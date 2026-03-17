@@ -72,13 +72,8 @@
         }
 
         @keyframes tick {
-            0% {
-                transform: translateX(0)
-            }
-
-            100% {
-                transform: translateX(-50%)
-            }
+            0% { transform: translateX(0) }
+            100% { transform: translateX(-50%) }
         }
 
         .ti {
@@ -92,17 +87,9 @@
             color: rgba(255, 255, 255, .45)
         }
 
-        .ti-on {
-            color: var(--green)
-        }
-
-        .ti-bd {
-            color: var(--accent)
-        }
-
-        .ti-sep {
-            color: rgba(255, 255, 255, .15)
-        }
+        .ti-on { color: var(--green) }
+        .ti-bd { color: var(--accent) }
+        .ti-sep { color: rgba(255, 255, 255, .15) }
 
         /* ── NAV ── */
         nav {
@@ -155,9 +142,7 @@
             padding-bottom: 2px
         }
 
-        .nav-links a:hover {
-            color: var(--black)
-        }
+        .nav-links a:hover { color: var(--black) }
 
         .nav-links a::after {
             content: '';
@@ -170,9 +155,7 @@
             transition: width .3s
         }
 
-        .nav-links a:hover::after {
-            width: 100%
-        }
+        .nav-links a:hover::after { width: 100% }
 
         .nav-btn {
             display: inline-flex;
@@ -215,17 +198,9 @@
             transition: all .3s;
         }
 
-        .nav-hamburger.open span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg)
-        }
-
-        .nav-hamburger.open span:nth-child(2) {
-            opacity: 0
-        }
-
-        .nav-hamburger.open span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg)
-        }
+        .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg) }
+        .nav-hamburger.open span:nth-child(2) { opacity: 0 }
+        .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) }
 
         /* Mobile menu drawer */
         .mobile-menu {
@@ -234,19 +209,17 @@
             top: 68px;
             left: 0;
             right: 0;
-            background: rgba(250, 250, 250, .97);
+            background: rgba(250,250,250,.97);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--gl);
             padding: 20px 24px 28px;
             z-index: 199;
             flex-direction: column;
             gap: 6px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, .08);
+            box-shadow: 0 8px 32px rgba(0,0,0,.08);
         }
 
-        .mobile-menu.open {
-            display: flex
-        }
+        .mobile-menu.open { display: flex }
 
         .mobile-menu a {
             color: var(--black);
@@ -257,9 +230,7 @@
             border-bottom: 1px solid var(--gl);
         }
 
-        .mobile-menu a:last-child {
-            border-bottom: none
-        }
+        .mobile-menu a:last-child { border-bottom: none }
 
         .mobile-menu .mobile-cta {
             margin-top: 12px;
@@ -302,9 +273,7 @@
             margin-bottom: 22px
         }
 
-        .hero h1 .italic {
-            font-style: italic
-        }
+        .hero h1 .italic { font-style: italic }
 
         .hero-p {
             font-size: 1rem;
@@ -336,13 +305,8 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, .12)
         }
 
-        .hero-cta svg {
-            transition: transform .3s
-        }
-
-        .hero-cta:hover svg {
-            transform: translateX(3px)
-        }
+        .hero-cta svg { transition: transform .3s }
+        .hero-cta:hover svg { transform: translateX(3px) }
 
         .hero-right {
             position: relative;
@@ -441,122 +405,53 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0)
-            }
-
-            50% {
-                transform: translateY(-10px)
-            }
+            0%, 100% { transform: translateY(0) }
+            50% { transform: translateY(-10px) }
         }
 
         @keyframes float2 {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(-2deg)
-            }
-
-            50% {
-                transform: translateY(-7px) rotate(2deg)
-            }
+            0%, 100% { transform: translateY(0) rotate(-2deg) }
+            50% { transform: translateY(-7px) rotate(2deg) }
         }
 
         @keyframes spin-cw {
-            from {
-                transform: rotate(0)
-            }
-
-            to {
-                transform: rotate(360deg)
-            }
+            from { transform: rotate(0) }
+            to { transform: rotate(360deg) }
         }
 
         @keyframes spin-ccw {
-            from {
-                transform: rotate(0)
-            }
-
-            to {
-                transform: rotate(-360deg)
-            }
+            from { transform: rotate(0) }
+            to { transform: rotate(-360deg) }
         }
 
         @keyframes radar-sweep {
-            from {
-                transform: rotate(0deg)
-            }
-
-            to {
-                transform: rotate(360deg)
-            }
+            from { transform: rotate(0deg) }
+            to { transform: rotate(360deg) }
         }
 
         @keyframes seg-glow {
-
-            0%,
-            100% {
-                opacity: 0.1
-            }
-
-            50% {
-                opacity: 0.22
-            }
+            0%, 100% { opacity: 0.1 }
+            50% { opacity: 0.22 }
         }
 
         @keyframes label-pop {
-            from {
-                opacity: 0;
-                transform: scale(0.75) translateY(8px)
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0)
-            }
+            from { opacity: 0; transform: scale(0.75) translateY(8px) }
+            to { opacity: 1; transform: scale(1) translateY(0) }
         }
 
-        .float {
-            animation: float 5s ease-in-out infinite
-        }
-
-        .float2 {
-            animation: float2 6.5s ease-in-out infinite
-        }
-
-        .spin-cw {
-            animation: spin-cw 40s linear infinite
-        }
-
-        .spin-ccw {
-            animation: spin-ccw 22s linear infinite
-        }
-
-        .radar-sweep-el {
-            animation: radar-sweep 6s linear infinite
-        }
-
-        .seg-anim {
-            animation: seg-glow 3s ease-in-out infinite
-        }
+        .float { animation: float 5s ease-in-out infinite }
+        .float2 { animation: float2 6.5s ease-in-out infinite }
+        .spin-cw { animation: spin-cw 40s linear infinite }
+        .spin-ccw { animation: spin-ccw 22s linear infinite }
+        .radar-sweep-el { animation: radar-sweep 6s linear infinite }
+        .seg-anim { animation: seg-glow 3s ease-in-out infinite }
 
         @keyframes needle-pulse {
-
-            0%,
-            100% {
-                filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1))
-            }
-
-            50% {
-                filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.2))
-            }
+            0%, 100% { filter: drop-shadow(0 0 4px rgba(0,0,0,0.1)) }
+            50% { filter: drop-shadow(0 0 14px rgba(0,0,0,0.2)) }
         }
 
-        .needle-anim {
-            animation: needle-pulse 3s ease-in-out infinite
-        }
+        .needle-anim { animation: needle-pulse 3s ease-in-out infinite }
 
         /* ── STATS SECTION ── */
         .sbox {
@@ -570,13 +465,8 @@
         }
 
         @keyframes ticker-vertical {
-            0% {
-                transform: translateY(0)
-            }
-
-            100% {
-                transform: translateY(-50%)
-            }
+            0% { transform: translateY(0) }
+            100% { transform: translateY(-50%) }
         }
 
         /* ── SERVICE CARDS ── */
@@ -613,9 +503,7 @@
             gap: 14px;
         }
 
-        .bp-body {
-            padding: 24px 26px
-        }
+        .bp-body { padding: 24px 26px }
 
         .bp-tag {
             font-family: var(--mono);
@@ -682,17 +570,10 @@
             transition: gap 0.25s;
         }
 
-        .bp-action:hover {
-            gap: 10px
-        }
+        .bp-action:hover { gap: 10px }
 
-        .bp-action svg {
-            transition: transform 0.25s
-        }
-
-        .bp-action:hover svg {
-            transform: translateX(3px)
-        }
+        .bp-action svg { transition: transform 0.25s }
+        .bp-action:hover svg { transform: translateX(3px) }
 
         /* ── PROCESS STEPS ── */
         .step-num {
@@ -729,14 +610,10 @@
             transform: scale(1.08);
         }
 
-        .step-card:hover h3 {
-            color: var(--gray)
-        }
+        .step-card:hover h3 { color: var(--gray) }
 
         /* ── ABOUT ── */
-        .about-bg {
-            background: #f7f7f2
-        }
+        .about-bg { background: #f7f7f2 }
 
         .about-grid {
             display: grid;
@@ -826,9 +703,7 @@
             transition: all .3s
         }
 
-        .bubble-b:hover {
-            border-color: #ccc
-        }
+        .bubble-b:hover { border-color: #ccc }
 
         .bt {
             font-size: .92rem;
@@ -836,9 +711,7 @@
             color: var(--black)
         }
 
-        .bt .fade {
-            color: var(--gray)
-        }
+        .bt .fade { color: var(--gray) }
 
         .chat-line {
             height: 18px;
@@ -862,10 +735,17 @@
             border: 1.5px solid var(--gl);
         }
 
-        /* ── CONTACT ── */
-        .contact-bg {
-            background: var(--white)
+        /* Reset icon margins on mobile via override */
+        @media (max-width: 900px) {
+            .engage-icon-wrap {
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+                order: -1 !important;
+            }
         }
+
+        /* ── CONTACT ── */
+        .contact-bg { background: var(--white) }
 
         .ticket {
             max-width: 800px;
@@ -909,9 +789,7 @@
             letter-spacing: .1em
         }
 
-        .ticket-body {
-            padding: 34px 30px 28px
-        }
+        .ticket-body { padding: 34px 30px 28px }
 
         label {
             display: block;
@@ -922,9 +800,7 @@
             margin-bottom: 7px
         }
 
-        input,
-        select,
-        textarea {
+        input, select, textarea {
             width: 100%;
             background: var(--white);
             border: 1px solid var(--gl);
@@ -937,21 +813,14 @@
             transition: all .3s
         }
 
-        input::placeholder,
-        textarea::placeholder {
-            color: #bbb
-        }
+        input::placeholder, textarea::placeholder { color: #bbb }
 
-        input:focus,
-        select:focus,
-        textarea:focus {
+        input:focus, select:focus, textarea:focus {
             border-color: var(--black);
             box-shadow: 0 0 0 3px rgba(0, 0, 0, .05)
         }
 
-        textarea {
-            resize: none
-        }
+        textarea { resize: none }
 
         .f-grid {
             display: grid;
@@ -960,9 +829,7 @@
             margin-bottom: 16px
         }
 
-        .f-full {
-            margin-bottom: 16px
-        }
+        .f-full { margin-bottom: 16px }
 
         .f-submit {
             width: 100%;
@@ -1027,8 +894,7 @@
             border-radius: 1px
         }
 
-        .rwy-edge-l,
-        .rwy-edge-r {
+        .rwy-edge-l, .rwy-edge-r {
             position: absolute;
             bottom: 0;
             display: flex;
@@ -1037,13 +903,8 @@
             padding-bottom: 14px
         }
 
-        .rwy-edge-l {
-            left: calc(50% - 110px)
-        }
-
-        .rwy-edge-r {
-            right: calc(50% - 110px)
-        }
+        .rwy-edge-l { left: calc(50% - 110px) }
+        .rwy-edge-r { right: calc(50% - 110px) }
 
         .rwy-lt {
             width: 5px;
@@ -1052,38 +913,15 @@
             background: var(--accent)
         }
 
-        .rwy-lt:nth-child(1) {
-            animation: rwl 1.4s ease-in-out infinite 0s
-        }
-
-        .rwy-lt:nth-child(2) {
-            animation: rwl 1.4s ease-in-out infinite .22s
-        }
-
-        .rwy-lt:nth-child(3) {
-            animation: rwl 1.4s ease-in-out infinite .44s
-        }
-
-        .rwy-lt:nth-child(4) {
-            animation: rwl 1.4s ease-in-out infinite .66s
-        }
-
-        .rwy-lt:nth-child(5) {
-            animation: rwl 1.4s ease-in-out infinite .88s
-        }
+        .rwy-lt:nth-child(1) { animation: rwl 1.4s ease-in-out infinite 0s }
+        .rwy-lt:nth-child(2) { animation: rwl 1.4s ease-in-out infinite .22s }
+        .rwy-lt:nth-child(3) { animation: rwl 1.4s ease-in-out infinite .44s }
+        .rwy-lt:nth-child(4) { animation: rwl 1.4s ease-in-out infinite .66s }
+        .rwy-lt:nth-child(5) { animation: rwl 1.4s ease-in-out infinite .88s }
 
         @keyframes rwl {
-
-            0%,
-            100% {
-                opacity: 1;
-                box-shadow: 0 0 8px var(--accent)
-            }
-
-            50% {
-                opacity: .15;
-                box-shadow: none
-            }
+            0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent) }
+            50% { opacity: .15; box-shadow: none }
         }
 
         .rwy-tag {
@@ -1145,9 +983,7 @@
             transition: color .2s
         }
 
-        .f-col a:hover {
-            color: var(--black)
-        }
+        .f-col a:hover { color: var(--black) }
 
         .f-rule {
             height: 1px;
@@ -1219,13 +1055,8 @@
             z-index: 300
         }
 
-        #topBtn.v {
-            opacity: 1
-        }
-
-        #topBtn:hover {
-            transform: translateY(-3px)
-        }
+        #topBtn.v { opacity: 1 }
+        #topBtn:hover { transform: translateY(-3px) }
 
         .toast {
             position: fixed;
@@ -1244,23 +1075,11 @@
             box-shadow: 0 8px 28px rgba(0, 0, 0, .08)
         }
 
-        .toast.show {
-            transform: translateX(0)
-        }
+        .toast.show { transform: translateX(0) }
+        .toast span { font-size: .87rem; color: var(--black) }
 
-        .toast span {
-            font-size: .87rem;
-            color: var(--black)
-        }
-
-        section {
-            padding: 100px 48px
-        }
-
-        .inner {
-            max-width: 1200px;
-            margin: 0 auto
-        }
+        section { padding: 100px 48px }
+        .inner { max-width: 1200px; margin: 0 auto }
 
         .stag {
             display: inline-block;
@@ -1301,368 +1120,242 @@
             transform: none
         }
 
-        .r.left {
-            transform: translateX(-24px)
-        }
+        .r.left { transform: translateX(-24px) }
+        .r.right { transform: translateX(24px) }
+        .r.left.in, .r.right.in { transform: none }
 
-        .r.right {
-            transform: translateX(24px)
-        }
-
-        .r.left.in,
-        .r.right.in {
-            transform: none
-        }
-
-        .d1 {
-            transition-delay: .1s
-        }
-
-        .d2 {
-            transition-delay: .22s
-        }
-
-        .d3 {
-            transition-delay: .34s
-        }
-
-        .d4 {
-            transition-delay: .46s
-        }
+        .d1 { transition-delay: .1s }
+        .d2 { transition-delay: .22s }
+        .d3 { transition-delay: .34s }
+        .d4 { transition-delay: .46s }
 
         @keyframes bl {
-
-            0%,
-            100% {
-                opacity: 1
-            }
-
-            50% {
-                opacity: .1
-            }
+            0%, 100% { opacity: 1 }
+            50% { opacity: .1 }
         }
 
-        .blink {
-            animation: bl 2s ease-in-out infinite
-        }
+        .blink { animation: bl 2s ease-in-out infinite }
 
         /* ════════════════════════════════════════
-           RESPONSIVE BREAKPOINTS
+           RESPONSIVE — TRUE MOBILE FIRST
         ════════════════════════════════════════ */
 
-        /* ── Tablet: ≤ 1024px ── */
-        @media (max-width: 1024px) {
-            .compass-wrap {
-                width: 360px;
-                height: 360px
-            }
-
-            .compass-wrap svg {
-                width: 360px;
-                height: 360px
-            }
-
-            .seg-label.right {
-                right: -55px
-            }
-        }
-
-        /* ── Tablet: ≤ 900px ── */
+        /* ── Tablet ≤ 900px ── */
         @media (max-width: 900px) {
-            nav {
-                padding: 0 24px
-            }
 
-            /* Nav: hide links, show hamburger */
-            .nav-links {
-                display: none
-            }
+            /* NAV */
+            nav { padding: 0 20px; height: 60px }
+            .nav-links { display: none }
+            .nav-btn { display: none }
+            .nav-hamburger { display: flex }
+            .mobile-menu { top: 60px }
 
-            .nav-btn {
-                display: none
-            }
+            /* GLOBAL section padding */
+            section { padding: 60px 20px !important }
 
-            .nav-hamburger {
-                display: flex
-            }
-
-            /* Hero: stack vertically */
+            /* HERO */
             .hero {
-                padding: 100px 24px 60px;
+                padding: 90px 20px 50px !important;
                 min-height: auto;
             }
-
             .hero-inner {
-                grid-template-columns: 1fr;
-                gap: 40px;
+                grid-template-columns: 1fr !important;
+                gap: 36px;
                 text-align: center;
             }
+            .hero h1 { font-size: clamp(2rem, 7vw, 2.8rem) }
+            .hero-p { max-width: 100% }
+            .hero-cta { display: inline-flex }
 
-            .hero h1 {
-                font-size: clamp(2.2rem, 6vw, 3rem)
-            }
-
-            .hero-p {
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto
-            }
-
-            .hero-cta {
-                margin: 0 auto
-            }
-
-            /* Compass: scale down */
-            .hero-right {
-                width: 100%
-            }
-
+            /* Compass */
+            .hero-right { width: 100% }
             .compass-wrap {
-                width: 280px;
-                height: 280px;
-                margin: 0 auto
-            }
-
-            .compass-wrap>svg {
-                width: 280px;
-                height: 280px
-            }
-
-            .seg-label {
-                display: none
-            }
-
-            /* hide labels on small screens */
-            .pill-float {
-                display: none
-            }
-
-            /* hide floating pills */
-
-            /* About */
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-img {
-                max-width: 340px;
+                width: 260px !important;
+                height: 260px !important;
                 margin: 0 auto;
-                display: block
             }
+            .compass-wrap > svg { width: 260px !important; height: 260px !important; position: absolute; top: 0; left: 0 }
+            .seg-label { display: none }
+            .pill-float { display: none }
 
-            /* Stats */
-            section {
-                padding: 70px 24px
-            }
-
+            /* STATS section */
+            #stats { padding: 60px 20px !important }
+            #stats > div { padding: 0 !important }
             .values-grid {
                 grid-template-columns: 1fr !important;
-                gap: 40px !important;
+                gap: 48px !important;
+            }
+            .radar-container {
+                width: 280px !important;
+                height: 280px !important;
+            }
+            .radar-container svg {
+                width: 280px !important;
+                height: 280px !important;
+            }
+            .stats-inner { grid-template-columns: 1fr 1fr !important }
+
+            /* ABOUT */
+            .about-bg { padding: 60px 20px !important }
+            .about-grid {
+                grid-template-columns: 1fr !important;
+                gap: 36px !important;
+            }
+            .about-img {
+                max-width: 280px !important;
+                display: block;
+                margin: 0 auto;
             }
 
-            .stats-inner {
-                grid-template-columns: 1fr 1fr !important;
-            }
-
-            /* Process steps: 2x2 grid */
+            /* PROCESS */
+            #process { padding: 60px 0 !important }
+            #process > div { padding: 0 20px !important }
             .flight-grid {
                 grid-template-columns: 1fr 1fr !important;
-                gap: 32px 20px !important;
-                position: relative;
+                gap: 32px 16px !important;
             }
-
-            /* Hide the connecting line */
-            .flight-grid>div:first-of-type.flight-line {
-                display: none !important;
+            .flight-line { display: none !important }
+            .process-callout {
+                flex-direction: column !important;
+                gap: 20px !important;
+                padding: 24px 20px !important;
             }
+            .process-callout a { width: 100% !important; justify-content: center !important }
 
-            /* Service cards */
-            .bp-grid {
-                grid-template-columns: 1fr !important;
-            }
+            /* SERVICES */
+            #services { padding: 60px 20px !important }
+            .bp-grid { grid-template-columns: 1fr !important; gap: 20px !important }
 
-            /* Engagement */
+            /* ENGAGEMENT */
+            #engagement { padding: 60px 0 !important }
+            #engagement > div { padding: 0 20px !important }
             .engage-grid {
                 grid-template-columns: 1fr !important;
-                gap: 28px !important;
+                gap: 24px !important;
+                margin-bottom: 40px !important;
             }
-
             .engage-card {
                 flex-direction: column !important;
                 text-align: center !important;
                 border-radius: 24px !important;
                 padding: 32px 24px !important;
-                gap: 24px;
+                gap: 24px !important;
             }
-
-            .engage-card>div:first-child {
+            .engage-icon-wrap {
                 margin: 0 auto !important;
-                order: -1 !important;
-            }
-
-            .engage-card>div:nth-child(1) {
                 margin-right: 0 !important;
                 margin-left: 0 !important;
-                order: 0 !important;
+                order: -1 !important;
+                width: 140px !important;
+                height: 140px !important;
             }
+            .delivery-flex { flex-direction: column !important; gap: 14px !important }
 
-            /* Contact form */
-            .ticket-body {
-                padding: 24px 20px 20px
-            }
-
-            .f-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-
-            /* Footer */
-            footer {
-                padding: 48px 24px 24px
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 36px !important;
-            }
-
-            /* Bottom callout */
-            .process-callout {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 20px !important;
-            }
-
-            .process-callout a {
-                width: 100%;
-                justify-content: center
-            }
-
-            /* Delivery models */
-            .delivery-flex {
-                flex-direction: column !important;
-                gap: 16px !important;
-            }
-        }
-
-        /* ── Mobile: ≤ 600px ── */
-        @media (max-width: 600px) {
-            section {
-                padding: 60px 20px
-            }
-
-            /* Hero */
-            .hero {
-                padding: 90px 20px 50px
-            }
-
-            .hero h1 {
-                font-size: clamp(2rem, 8vw, 2.6rem)
-            }
-
-            /* Compass: even smaller */
-            .compass-wrap {
-                width: 240px;
-                height: 240px
-            }
-
-            .compass-wrap>svg {
-                width: 240px;
-                height: 240px
-            }
-
-            /* Process: single column */
-            .flight-grid {
-                grid-template-columns: 1fr !important;
-                gap: 28px !important;
-            }
-
-            /* Stats: single column */
-            .stats-inner {
-                grid-template-columns: 1fr !important;
-            }
-
-            /* Footer: single column */
-            .footer-grid {
-                grid-template-columns: 1fr !important;
-                gap: 28px !important;
-            }
-
-            .f-bottom {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-
-            /* Ticket */
-            .ticket-stub {
-                flex-direction: column;
-                gap: 10px;
-                align-items: flex-start
-            }
-
-            /* Contact links */
+            /* CONTACT */
+            #contact { padding: 60px 20px !important }
+            .ticket-body { padding: 22px 18px !important }
+            .f-grid { grid-template-columns: 1fr !important; gap: 14px !important }
             .contact-links {
                 flex-direction: column !important;
                 align-items: center !important;
                 gap: 14px !important;
             }
+            .contact-links .divider { display: none !important }
 
-            .contact-links span.divider {
-                display: none
+            /* FOOTER */
+            footer { padding: 44px 20px 20px !important }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 32px !important;
             }
 
-            /* Engage cards: fully stacked */
-            .engage-card {
-                border-radius: 20px !important;
-                padding: 28px 20px !important;
-            }
-
-            .engage-icon-wrap {
-                width: 120px !important;
-                height: 120px !important
-            }
-
-            /* About img */
-            .about-img {
-                max-width: 100%
-            }
-
-            /* Radar: smaller */
-            .radar-container {
-                width: 240px !important;
-                height: 240px !important
-            }
-
-            .radar-container svg {
-                width: 240px !important;
-                height: 240px !important
-            }
-
-            /* Toast: full width on mobile */
-            .toast {
-                left: 12px;
-                right: 12px;
-                top: 76px;
-            }
-
-            /* Top btn */
-            #topBtn {
-                bottom: 16px;
-                right: 16px
-            }
+            /* TOAST */
+            .toast { left: 12px; right: 12px; top: 68px }
+            #topBtn { bottom: 16px; right: 16px }
         }
 
-        /* ── Very small: ≤ 400px ── */
-        @media (max-width: 400px) {
-            .hero h1 {
-                font-size: 1.9rem
+        /* ── Mobile ≤ 600px ── */
+        @media (max-width: 600px) {
+
+            /* NAV */
+            .logo-name { font-size: 1.25rem }
+
+            /* HERO */
+            .hero { padding: 80px 16px 44px !important }
+            .hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.4rem) }
+            .hero-inner { gap: 28px }
+            .compass-wrap {
+                width: 220px !important;
+                height: 220px !important;
+            }
+            .compass-wrap > svg { width: 220px !important; height: 220px !important }
+
+            /* RADAR */
+            .radar-container {
+                width: 240px !important;
+                height: 240px !important;
+            }
+            .radar-container svg {
+                width: 240px !important;
+                height: 240px !important;
             }
 
-            .logo-name {
-                font-size: 1.2rem
+            /* STATS */
+            .stats-inner { grid-template-columns: 1fr 1fr !important }
+            .sbox { padding-left: 12px }
+
+            /* PROCESS steps: single col */
+            .flight-grid {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
             }
+
+            /* ENGAGE cards */
+            .engage-card {
+                border-radius: 20px !important;
+                padding: 28px 18px !important;
+            }
+            .engage-icon-wrap {
+                width: 110px !important;
+                height: 110px !important;
+            }
+
+            /* TICKET stub */
+            .ticket-stub {
+                flex-direction: column !important;
+                gap: 8px !important;
+                align-items: flex-start !important;
+            }
+            .ticket-body { padding: 18px 16px !important }
+
+            /* FOOTER: single column */
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+            .f-bottom {
+                flex-direction: column !important;
+                gap: 10px !important;
+                text-align: center !important;
+            }
+
+            /* SERVICE card header: wrap on very small */
+            .bp-header { padding: 18px 18px }
+
+            section { padding: 50px 16px !important }
+        }
+
+        /* ── Very small ≤ 380px ── */
+        @media (max-width: 380px) {
+            .hero h1 { font-size: 1.75rem }
+            .compass-wrap {
+                width: 190px !important;
+                height: 190px !important;
+            }
+            .compass-wrap > svg { width: 190px !important; height: 190px !important }
+            .radar-container { width: 200px !important; height: 200px !important }
+            .radar-container svg { width: 200px !important; height: 200px !important }
+            .stats-inner { grid-template-columns: 1fr !important }
         }
     </style>
 </head>
@@ -1671,26 +1364,16 @@
     <!-- TICKER -->
     <div class="ticker">
         <div class="ticker-track">
-            <div class="ti"><span>ACX-001</span><span class="ti-sep">◈</span><span>CONSULTING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE A1</span></div>
-            <div class="ti"><span>ACX-002</span><span class="ti-sep">◈</span><span>ENGINEERING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE B3</span></div>
-            <div class="ti"><span>ACX-003</span><span class="ti-sep">◈</span><span>ADVISORY</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE C2</span></div>
-            <div class="ti"><span>ACX-004</span><span class="ti-sep">◈</span><span>SOLUTIONING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE D7</span></div>
-            <div class="ti"><span class="ti-sep">◈</span><span>TRUE NORTH BEARING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">MISSION: GO</span><span class="ti-sep">◈</span></div>
-            <div class="ti"><span>ACX-001</span><span class="ti-sep">◈</span><span>CONSULTING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE A1</span></div>
-            <div class="ti"><span>ACX-002</span><span class="ti-sep">◈</span><span>ENGINEERING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE B3</span></div>
-            <div class="ti"><span>ACX-003</span><span class="ti-sep">◈</span><span>ADVISORY</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE C2</span></div>
-            <div class="ti"><span>ACX-004</span><span class="ti-sep">◈</span><span>SOLUTIONING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE D7</span></div>
-            <div class="ti"><span class="ti-sep">◈</span><span>TRUE NORTH BEARING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">MISSION: GO</span><span class="ti-sep">◈</span></div>
+            <div class="ti"><span>ACX-001</span><span class="ti-sep">◈</span><span>CONSULTING</span><span class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE A1</span></div>
+            <div class="ti"><span>ACX-002</span><span class="ti-sep">◈</span><span>ENGINEERING</span><span class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE B3</span></div>
+            <div class="ti"><span>ACX-003</span><span class="ti-sep">◈</span><span>ADVISORY</span><span class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE C2</span></div>
+            <div class="ti"><span>ACX-004</span><span class="ti-sep">◈</span><span>SOLUTIONING</span><span class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE D7</span></div>
+            <div class="ti"><span class="ti-sep">◈</span><span>TRUE NORTH BEARING</span><span class="ti-sep">◈</span><span class="ti-bd">MISSION: GO</span><span class="ti-sep">◈</span></div>
+            <div class="ti"><span>ACX-001</span><span class="ti-sep">◈</span><span>CONSULTING</span><span class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE A1</span></div>
+            <div class="ti"><span>ACX-002</span><span class="ti-sep">◈</span><span>ENGINEERING</span><span class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE B3</span></div>
+            <div class="ti"><span>ACX-003</span><span class="ti-sep">◈</span><span>ADVISORY</span><span class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE C2</span></div>
+            <div class="ti"><span>ACX-004</span><span class="ti-sep">◈</span><span>SOLUTIONING</span><span class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE D7</span></div>
+            <div class="ti"><span class="ti-sep">◈</span><span>TRUE NORTH BEARING</span><span class="ti-sep">◈</span><span class="ti-bd">MISSION: GO</span><span class="ti-sep">◈</span></div>
         </div>
     </div>
 
@@ -1730,12 +1413,10 @@
         <div class="hero-inner">
             <div class="hero-left">
                 <h1 class="r">Your<br />Growth and Transformation<br /><span class="italic">Partner</span></h1>
-                <p class="hero-p r d1">We build fast, scalable, secure solutions that help businesses grow, adapt, and
-                    stay ahead.</p>
+                <p class="hero-p r d1">We build fast, scalable, secure solutions that help businesses grow, adapt, and stay ahead.</p>
                 <a href="#contact" class="hero-cta r d2">Get Onboard
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M3,8 L13,8 M10,5 L13,8 L10,11" stroke="currentColor" stroke-width="1.8"
-                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3,8 L13,8 M10,5 L13,8 L10,11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </a>
             </div>
@@ -1747,22 +1428,17 @@
                             <div class="seg-icon">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <circle cx="7.5" cy="5.5" r="2.5" stroke="var(--black)" stroke-width="1.2" />
-                                    <path d="M7.5,8 L6,12.5 M7.5,8 L9,12.5 M6,12.5 L9,12.5" stroke="var(--black)"
-                                        stroke-width="1" stroke-linecap="round" />
-                                    <line x1="4.5" y1="7.5" x2="2.5" y2="9" stroke="var(--black)" stroke-width="1"
-                                        stroke-linecap="round" opacity="0.5" />
-                                    <line x1="10.5" y1="7.5" x2="12.5" y2="9" stroke="var(--black)" stroke-width="1"
-                                        stroke-linecap="round" opacity="0.5" />
+                                    <path d="M7.5,8 L6,12.5 M7.5,8 L9,12.5 M6,12.5 L9,12.5" stroke="var(--black)" stroke-width="1" stroke-linecap="round" />
+                                    <line x1="4.5" y1="7.5" x2="2.5" y2="9" stroke="var(--black)" stroke-width="1" stroke-linecap="round" opacity="0.5" />
+                                    <line x1="10.5" y1="7.5" x2="12.5" y2="9" stroke="var(--black)" stroke-width="1" stroke-linecap="round" opacity="0.5" />
                                 </svg>
                             </div>
                         </div>
                         <div class="seg-label right">
                             <div class="seg-icon">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <path d="M2,11 L4,8 L6.5,9.5 L9.5,5 L13,7" stroke="var(--black)" stroke-width="1.3"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                                    <circle cx="9.5" cy="5" r="1.5" fill="var(--gl)" stroke="var(--black)"
-                                        stroke-width="1" />
+                                    <path d="M2,11 L4,8 L6.5,9.5 L9.5,5 L13,7" stroke="var(--black)" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="9.5" cy="5" r="1.5" fill="var(--gl)" stroke="var(--black)" stroke-width="1" />
                                 </svg>
                             </div>
                             <span style="font-size:0.75rem;color:var(--black);letter-spacing:0.18em;">ADVISORY</span>
@@ -1770,14 +1446,10 @@
                         <div class="seg-label bottom">
                             <div class="seg-icon">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                                    <rect x="2" y="4.5" width="11" height="7.5" rx="1" stroke="var(--black)"
-                                        stroke-width="1.2" />
-                                    <line x1="5" y1="4.5" x2="5" y2="2.5" stroke="var(--black)" stroke-width="1.2"
-                                        stroke-linecap="round" />
-                                    <line x1="10" y1="4.5" x2="10" y2="2.5" stroke="var(--black)" stroke-width="1.2"
-                                        stroke-linecap="round" />
-                                    <line x1="5" y1="8" x2="10" y2="8" stroke="var(--black)" stroke-width="1"
-                                        stroke-linecap="round" />
+                                    <rect x="2" y="4.5" width="11" height="7.5" rx="1" stroke="var(--black)" stroke-width="1.2" />
+                                    <line x1="5" y1="4.5" x2="5" y2="2.5" stroke="var(--black)" stroke-width="1.2" stroke-linecap="round" />
+                                    <line x1="10" y1="4.5" x2="10" y2="2.5" stroke="var(--black)" stroke-width="1.2" stroke-linecap="round" />
+                                    <line x1="5" y1="8" x2="10" y2="8" stroke="var(--black)" stroke-width="1" stroke-linecap="round" />
                                 </svg>
                             </div>
                             <span style="font-size:0.75rem;color:var(--black);letter-spacing:0.18em;">SOLUTIONING</span>
@@ -1787,14 +1459,11 @@
                             <div class="seg-icon">
                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                                     <circle cx="7.5" cy="7.5" r="2.5" stroke="var(--black)" stroke-width="1.2" />
-                                    <path
-                                        d="M7.5,1 L7.5,2.8 M7.5,12.2 L7.5,14 M1,7.5 L2.8,7.5 M12.2,7.5 L14,7.5 M3.2,3.2 L4.4,4.4 M10.6,10.6 L11.8,11.8 M11.8,3.2 L10.6,4.4 M4.4,10.6 L3.2,11.8"
-                                        stroke="var(--black)" stroke-width="1.1" stroke-linecap="round" />
+                                    <path d="M7.5,1 L7.5,2.8 M7.5,12.2 L7.5,14 M1,7.5 L2.8,7.5 M12.2,7.5 L14,7.5 M3.2,3.2 L4.4,4.4 M10.6,10.6 L11.8,11.8 M11.8,3.2 L10.6,4.4 M4.4,10.6 L3.2,11.8" stroke="var(--black)" stroke-width="1.1" stroke-linecap="round" />
                                 </svg>
                             </div>
                         </div>
-                        <svg viewBox="0 0 440 440" width="440" height="440" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+                        <svg viewBox="0 0 440 440" width="440" height="440" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
                             <defs>
                                 <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
                                     <stop offset="0%" stop-color="#ffffff" />
@@ -1816,89 +1485,60 @@
                                     </feMerge>
                                 </filter>
                             </defs>
-                            <path d="M220,220 L220,56 A164,164 0 0,1 384,220 Z" fill="var(--gl)" opacity="0.6"
-                                class="seg-anim" />
-                            <path d="M220,220 L384,220 A164,164 0 0,1 220,384 Z" fill="var(--gl)" opacity="0.5"
-                                class="seg-anim" style="animation-delay:0.75s" />
-                            <path d="M220,220 L220,384 A164,164 0 0,1 56,220 Z" fill="var(--gl)" opacity="0.6"
-                                class="seg-anim" style="animation-delay:1.5s" />
-                            <path d="M220,220 L56,220 A164,164 0 0,1 220,56 Z" fill="var(--gl)" opacity="0.5"
-                                class="seg-anim" style="animation-delay:2.25s" />
+                            <path d="M220,220 L220,56 A164,164 0 0,1 384,220 Z" fill="var(--gl)" opacity="0.6" class="seg-anim" />
+                            <path d="M220,220 L384,220 A164,164 0 0,1 220,384 Z" fill="var(--gl)" opacity="0.5" class="seg-anim" style="animation-delay:0.75s" />
+                            <path d="M220,220 L220,384 A164,164 0 0,1 56,220 Z" fill="var(--gl)" opacity="0.6" class="seg-anim" style="animation-delay:1.5s" />
+                            <path d="M220,220 L56,220 A164,164 0 0,1 220,56 Z" fill="var(--gl)" opacity="0.5" class="seg-anim" style="animation-delay:2.25s" />
                             <circle cx="220" cy="220" r="164" stroke="var(--gl)" stroke-width="1.5" />
                             <line x1="220" y1="56" x2="220" y2="384" stroke="var(--gl)" stroke-width="1" />
                             <line x1="56" y1="220" x2="384" y2="220" stroke="var(--gl)" stroke-width="1" />
                             <g class="spin-cw" style="transform-origin:220px 220px;">
-                                <circle cx="220" cy="220" r="185" stroke="var(--gl)" stroke-width="1"
-                                    stroke-dasharray="4 6" />
+                                <circle cx="220" cy="220" r="185" stroke="var(--gl)" stroke-width="1" stroke-dasharray="4 6" />
                             </g>
                             <g class="spin-ccw" style="transform-origin:220px 220px;">
-                                <circle cx="220" cy="220" r="175" stroke="rgba(0,0,0,0.12)" stroke-width="1"
-                                    stroke-dasharray="2 8" />
+                                <circle cx="220" cy="220" r="175" stroke="rgba(0,0,0,0.12)" stroke-width="1" stroke-dasharray="2 8" />
                             </g>
                             <g class="radar-sweep-el" style="transform-origin:220px 220px;">
                                 <path d="M220,220 L248,62 A164,164 0 0,0 220,56 Z" fill="var(--black)" opacity="0.03" />
-                                <line x1="220" y1="220" x2="220" y2="56" stroke="var(--black)" stroke-width="1.2"
-                                    opacity="0.2" />
+                                <line x1="220" y1="220" x2="220" y2="56" stroke="var(--black)" stroke-width="1.2" opacity="0.2" />
                             </g>
-                            <circle cx="220" cy="220" r="150" stroke="rgba(0,0,0,0.1)" stroke-width="1"
-                                stroke-dasharray="3 5" />
-                            <circle cx="220" cy="220" r="130" fill="white" stroke="rgba(0,0,0,0.15)"
-                                stroke-width="1.5" />
+                            <circle cx="220" cy="220" r="150" stroke="rgba(0,0,0,0.1)" stroke-width="1" stroke-dasharray="3 5" />
+                            <circle cx="220" cy="220" r="130" fill="white" stroke="rgba(0,0,0,0.15)" stroke-width="1.5" />
                             <circle cx="220" cy="220" r="115" stroke="rgba(0,0,0,0.04)" stroke-width="8" fill="none" />
                             <circle cx="220" cy="220" r="100" stroke="rgba(0,0,0,0.03)" stroke-width="6" fill="none" />
                             <polygon points="220,220 200,200 220,148 240,200" fill="url(#starGrad2)" opacity="0.55" />
                             <polygon points="220,220 240,200 292,220 240,240" fill="url(#starGrad2)" opacity="0.55" />
                             <polygon points="220,220 240,240 220,292 200,240" fill="url(#starGrad2)" opacity="0.55" />
                             <polygon points="220,220 200,240 148,220 200,200" fill="url(#starGrad2)" opacity="0.55" />
-                            <polygon points="220,220 208,205 220,96 232,205" fill="url(#starGrad)" filter="url(#shadow)"
-                                class="needle-anim" />
-                            <polygon points="220,220 235,208 344,220 235,232" fill="url(#starGrad)"
-                                filter="url(#shadow)" />
-                            <polygon points="220,220 232,235 220,344 208,235" fill="url(#starGrad)"
-                                filter="url(#shadow)" />
-                            <polygon points="220,220 205,232 96,220 205,208" fill="url(#starGrad)"
-                                filter="url(#shadow)" />
+                            <polygon points="220,220 208,205 220,96 232,205" fill="url(#starGrad)" filter="url(#shadow)" class="needle-anim" />
+                            <polygon points="220,220 235,208 344,220 235,232" fill="url(#starGrad)" filter="url(#shadow)" />
+                            <polygon points="220,220 232,235 220,344 208,235" fill="url(#starGrad)" filter="url(#shadow)" />
+                            <polygon points="220,220 205,232 96,220 205,208" fill="url(#starGrad)" filter="url(#shadow)" />
                             <polygon points="220,220 213,210 220,96" fill="rgba(255,255,255,0.7)" />
                             <polygon points="220,220 230,213 344,220" fill="rgba(255,255,255,0.6)" />
-                            <circle cx="220" cy="220" r="22" fill="white" stroke="rgba(0,0,0,0.15)" stroke-width="1.5"
-                                filter="url(#shadow)" />
+                            <circle cx="220" cy="220" r="22" fill="white" stroke="rgba(0,0,0,0.15)" stroke-width="1.5" filter="url(#shadow)" />
                             <circle cx="220" cy="220" r="10" fill="var(--black)" />
                             <circle cx="216" cy="216" r="5" fill="rgba(255,255,255,0.9)" opacity="0.7" />
-                            <text x="220" y="218" text-anchor="middle" font-family="var(--mono)" font-size="5.5"
-                                fill="rgba(0,0,0,0.4)" letter-spacing="2.5">ACANTIX</text>
-                            <text x="220" y="74" text-anchor="middle" font-family="var(--mono)" font-size="11"
-                                font-weight="600" fill="var(--black)" letter-spacing="2">N</text>
-                            <text x="220" y="378" text-anchor="middle" font-family="var(--mono)" font-size="10"
-                                fill="rgba(0,0,0,0.45)">S</text>
-                            <text x="378" y="224" text-anchor="middle" font-family="var(--mono)" font-size="10"
-                                fill="rgba(0,0,0,0.45)">E</text>
-                            <text x="62" y="224" text-anchor="middle" font-family="var(--mono)" font-size="10"
-                                fill="rgba(0,0,0,0.45)">W</text>
-                            <line x1="220" y1="56" x2="220" y2="66" stroke="var(--black)" stroke-width="2"
-                                stroke-linecap="round" />
-                            <line x1="220" y1="374" x2="220" y2="384" stroke="rgba(0,0,0,0.3)" stroke-width="1.5"
-                                stroke-linecap="round" />
-                            <line x1="384" y1="220" x2="374" y2="220" stroke="rgba(0,0,0,0.3)" stroke-width="1.5"
-                                stroke-linecap="round" />
-                            <line x1="56" y1="220" x2="66" y2="220" stroke="rgba(0,0,0,0.3)" stroke-width="1.5"
-                                stroke-linecap="round" />
+                            <text x="220" y="218" text-anchor="middle" font-family="var(--mono)" font-size="5.5" fill="rgba(0,0,0,0.4)" letter-spacing="2.5">ACANTIX</text>
+                            <text x="220" y="74" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="600" fill="var(--black)" letter-spacing="2">N</text>
+                            <text x="220" y="378" text-anchor="middle" font-family="var(--mono)" font-size="10" fill="rgba(0,0,0,0.45)">S</text>
+                            <text x="378" y="224" text-anchor="middle" font-family="var(--mono)" font-size="10" fill="rgba(0,0,0,0.45)">E</text>
+                            <text x="62" y="224" text-anchor="middle" font-family="var(--mono)" font-size="10" fill="rgba(0,0,0,0.45)">W</text>
+                            <line x1="220" y1="56" x2="220" y2="66" stroke="var(--black)" stroke-width="2" stroke-linecap="round" />
+                            <line x1="220" y1="374" x2="220" y2="384" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="384" y1="220" x2="374" y2="220" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="56" y1="220" x2="66" y2="220" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
                     </div>
 
                     <!-- Floating pills — hidden on mobile via CSS -->
-                    <div class="pill-float"
-                        style="position:absolute;top:14px;right:-4px;z-index:10;animation:float 5s ease-in-out infinite;">
-                        <div
-                            style="font-family:var(--mono);font-size:10px;color:var(--gray);letter-spacing:0.15em;margin-bottom:2px;">
-                            SIGNAL LOCK</div>
+                    <div class="pill-float" style="position:absolute;top:14px;right:-4px;z-index:10;animation:float 5s ease-in-out infinite;">
+                        <div style="font-family:var(--mono);font-size:10px;color:var(--gray);letter-spacing:0.15em;margin-bottom:2px;">SIGNAL LOCK</div>
                         <div style="font-weight:700;font-size:0.88rem;">TRUE NORTH</div>
                         <div style="font-family:var(--mono);font-size:9px;color:var(--gray);">99.8% PRECISION</div>
                     </div>
-                    <div class="pill-float"
-                        style="position:absolute;bottom:48px;left:-8px;z-index:10;background:var(--white);border-color:rgba(0,0,0,0.1);animation:float2 6.5s ease-in-out infinite;">
-                        <div
-                            style="font-family:var(--mono);font-size:10px;color:var(--gray);letter-spacing:0.15em;margin-bottom:2px;">
-                            BEARING</div>
+                    <div class="pill-float" style="position:absolute;bottom:48px;left:-8px;z-index:10;background:var(--white);border-color:rgba(0,0,0,0.1);animation:float2 6.5s ease-in-out infinite;">
+                        <div style="font-family:var(--mono);font-size:10px;color:var(--gray);letter-spacing:0.15em;margin-bottom:2px;">BEARING</div>
                         <div style="font-weight:700;font-size:0.88rem;">045°</div>
                         <div style="font-family:var(--mono);font-size:9px;color:var(--gray);">ENTERPRISE</div>
                     </div>
@@ -1910,53 +1550,74 @@
     <!-- STATS / RADAR -->
     <section id="stats" style="padding:100px 0;background:#fff;">
         <div style="max-width:1280px;margin:0 auto;padding:0 28px;">
-            <div class="values-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+            <div class="values-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
                 <!-- Radar widget -->
                 <div class="reveal" style="display:flex;justify-content:center;">
-                    <div class="radar-container" style="position:relative;width:320px;height:320px;margin:0 auto;">
-                        <svg viewBox="0 0 320 320" width="320" height="320" fill="none">
-                            <circle cx="160" cy="160" r="148" stroke="var(--gl)" stroke-width="1" />
-                            <circle cx="160" cy="160" r="108" stroke="var(--gl)" stroke-width="1" />
-                            <circle cx="160" cy="160" r="70" stroke="var(--gl)" stroke-width="1" />
-                            <circle cx="160" cy="160" r="36" stroke="var(--gl)" stroke-width="1" />
-                            <line x1="12" y1="160" x2="308" y2="160" stroke="var(--gl)" stroke-width="0.8" />
-                            <line x1="160" y1="12" x2="160" y2="308" stroke="var(--gl)" stroke-width="0.8" />
-                            <line x1="55" y1="55" x2="265" y2="265" stroke="var(--gl)" stroke-width="0.7"
-                                opacity="0.5" />
-                            <line x1="265" y1="55" x2="55" y2="265" stroke="var(--gl)" stroke-width="0.7"
-                                opacity="0.5" />
-                            <g style="transform-origin:160px 160px;animation: radar-sweep 6s linear infinite;">
-                                <path d="M160,160 L182,18 A148,148 0 0,0 160,12 Z" fill="#999" opacity="0.08" />
-                                <line x1="160" y1="160" x2="160" y2="12" stroke="#999" stroke-width="1.5"
-                                    opacity="0.55" />
+                    <div class="radar-container" style="position:relative;width:360px;height:360px;margin:0 auto;">
+                        <svg viewBox="0 0 360 360" width="360" height="360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Grid rings -->
+                            <circle cx="180" cy="180" r="160" stroke="var(--gl)" stroke-width="1" />
+                            <circle cx="180" cy="180" r="118" stroke="var(--gl)" stroke-width="1" />
+                            <circle cx="180" cy="180" r="78" stroke="var(--gl)" stroke-width="1" />
+                            <circle cx="180" cy="180" r="40" stroke="var(--gl)" stroke-width="1" />
+                            <!-- Crosshairs -->
+                            <line x1="20" y1="180" x2="340" y2="180" stroke="var(--gl)" stroke-width="0.8" />
+                            <line x1="180" y1="20" x2="180" y2="340" stroke="var(--gl)" stroke-width="0.8" />
+                            <!-- Diagonal guides -->
+                            <line x1="66" y1="66" x2="294" y2="294" stroke="var(--gl)" stroke-width="0.6" opacity="0.45" />
+                            <line x1="294" y1="66" x2="66" y2="294" stroke="var(--gl)" stroke-width="0.6" opacity="0.45" />
+
+                            <!-- Radar sweep -->
+                            <g style="transform-origin:180px 180px;animation:radar-sweep 6s linear infinite;">
+                                <path d="M180,180 L202,26 A160,160 0 0,0 180,20 Z" fill="#999" opacity="0.07" />
+                                <line x1="180" y1="180" x2="180" y2="20" stroke="#999" stroke-width="1.5" opacity="0.5" />
                             </g>
-                            <circle cx="198" cy="106" r="4" fill="#666">
-                                <animate attributeName="opacity" values="0.9;0.1;0.9" dur="2.4s"
-                                    repeatCount="indefinite" />
+
+                            <!-- Blip dots -->
+                            <circle cx="222" cy="118" r="4" fill="#555">
+                                <animate attributeName="opacity" values="0.9;0.1;0.9" dur="2.4s" repeatCount="indefinite" />
                                 <animate attributeName="r" values="4;7;4" dur="2.4s" repeatCount="indefinite" />
                             </circle>
-                            <circle cx="120" cy="215" r="3.5" fill="#666" opacity="0.4">
-                                <animate attributeName="opacity" values="0.4;0.06;0.4" dur="3.9s"
-                                    repeatCount="indefinite" />
+                            <circle cx="135" cy="238" r="3.5" fill="#777" opacity="0.4">
+                                <animate attributeName="opacity" values="0.4;0.06;0.4" dur="3.9s" repeatCount="indefinite" />
                             </circle>
-                            <circle cx="225" cy="195" r="3" fill="var(--black)" opacity="0.18">
-                                <animate attributeName="opacity" values="0.18;0.03;0.18" dur="5.5s"
-                                    repeatCount="indefinite" />
+                            <circle cx="248" cy="215" r="3" fill="var(--black)" opacity="0.18">
+                                <animate attributeName="opacity" values="0.18;0.03;0.18" dur="5.5s" repeatCount="indefinite" />
                             </circle>
-                            <circle cx="108" cy="140" r="3" fill="#666" opacity="0.35">
-                                <animate attributeName="opacity" values="0.35;0.06;0.35" dur="4.6s"
-                                    repeatCount="indefinite" />
+                            <circle cx="120" cy="155" r="3" fill="#666" opacity="0.35">
+                                <animate attributeName="opacity" values="0.35;0.06;0.35" dur="4.6s" repeatCount="indefinite" />
                             </circle>
-                            <circle cx="160" cy="160" r="5" fill="#666" />
-                            <circle cx="160" cy="160" r="2" fill="white" />
+
+                            <!-- Center dot -->
+                            <circle cx="180" cy="180" r="5" fill="#555" />
+                            <circle cx="180" cy="180" r="2" fill="white" />
+
+                            <!-- ── Cardinal label chips ── -->
+                            <!-- NORTH: "Start" (top) -->
+                            <rect x="148" y="4" width="64" height="22" rx="11" fill="var(--black)" />
+                            <text x="180" y="19" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="9" font-weight="700" fill="white" letter-spacing="1.5">START</text>
+
+                            <!-- EAST: "Growth" (right) -->
+                            <rect x="296" y="169" width="60" height="22" rx="11" fill="var(--black)" />
+                            <text x="326" y="184" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="9" font-weight="700" fill="white" letter-spacing="1.5">GROWTH</text>
+
+                            <!-- SOUTH: "Acceleration" (bottom) -->
+                            <rect x="115" y="334" width="90" height="22" rx="11" fill="var(--black)" />
+                            <text x="160" y="349" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="8.5" font-weight="700" fill="white" letter-spacing="1.2">ACCELERATION</text>
+
+                            <!-- WEST: "Organization" (left) -->
+                            <rect x="0" y="169" width="84" height="22" rx="11" fill="var(--black)" />
+                            <text x="42" y="184" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="8" font-weight="700" fill="white" letter-spacing="1">ORGANIZATION</text>
+
+                            <!-- Tick marks at cardinal points -->
+                            <line x1="180" y1="20" x2="180" y2="30" stroke="var(--black)" stroke-width="2" stroke-linecap="round" />
+                            <line x1="180" y1="330" x2="180" y2="340" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="340" y1="180" x2="330" y2="180" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round" />
+                            <line x1="20" y1="180" x2="30" y2="180" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
-                        <div
-                            style="position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:5px;">
-                            <div class="blink" style="width:5px;height:5px;border-radius:50%;background:var(--gray);">
-                            </div>
-                            <span
-                                style="font-family:var(--mono);font-size:0.55rem;color:var(--gray);letter-spacing:0.15em;">RADAR
-                                — LIVE</span>
+                        <div style="position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:5px;">
+                            <div class="blink" style="width:5px;height:5px;border-radius:50%;background:var(--gray);flex-shrink:0;"></div>
+                            <span style="font-family:var(--mono);font-size:0.55rem;color:var(--gray);letter-spacing:0.15em;white-space:nowrap;">RADAR — LIVE</span>
                         </div>
                     </div>
                 </div>
@@ -1964,51 +1625,33 @@
                 <!-- Stats -->
                 <div class="reveal d2">
                     <div class="stag" style="display:inline-flex;margin-bottom:12px;">Telemetry Readout</div>
-                    <h2
-                        style="font-size:clamp(1.9rem,3vw,2.9rem);font-weight:800;line-height:1.12;margin-bottom:36px;letter-spacing:-0.02em;">
+                    <h2 style="font-size:clamp(1.9rem,3vw,2.9rem);font-weight:800;line-height:1.12;margin-bottom:36px;letter-spacing:-0.02em;">
                         Mission <span class="hl">Metrics</span>
                     </h2>
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="stats-inner">
                         <div class="sbox">
-                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c1">120+
-                            </div>
-                            <div
-                                style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">
-                                PROJECTS DELIVERED</div>
+                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c1">120+</div>
+                            <div style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">PROJECTS DELIVERED</div>
                         </div>
                         <div class="sbox">
-                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c2">50+
-                            </div>
-                            <div
-                                style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">
-                                CLIENTS</div>
+                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c2">50+</div>
+                            <div style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">CLIENTS</div>
                         </div>
                         <div class="sbox">
-                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c3">20+
-                            </div>
-                            <div
-                                style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">
-                                YEARS EXPERIENCE SMEs</div>
+                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c3">20+</div>
+                            <div style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">YEARS EXPERIENCE SMEs</div>
                         </div>
                         <div class="sbox">
-                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c4">98%
-                            </div>
-                            <div
-                                style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">
-                                CLIENT SATISFACTION</div>
+                            <div style="font-size:2.4rem;font-weight:800;color:var(--black);line-height:1;" id="c4">98%</div>
+                            <div style="font-family:var(--mono);font-size:0.58rem;color:var(--gray);letter-spacing:0.1em;margin-top:6px;">CLIENT SATISFACTION</div>
                         </div>
                     </div>
-                    <div
-                        style="margin-top:18px;border:1.5px solid var(--gl);border-radius:14px;padding:14px 16px;background:var(--bg);overflow:hidden;height:88px;position:relative;">
+                    <div style="margin-top:18px;border:1.5px solid var(--gl);border-radius:14px;padding:14px 16px;background:var(--bg);overflow:hidden;height:88px;position:relative;">
                         <div style="display:flex;align-items:center;gap:5px;margin-bottom:7px;">
-                            <div class="blink" style="width:5px;height:5px;border-radius:50%;background:var(--gray);">
-                            </div>
-                            <span
-                                style="font-family:var(--mono);font-size:0.54rem;color:var(--gray);letter-spacing:0.14em;">SYSTEM
-                                FEED</span>
+                            <div class="blink" style="width:5px;height:5px;border-radius:50%;background:var(--gray);"></div>
+                            <span style="font-family:var(--mono);font-size:0.54rem;color:var(--gray);letter-spacing:0.14em;">SYSTEM FEED</span>
                         </div>
-                        <div class="feed-scroll"
-                            style="font-family:var(--mono);font-size:0.6rem;color:var(--black);line-height:2.2;">
+                        <div class="feed-scroll" style="font-family:var(--mono);font-size:0.6rem;color:var(--black);line-height:2.2;">
                             <div>[ CONSULTING ] ........ ACTIVE — 12 engagements</div>
                             <div>[ ENGINEERING ] ....... ACTIVE — 8 sprints live</div>
                             <div>[ ADVISORY ] .......... ACTIVE — 5 clients onboard</div>
@@ -2031,9 +1674,7 @@
                 <span class="stag">WHO WE ARE</span>
                 <h2>Your Vision. is Our <span class="hl">Mission.</span></h2>
                 <p style="color:var(--gray);font-size:.95rem;max-width:620px;margin:14px auto 0;line-height:1.85;">
-                    Acantix turns ideas into high-impact digital solutions through thoughtful design, precise
-                    engineering, and seamless execution. We shape your vision into a scalable, future-ready solution,
-                    guiding every phase with clarity, strategy, and innovation you can trust.</p>
+                    Acantix turns ideas into high-impact digital solutions through thoughtful design, precise engineering, and seamless execution. We shape your vision into a scalable, future-ready solution, guiding every phase with clarity, strategy, and innovation you can trust.</p>
             </div>
             <div class="about-grid">
                 <div class="r left">
@@ -2043,10 +1684,7 @@
                     <div class="chat">
                         <div style="margin-bottom:8px;">
                             <div class="chat-who c-ops">
-                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                        <circle cx="7" cy="5" r="2.5" stroke="var(--black)" stroke-width="1.2" />
-                                        <path d="M2,13 C2,10 12,10 12,13" stroke="var(--black)" stroke-width="1.2" />
-                                    </svg></div>
+                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="5" r="2.5" stroke="var(--black)" stroke-width="1.2" /><path d="M2,13 C2,10 12,10 12,13" stroke="var(--black)" stroke-width="1.2" /></svg></div>
                                 Solutions Architect
                             </div>
                             <div class="bubble-a">
@@ -2056,53 +1694,39 @@
                         <div class="chat-line"></div>
                         <div style="margin-bottom:8px;">
                             <div class="chat-who c-client">Client
-                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                        <path d="M3,3 L11,3 L11,11 L3,11 Z" stroke="var(--gray)" stroke-width="1.2" />
-                                    </svg></div>
+                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3,3 L11,3 L11,11 L3,11 Z" stroke="var(--gray)" stroke-width="1.2" /></svg></div>
                             </div>
                             <div class="bubble-b">
-                                <p class="bt">We need a trusted partner for scalable <span class="fade">innovation and
-                                        secure systems.</span></p>
+                                <p class="bt">We need a trusted partner for scalable <span class="fade">innovation and secure systems.</span></p>
                             </div>
                         </div>
                         <div class="chat-line chat-line-r"></div>
                         <div style="margin-bottom:8px;">
                             <div class="chat-who c-ops">
-                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                        <circle cx="7" cy="5" r="2.5" stroke="var(--black)" stroke-width="1.2" />
-                                        <path d="M2,13 C2,10 12,10 12,13" stroke="var(--black)" stroke-width="1.2" />
-                                    </svg></div>
+                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="5" r="2.5" stroke="var(--black)" stroke-width="1.2" /><path d="M2,13 C2,10 12,10 12,13" stroke="var(--black)" stroke-width="1.2" /></svg></div>
                                 Solutions Architect:
                             </div>
                             <div class="bubble-a">
-                                <p class="bt">Your require<span class="fade">ments are clear. Our experts will craft a
-                                        technology strategy aligned to your business goals</span></p>
+                                <p class="bt">Your require<span class="fade">ments are clear. Our experts will craft a technology strategy aligned to your business goals</span></p>
                             </div>
                         </div>
                         <div class="chat-line"></div>
                         <div style="margin-bottom:8px;">
                             <div class="chat-who c-client">Client
-                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                        <path d="M3,3 L11,3 L11,11 L3,11 Z" stroke="var(--gray)" stroke-width="1.2" />
-                                    </svg></div>
+                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3,3 L11,3 L11,11 L3,11 Z" stroke="var(--gray)" stroke-width="1.2" /></svg></div>
                             </div>
                             <div class="bubble-b">
-                                <p class="bt">Speed, reliability, and <span class="fade">measurable results are our
-                                        priorities.</span></p>
+                                <p class="bt">Speed, reliability, and <span class="fade">measurable results are our priorities.</span></p>
                             </div>
                         </div>
                         <div class="chat-line chat-line-r"></div>
                         <div>
                             <div class="chat-who c-ops">
-                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                        <circle cx="7" cy="5" r="2.5" stroke="var(--black)" stroke-width="1.2" />
-                                        <path d="M2,13 C2,10 12,10 12,13" stroke="var(--black)" stroke-width="1.2" />
-                                    </svg></div>
+                                <div class="c-ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="5" r="2.5" stroke="var(--black)" stroke-width="1.2" /><path d="M2,13 C2,10 12,10 12,13" stroke="var(--black)" stroke-width="1.2" /></svg></div>
                                 Solutions Architect
                             </div>
                             <div class="bubble-a" style="border-color:#ccc;">
-                                <p class="bt">Deployment is ready. Let's unlock the next stage of your <strong>digital
-                                        transformation.</strong></p>
+                                <p class="bt">Deployment is ready. Let's unlock the next stage of your <strong>digital transformation.</strong></p>
                             </div>
                         </div>
                     </div>
@@ -2122,61 +1746,49 @@
             </div>
             <div class="r d1" style="text-align:center;margin-bottom:68px;">
                 <p style="color:var(--gray);font-size:1rem;line-height:1.88;max-width:620px;margin:0 auto;">
-                    At the core of our approach is the <strong style="color:var(--black);">Acantix Compass Operating
-                        Model</strong>, built around four integrated capabilities that work in concert to take you from
-                    vision to value.
+                    At the core of our approach is the <strong style="color:var(--black);">Acantix Compass Operating Model</strong>, built around four integrated capabilities that work in concert to take you from vision to value.
                 </p>
             </div>
 
             <div class="flight-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;">
                 <!-- Connecting line — hidden on mobile by CSS class -->
-                <div class="flight-line"
-                    style="position:absolute;top:26px;left:12.5%;right:12.5%;height:1.5px;background:linear-gradient(90deg,var(--gl),var(--black),var(--gl));z-index:0;">
-                </div>
+                <div class="flight-line" style="position:absolute;top:26px;left:12.5%;right:12.5%;height:1.5px;background:linear-gradient(90deg,var(--gl),var(--black),var(--gl));z-index:0;"></div>
 
                 <div class="step-card r">
                     <div class="step-num" style="position:relative;">01
-                        <span
-                            style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;">
+                        <span style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;">
                             <span style="font-family:var(--mono);font-size:0.44rem;color:white;">N</span>
                         </span>
                     </div>
                     <h3 style="font-weight:700;font-size:1rem;margin-bottom:10px;color:var(--black);">Consulting</h3>
-                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Defining strategic direction and
-                        transformation roadmaps for your organisation.</p>
+                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Defining strategic direction and transformation roadmaps for your organisation.</p>
                 </div>
                 <div class="step-card r d2">
                     <div class="step-num" style="position:relative;">02
-                        <span
-                            style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;">
+                        <span style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;">
                             <span style="font-family:var(--mono);font-size:0.44rem;color:var(--gray);">E</span>
                         </span>
                     </div>
                     <h3 style="font-weight:700;font-size:1rem;margin-bottom:10px;color:var(--black);">Advisory</h3>
-                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Providing expert guidance for
-                        critical business and technology decisions.</p>
+                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Providing expert guidance for critical business and technology decisions.</p>
                 </div>
                 <div class="step-card r d3">
                     <div class="step-num" style="border-color:var(--gray);color:var(--gray);position:relative;">03
-                        <span
-                            style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:1px solid var(--gl);display:flex;align-items:center;justify-content:center;">
+                        <span style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:1px solid var(--gl);display:flex;align-items:center;justify-content:center;">
                             <span style="font-family:var(--mono);font-size:0.44rem;color:var(--gray);">S</span>
                         </span>
                     </div>
                     <h3 style="font-weight:700;font-size:1rem;margin-bottom:10px;color:var(--black);">Solutioning</h3>
-                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Designing scalable architectures
-                        and platform strategies that are built to last.</p>
+                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Designing scalable architectures and platform strategies that are built to last.</p>
                 </div>
                 <div class="step-card r d4">
                     <div class="step-num" style="border-color:var(--gray);color:var(--gray);position:relative;">04
-                        <span
-                            style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:1px solid var(--gl);display:flex;align-items:center;justify-content:center;">
+                        <span style="position:absolute;top:-8px;right:-8px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:1px solid var(--gl);display:flex;align-items:center;justify-content:center;">
                             <span style="font-family:var(--mono);font-size:0.44rem;color:var(--gray);">W</span>
                         </span>
                     </div>
                     <h3 style="font-weight:700;font-size:1rem;margin-bottom:10px;color:var(--black);">Engineering</h3>
-                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Building, deploying, and operating
-                        robust digital systems with precision.</p>
+                    <p style="color:var(--gray);font-size:0.88rem;line-height:1.78;">Building, deploying, and operating robust digital systems with precision.</p>
                 </div>
             </div>
 
@@ -2197,9 +1809,7 @@
                         </svg>
                     </div>
                     <p style="font-size:0.95rem;color:var(--black);line-height:1.75;max-width:600px;">
-                        <strong style="font-weight:700;">These four capabilities don't operate in silos</strong> — they
-                        work together as an integrated model, ensuring every engagement benefits from strategy,
-                        guidance, design, and delivery in concert.
+                        <strong style="font-weight:700;">These four capabilities don't operate in silos</strong> — they work together as an integrated model, ensuring every engagement benefits from strategy, guidance, design, and delivery in concert.
                     </p>
                 </div>
                 <a href="#contact" class="btn-p" style="flex-shrink:0;white-space:nowrap;">Start Your Engagement →</a>
@@ -2213,8 +1823,7 @@
             <div style="text-align:center;margin-bottom:60px;" class="r">
                 <span class="stag">WHAT WE DO</span>
                 <h2>From Vision to <span class="hl">Value.</span></h2>
-                <p style="color:var(--gray);font-size:.97rem;max-width:420px;margin:12px auto 0;line-height:1.8;">
-                    End-to-end digital services — four Missions to impact.</p>
+                <p style="color:var(--gray);font-size:.97rem;max-width:420px;margin:12px auto 0;line-height:1.8;">End-to-end digital services — four Missions to impact.</p>
             </div>
 
             <div class="bp-grid">
@@ -2223,11 +1832,9 @@
                     <div class="bp-header">
                         <div class="bp-icon-wrap">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12,3 L12,8 M12,3 L9,6 M12,3 L15,6" stroke="white" stroke-width="1.4"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12,3 L12,8 M12,3 L9,6 M12,3 L15,6" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
                                 <circle cx="12" cy="14" r="5" stroke="white" stroke-width="1.4" />
-                                <path d="M12,13 L12,14.5 L13.5,14.5" stroke="white" stroke-width="1.3"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12,13 L12,14.5 L13.5,14.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
                         <div>
@@ -2235,23 +1842,15 @@
                             <div style="color:#fff;font-weight:700;font-size:1.05rem;">Strategic Consulting</div>
                         </div>
                         <div style="margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
-                            <div class="blink" style="width:6px;height:6px;border-radius:50%;background:var(--gray);">
-                            </div>
-                            <span
-                                style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
+                            <div class="blink" style="width:6px;height:6px;border-radius:50%;background:var(--gray);"></div>
+                            <span style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
                         </div>
                     </div>
                     <div class="bp-body">
-                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Technology
-                            strategy, digital transformation roadmaps, CTO advisory, and organisational readiness
-                            assessments. We help leadership teams make the right technology decisions with confidence.
-                        </p>
+                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Technology strategy, digital transformation roadmaps, CTO advisory, and organisational readiness assessments. We help leadership teams make the right technology decisions with confidence.</p>
                         <div class="bp-perf">
-                            <span
-                                style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">IMPACT</span>
-                            <div class="bp-bar">
-                                <div class="bp-bar-fill" data-width="92" style="width:0%"></div>
-                            </div>
+                            <span style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">IMPACT</span>
+                            <div class="bp-bar"><div class="bp-bar-fill" data-width="92" style="width:0%"></div></div>
                             <span class="bp-perc">92%</span>
                         </div>
                         <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;">
@@ -2259,11 +1858,7 @@
                             <span class="stag" style="font-size:0.6rem;">CTO ADVISORY</span>
                             <span class="stag" style="font-size:0.6rem;">DIGITAL ROADMAP</span>
                         </div>
-                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13"
-                                fill="none">
-                                <path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor"
-                                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></a>
+                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
                     </div>
                 </div>
 
@@ -2272,35 +1867,24 @@
                     <div class="bp-header">
                         <div class="bp-icon-wrap">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M3,19 L6,14 L9.5,16 L14,9 L19,12.5 L22,7" stroke="white" stroke-width="1.5"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                                <circle cx="14" cy="9" r="2.5" fill="rgba(255,255,255,0.15)" stroke="white"
-                                    stroke-width="1.2" />
+                                <path d="M3,19 L6,14 L9.5,16 L14,9 L19,12.5 L22,7" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="14" cy="9" r="2.5" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="1.2" />
                             </svg>
                         </div>
                         <div>
                             <div class="bp-tag">ADVISORY</div>
-                            <div style="color:#fff;font-weight:700;font-size:1.05rem;">Business &amp; Tech Advisory
-                            </div>
+                            <div style="color:#fff;font-weight:700;font-size:1.05rem;">Business &amp; Tech Advisory</div>
                         </div>
                         <div style="margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
-                            <div class="blink"
-                                style="width:6px;height:6px;border-radius:50%;background:var(--gray);animation-delay:0.5s;">
-                            </div>
-                            <span
-                                style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
+                            <div class="blink" style="width:6px;height:6px;border-radius:50%;background:var(--gray);animation-delay:0.5s;"></div>
+                            <span style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
                         </div>
                     </div>
                     <div class="bp-body">
-                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Independent
-                            advisory services for enterprises evaluating technology investments, vendor selection,
-                            architecture reviews and risk assessment. We give you a clear, unbiased north star.</p>
+                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Independent advisory services for enterprises evaluating technology investments, vendor selection, architecture reviews and risk assessment. We give you a clear, unbiased north star.</p>
                         <div class="bp-perf">
-                            <span
-                                style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">CLARITY</span>
-                            <div class="bp-bar">
-                                <div class="bp-bar-fill" data-width="88" style="width:0%"></div>
-                            </div>
+                            <span style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">CLARITY</span>
+                            <div class="bp-bar"><div class="bp-bar-fill" data-width="88" style="width:0%"></div></div>
                             <span class="bp-perc">88%</span>
                         </div>
                         <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;">
@@ -2308,11 +1892,7 @@
                             <span class="stag" style="font-size:0.6rem;">ARCH AUDIT</span>
                             <span class="stag" style="font-size:0.6rem;">RISK ANALYSIS</span>
                         </div>
-                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13"
-                                fill="none">
-                                <path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor"
-                                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></a>
+                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
                     </div>
                 </div>
 
@@ -2322,9 +1902,7 @@
                         <div class="bp-icon-wrap">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.4" />
-                                <path
-                                    d="M12,2 L12,5 M12,19 L12,22 M2,12 L5,12 M19,12 L22,12 M5.6,5.6 L7.8,7.8 M16.2,16.2 L18.4,18.4 M18.4,5.6 L16.2,7.8 M7.8,16.2 L5.6,18.4"
-                                    stroke="white" stroke-width="1.3" stroke-linecap="round" />
+                                <path d="M12,2 L12,5 M12,19 L12,22 M2,12 L5,12 M19,12 L22,12 M5.6,5.6 L7.8,7.8 M16.2,16.2 L18.4,18.4 M18.4,5.6 L16.2,7.8 M7.8,16.2 L5.6,18.4" stroke="white" stroke-width="1.3" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div>
@@ -2332,23 +1910,15 @@
                             <div style="color:#fff;font-weight:700;font-size:1.05rem;">Software Engineering</div>
                         </div>
                         <div style="margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
-                            <div class="blink"
-                                style="width:6px;height:6px;border-radius:50%;background:var(--gray);animation-delay:1s;">
-                            </div>
-                            <span
-                                style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
+                            <div class="blink" style="width:6px;height:6px;border-radius:50%;background:var(--gray);animation-delay:1s;"></div>
+                            <span style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
                         </div>
                     </div>
                     <div class="bp-body">
-                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Full-cycle
-                            software engineering — from product design and backend architecture to cloud infrastructure
-                            and delivery. We build robust, scalable platforms that enterprises depend on.</p>
+                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Full-cycle software engineering — from product design and backend architecture to cloud infrastructure and delivery. We build robust, scalable platforms that enterprises depend on.</p>
                         <div class="bp-perf">
-                            <span
-                                style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">VELOCITY</span>
-                            <div class="bp-bar">
-                                <div class="bp-bar-fill" data-width="95" style="width:0%"></div>
-                            </div>
+                            <span style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">VELOCITY</span>
+                            <div class="bp-bar"><div class="bp-bar-fill" data-width="95" style="width:0%"></div></div>
                             <span class="bp-perc">95%</span>
                         </div>
                         <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;">
@@ -2356,11 +1926,7 @@
                             <span class="stag" style="font-size:0.6rem;">CLOUD &amp; INFRA</span>
                             <span class="stag" style="font-size:0.6rem;">PLATFORM BUILD</span>
                         </div>
-                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13"
-                                fill="none">
-                                <path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor"
-                                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></a>
+                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
                     </div>
                 </div>
 
@@ -2370,14 +1936,10 @@
                         <div class="bp-icon-wrap">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <rect x="3" y="7" width="18" height="13" rx="1.5" stroke="white" stroke-width="1.4" />
-                                <line x1="8" y1="7" x2="8" y2="4" stroke="white" stroke-width="1.4"
-                                    stroke-linecap="round" />
-                                <line x1="16" y1="7" x2="16" y2="4" stroke="white" stroke-width="1.4"
-                                    stroke-linecap="round" />
-                                <line x1="8" y1="13" x2="16" y2="13" stroke="white" stroke-width="1.2"
-                                    stroke-linecap="round" />
-                                <line x1="8" y1="16.5" x2="12" y2="16.5" stroke="white" stroke-width="1.2"
-                                    stroke-linecap="round" />
+                                <line x1="8" y1="7" x2="8" y2="4" stroke="white" stroke-width="1.4" stroke-linecap="round" />
+                                <line x1="16" y1="7" x2="16" y2="4" stroke="white" stroke-width="1.4" stroke-linecap="round" />
+                                <line x1="8" y1="13" x2="16" y2="13" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                                <line x1="8" y1="16.5" x2="12" y2="16.5" stroke="white" stroke-width="1.2" stroke-linecap="round" />
                             </svg>
                         </div>
                         <div>
@@ -2385,23 +1947,15 @@
                             <div style="color:#fff;font-weight:700;font-size:1.05rem;">End-to-End Solutioning</div>
                         </div>
                         <div style="margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
-                            <div class="blink"
-                                style="width:6px;height:6px;border-radius:50%;background:var(--gray);animation-delay:1.5s;">
-                            </div>
-                            <span
-                                style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
+                            <div class="blink" style="width:6px;height:6px;border-radius:50%;background:var(--gray);animation-delay:1.5s;"></div>
+                            <span style="font-family:var(--mono);font-size:0.5rem;color:rgba(255,255,255,0.35);">ACTIVE</span>
                         </div>
                     </div>
                     <div class="bp-body">
-                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Bespoke
-                            solutions that combine consulting intelligence with engineering execution. From problem
-                            definition to live deployment — we own the entire solution lifecycle for our clients.</p>
+                        <p style="color:var(--gray);font-size:0.92rem;line-height:1.82;margin-bottom:14px;">Bespoke solutions that combine consulting intelligence with engineering execution. From problem definition to live deployment — we own the entire solution lifecycle for our clients.</p>
                         <div class="bp-perf">
-                            <span
-                                style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">COVERAGE</span>
-                            <div class="bp-bar">
-                                <div class="bp-bar-fill" data-width="98" style="width:0%"></div>
-                            </div>
+                            <span style="font-family:var(--mono);font-size:0.6rem;color:var(--gray);min-width:80px;">COVERAGE</span>
+                            <div class="bp-bar"><div class="bp-bar-fill" data-width="98" style="width:0%"></div></div>
                             <span class="bp-perc">98%</span>
                         </div>
                         <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;">
@@ -2409,11 +1963,7 @@
                             <span class="stag" style="font-size:0.6rem;">DELIVERY</span>
                             <span class="stag" style="font-size:0.6rem;">LIFECYCLE MGMT</span>
                         </div>
-                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13"
-                                fill="none">
-                                <path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor"
-                                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></a>
+                        <a href="#contact" class="bp-action">Learn More <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5,6.5 L10.5,6.5 M7.5,3.5 L10.5,6.5 L7.5,9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
                     </div>
                 </div>
             </div>
@@ -2433,10 +1983,8 @@
             <div class="engage-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:60px;">
                 <!-- Fishbowl Model -->
                 <div class="reveal card engage-card" style="border-radius:100px 40px 40px 100px;">
-                    <div class="engage-icon-wrap"
-                        style="width:180px;height:180px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 15px rgba(0,0,0,0.03);flex-shrink:0;margin-right:40px;">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" class="float" stroke="var(--black)"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <div class="engage-icon-wrap" style="width:180px;height:180px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 15px rgba(0,0,0,0.03);flex-shrink:0;margin-right:40px;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" class="float" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M7 4h10" />
                             <path d="M5.5 8c-1 3.5 1 9 6.5 9s7.5-5.5 6.5-9" />
                             <path d="M4 10h16" />
@@ -2445,67 +1993,40 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 style="font-size:1.4rem;font-weight:800;color:var(--black);margin-bottom:16px;">Fishbowl
-                            Model</h3>
-                        <p style="color:var(--gray);line-height:1.7;">Acantix team operates as a dedicated delivery unit
-                            working within a clearly defined project environment. The client maintains full visibility
-                            into progress, workflows, and team activities, ensuring transparency and alignment
-                            throughout the engagement.</p>
+                        <h3 style="font-size:1.4rem;font-weight:800;color:var(--black);margin-bottom:16px;">Fishbowl Model</h3>
+                        <p style="color:var(--gray);line-height:1.7;">Acantix team operates as a dedicated delivery unit working within a clearly defined project environment. The client maintains full visibility into progress, workflows, and team activities, ensuring transparency and alignment throughout the engagement.</p>
                     </div>
                 </div>
 
                 <!-- Swim Together Model -->
                 <div class="reveal card d2 engage-card" style="border-radius:40px 100px 100px 40px;">
-                    <div class="engage-icon-wrap"
-                        style="width:180px;height:180px;border-radius:50%;background:#fff;border:1px solid #ccc;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 15px rgba(0,0,0,0.05);flex-shrink:0;order:2;margin-left:40px;">
+                    <div class="engage-icon-wrap" style="width:180px;height:180px;border-radius:50%;background:#fff;border:1px solid #ccc;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 15px rgba(0,0,0,0.05);flex-shrink:0;order:2;margin-left:40px;">
                         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" class="float2">
-                            <path
-                                d="M4 14C4.00035 14.072 4.01509 14.1368 4.04153 14.1873C4.16709 14.4267 4.54271 14.5 5 14.5C5.45729 14.5 5.83291 14.4267 5.95847 14.1873C5.98491 14.1368 6.00035 14.072 6 14C5.99971 13.9101 6.02102 13.8407 6.05834 13.7844C6.1824 13.5972 6.54467 13.5 7 13.5C7.45533 13.5 7.8176 13.5972 7.94166 13.7844C7.97898 13.8407 8.00029 13.9101 8 14C7.99965 14.072 8.01439 14.1368 8.04083 14.1873C8.1664 14.4267 8.54202 14.5 9 14.5C9.45798 14.5 9.8336 14.4267 9.95917 14.1873C9.98561 14.1368 10.0004 14.072 10 14C9.99971 13.9101 10.021 13.8407 10.0583 13.7844C10.1824 13.5972 10.5447 13.5 11 13.5C11.4553 13.5 11.8176 13.5972 11.9417 13.7844C11.979 13.8407 12.0003 13.9101 12 14"
-                                stroke="var(--black)" stroke-width="2" stroke-linecap="round" />
+                            <path d="M4 14C4.00035 14.072 4.01509 14.1368 4.04153 14.1873C4.16709 14.4267 4.54271 14.5 5 14.5C5.45729 14.5 5.83291 14.4267 5.95847 14.1873C5.98491 14.1368 6.00035 14.072 6 14C5.99971 13.9101 6.02102 13.8407 6.05834 13.7844C6.1824 13.5972 6.54467 13.5 7 13.5C7.45533 13.5 7.8176 13.5972 7.94166 13.7844C7.97898 13.8407 8.00029 13.9101 8 14C7.99965 14.072 8.01439 14.1368 8.04083 14.1873C8.1664 14.4267 8.54202 14.5 9 14.5C9.45798 14.5 9.8336 14.4267 9.95917 14.1873C9.98561 14.1368 10.0004 14.072 10 14C9.99971 13.9101 10.021 13.8407 10.0583 13.7844C10.1824 13.5972 10.5447 13.5 11 13.5C11.4553 13.5 11.8176 13.5972 11.9417 13.7844C11.979 13.8407 12.0003 13.9101 12 14" stroke="var(--black)" stroke-width="2" stroke-linecap="round" />
                             <circle cx="12" cy="8" r="3" stroke="var(--black)" stroke-width="2" />
                         </svg>
                     </div>
                     <div>
-                        <h3 style="font-size:1.4rem;font-weight:800;color:var(--black);margin-bottom:16px;">Swim
-                            Together Model</h3>
-                        <p style="color:var(--gray);line-height:1.7;">Acantix professionals integrate directly with the
-                            client's internal teams, forming a unified delivery structure. Both teams work side-by-side
-                            toward shared goals, combining Acantix expertise with the client's domain knowledge to
-                            accelerate delivery and innovation.</p>
+                        <h3 style="font-size:1.4rem;font-weight:800;color:var(--black);margin-bottom:16px;">Swim Together Model</h3>
+                        <p style="color:var(--gray);line-height:1.7;">Acantix professionals integrate directly with the client's internal teams, forming a unified delivery structure. Both teams work side-by-side toward shared goals, combining Acantix expertise with the client's domain knowledge to accelerate delivery and innovation.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Delivery Models -->
             <div class="reveal d3" style="max-width:900px;margin:0 auto;text-align:center;">
-                <div
-                    style="background:var(--black);color:#fff;padding:12px;font-weight:700;letter-spacing:0.05em;border-radius:8px 8px 0 0;">
-                    Delivery Models</div>
-                <div class="delivery-flex"
-                    style="display:flex;justify-content:space-between;background:var(--bg);border:1px solid var(--gl);border-top:none;padding:24px;border-radius:0 0 8px 8px;gap:20px;">
-                    <div
-                        style="flex:1;background:#fff;border:1px dashed #ccc;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--black);font-weight:600;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" />
-                            <circle cx="12" cy="12" r="3" fill="currentColor" />
-                        </svg>
+                <div style="background:var(--black);color:#fff;padding:12px;font-weight:700;letter-spacing:0.05em;border-radius:8px 8px 0 0;">Delivery Models</div>
+                <div class="delivery-flex" style="display:flex;justify-content:space-between;background:var(--bg);border:1px solid var(--gl);border-top:none;padding:24px;border-radius:0 0 8px 8px;gap:20px;">
+                    <div style="flex:1;background:#fff;border:1px dashed #ccc;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--black);font-weight:600;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="12" r="3" fill="currentColor" /></svg>
                         Acantix Teams
                     </div>
-                    <div
-                        style="flex:1;background:#fff;border:1px dashed #ccc;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--black);font-weight:600;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
-                                stroke-linejoin="round" stroke-linecap="round" />
-                        </svg>
+                    <div style="flex:1;background:#fff;border:1px dashed #ccc;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--black);font-weight:600;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" /></svg>
                         Regional Partners
                     </div>
-                    <div
-                        style="flex:1;background:#fff;border:1px dashed #ccc;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--black);font-weight:600;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-                            <path d="M12 2v20" stroke="currentColor" stroke-width="2" />
-                            <path d="M2 12h20" stroke="currentColor" stroke-width="2" />
-                        </svg>
+                    <div style="flex:1;background:#fff;border:1px dashed #ccc;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--black);font-weight:600;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" /><path d="M12 2v20" stroke="currentColor" stroke-width="2" /><path d="M2 12h20" stroke="currentColor" stroke-width="2" /></svg>
                         Business Ecosystems
                     </div>
                 </div>
@@ -2519,8 +2040,7 @@
             <div style="text-align:center;margin-bottom:48px;" class="r">
                 <span class="stag">OPEN CHANNEL</span>
                 <h2>Start Your <span class="hl">Digital Journey</span></h2>
-                <p style="color:var(--gray);font-size:.97rem;margin-top:10px;">Fill out your details and we'll get you
-                    to your destination.</p>
+                <p style="color:var(--gray);font-size:.97rem;margin-top:10px;">Fill out your details and we'll get you to your destination.</p>
             </div>
             <div class="ticket r d1">
                 <div class="ticket-stub">
@@ -2537,43 +2057,26 @@
                         <div><label>COMPANY</label><input type="text" placeholder="Organisation" /></div>
                         <div><label>PHONE NUMBER</label><input type="tel" placeholder="+91 or international" /></div>
                     </div>
-                    <div class="f-full"><label>MESSAGE / PROJECT DETAILS</label><textarea rows="4"
-                            placeholder="Describe your challenge or goals..."></textarea></div>
+                    <div class="f-full"><label>MESSAGE / PROJECT DETAILS</label><textarea rows="4" placeholder="Describe your challenge or goals..."></textarea></div>
                     <button class="f-submit" onclick="submit(this)">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M2,8 L14,8 M11,5 L14,8 L11,11" stroke="white" stroke-width="1.8"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2,8 L14,8 M11,5 L14,8 L11,11" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
                         Submit
                     </button>
                 </div>
             </div>
-            <div class="contact-links"
-                style="display:flex;gap:32px;justify-content:center;margin-top:36px;flex-wrap:wrap;" class="r d2">
-                <a href="mailto:ai@acantix.com"
-                    style="display:flex;align-items:center;gap:7px;color:var(--gray);font-size:.87rem;text-decoration:none;transition:color .2s;"
-                    onmouseenter="this.style.color='var(--black)'" onmouseleave="this.style.color='var(--gray)'">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                        <rect x="1.5" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2" />
-                        <polyline points="1.5,3 7.5,8.5 13.5,3" stroke="currentColor" stroke-width="1.2" />
-                    </svg>
-                    ai@acantix.com
+            <div class="contact-links" style="display:flex;gap:32px;justify-content:center;margin-top:36px;flex-wrap:wrap;" class="r d2">
+                <a href="/cdn-cgi/l/email-protection#ea8b83aa8b898b849e8392c4898587" style="display:flex;align-items:center;gap:7px;color:var(--gray);font-size:.87rem;text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='var(--black)'" onmouseleave="this.style.color='var(--gray)'">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1.5" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2" /><polyline points="1.5,3 7.5,8.5 13.5,3" stroke="currentColor" stroke-width="1.2" /></svg>
+                    <span class="__cf_email__" data-cfemail="4f2e260f2e2c2e213b2637612c2022">[email&#160;protected]</span>
                 </a>
                 <span class="divider" style="color:var(--gl);">·</span>
                 <span style="display:flex;align-items:center;gap:7px;color:var(--gray);font-size:.87rem;">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                        <circle cx="7.5" cy="6" r="2.5" stroke="currentColor" stroke-width="1.2" />
-                        <path d="M2.5,14.5 C2.5,11 12.5,11 12.5,14.5" stroke="currentColor" stroke-width="1.2" />
-                    </svg>
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="6" r="2.5" stroke="currentColor" stroke-width="1.2" /><path d="M2.5,14.5 C2.5,11 12.5,11 12.5,14.5" stroke="currentColor" stroke-width="1.2" /></svg>
                     USA · India. Global Delivery
                 </span>
                 <span class="divider" style="color:var(--gl);">·</span>
                 <span style="display:flex;align-items:center;gap:7px;color:var(--gray);font-size:.87rem;">
-                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                        <circle cx="7.5" cy="7.5" r="6" stroke="currentColor" stroke-width="1.2" />
-                        <polyline points="7.5,4 7.5,7.5 10,10" stroke="currentColor" stroke-width="1.2"
-                            stroke-linecap="round" />
-                    </svg>
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6" stroke="currentColor" stroke-width="1.2" /><polyline points="7.5,4 7.5,7.5 10,10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" /></svg>
                     Response &lt; 24 Hours
                 </span>
             </div>
@@ -2584,25 +2087,13 @@
     <div class="runway">
         <div class="rwy-perspective"></div>
         <div class="rwy-dashes">
-            <div class="rwy-dash"></div>
-            <div class="rwy-dash"></div>
-            <div class="rwy-dash"></div>
-            <div class="rwy-dash"></div>
-            <div class="rwy-dash"></div>
+            <div class="rwy-dash"></div><div class="rwy-dash"></div><div class="rwy-dash"></div><div class="rwy-dash"></div><div class="rwy-dash"></div>
         </div>
         <div class="rwy-edge-l">
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
+            <div class="rwy-lt"></div><div class="rwy-lt"></div><div class="rwy-lt"></div><div class="rwy-lt"></div><div class="rwy-lt"></div>
         </div>
         <div class="rwy-edge-r">
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
-            <div class="rwy-lt"></div>
+            <div class="rwy-lt"></div><div class="rwy-lt"></div><div class="rwy-lt"></div><div class="rwy-lt"></div><div class="rwy-lt"></div>
         </div>
         <div class="rwy-tag">Vision meets Value</div>
     </div>
@@ -2613,11 +2104,9 @@
             <div class="f-brand">
                 <div style="display:flex;align-items:center;gap:10px;margin-bottom:2px;">
                     <img src="icon.svg" alt="Acantix" style="height:28px;width:28px;" />
-                    <span
-                        style="font-size:1.4rem;font-weight:800;color:var(--black);letter-spacing:-.02em;">Acantix</span>
+                    <span style="font-size:1.4rem;font-weight:800;color:var(--black);letter-spacing:-.02em;">Acantix</span>
                 </div>
-                <p>Better strategy, better engineering,<br />done right. Guiding enterprises<br />to their true north.
-                </p>
+                <p>Better strategy, better engineering,<br />done right. Guiding enterprises<br />to their true north.</p>
             </div>
             <div class="f-col">
                 <h4>COMPANY</h4>
@@ -2642,7 +2131,7 @@
                 <h4>OFFICE</h4>
                 <ul>
                     <li><a href="#">USA · India. Global Delivery</a></li>
-                    <li><a href="mailto:ai@acantix.com">ai@acantix.com</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#4d2c240d2c2e2c23392435632e2220"><span class="__cf_email__" data-cfemail="97f6fed7f6f4f6f9e3feefb9f4f8fa">[email&#160;protected]</span></a></li>
                 </ul>
             </div>
         </div>
@@ -2650,19 +2139,14 @@
         <div class="f-bottom">
             <div class="f-copy">© 2026 Acantix. All Rights Reserved.</div>
             <div class="f-status">
-                <div
-                    style="width:5px;height:5px;border-radius:50%;background:var(--green);animation:bl 2s ease-in-out infinite;">
-                </div>
+                <div style="width:5px;height:5px;border-radius:50%;background:var(--green);animation:bl 2s ease-in-out infinite;"></div>
                 All Systems Nominal
             </div>
         </div>
     </footer>
 
     <button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <polyline points="3,10 8,5 13,10" stroke="white" stroke-width="2.2" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polyline points="3,10 8,5 13,10" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
     </button>
 
     <div class="toast" id="toast">
@@ -2670,7 +2154,7 @@
         <span>Message Sent! Our team will contact you shortly.</span>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Nav scroll effect
         window.addEventListener('scroll', () => {
             document.getElementById('nav').classList.toggle('up', scrollY > 10);
@@ -2744,16 +2228,3 @@
         "description": "Acantix is a global consulting and engineering firm delivering strategic consulting, advisory, solutioning and software engineering services.",
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "ai@acantix.com",
-            "contactType": "customer support"
-        },
-        "areaServed": ["US","India","Global"]
-    }
-    </script>
-
-    <meta name="theme-color" content="#1a1a1a" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</body>
-
-</html>
