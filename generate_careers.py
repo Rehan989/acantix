@@ -44,7 +44,7 @@ careers_body = """
                 <h2 style="font-size:2.4rem;font-weight:800;color:var(--ink2);">It's not about the tools.<br/><span style="color:var(--sky);">It's about the people behind them.</span></h2>
                 <p style="color:var(--muted);margin-top:20px;">We don't run job ads, We don't chase resume</p>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+            <div class="careers-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
                 <div class="card">
                     <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:12px;color:var(--ink2);">Deep Work First</h3>
                     <p style="color:var(--muted);line-height:1.7;">We respect focus, async thinking, and flow. Our work patterns are designed for clarity and momentum—not noise.</p>
@@ -74,7 +74,7 @@ careers_body = """
                 <h2 style="font-size:2.4rem;font-weight:800;color:var(--ink2);">Open Positions</h2>
             </div>
             <div style="display:flex;flex-direction:column;gap:20px;">
-                <div class="bp-card" style="display:flex;align-items:center;padding:30px;justify-content:space-between;">
+                <div class="bp-card career-card" style="display:flex;align-items:center;padding:30px;justify-content:space-between;">
                     <div style="display:flex;align-items:center;gap:30px;">
                         <div class="step-num" style="margin:0;border-color:var(--sky);color:var(--sky);">01</div>
                         <div>
@@ -85,7 +85,7 @@ careers_body = """
                     <a href="mailto:join@acantix.com" class="btn btn-sky" style="white-space:nowrap;">Apply Now</a>
                 </div>
                 
-                <div class="bp-card" style="display:flex;align-items:center;padding:30px;justify-content:space-between;">
+                <div class="bp-card career-card" style="display:flex;align-items:center;padding:30px;justify-content:space-between;">
                     <div style="display:flex;align-items:center;gap:30px;">
                         <div class="step-num" style="margin:0;border-color:var(--sky);color:var(--sky);">02</div>
                         <div>
@@ -96,7 +96,7 @@ careers_body = """
                     <a href="mailto:join@acantix.com" class="btn btn-sky" style="white-space:nowrap;">Apply Now</a>
                 </div>
 
-                <div class="bp-card" style="display:flex;align-items:center;padding:30px;justify-content:space-between;">
+                <div class="bp-card career-card" style="display:flex;align-items:center;padding:30px;justify-content:space-between;">
                     <div style="display:flex;align-items:center;gap:30px;">
                         <div class="step-num" style="margin:0;border-color:var(--sky);color:var(--sky);">03</div>
                         <div>

@@ -64,11 +64,11 @@ case_studies_body = """
                 </div>
             </div>
             
-            <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(380px, 1fr));gap:30px;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:30px;">
                 
                 <!-- Healthcare -->
                 <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:linear-gradient(135deg, #0ea5e9, #0284c7);display:flex;align-items:center;justify-content:center;color:#fff;">
+                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="white" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
                     </div>
                     <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
@@ -90,7 +90,7 @@ case_studies_body = """
 
                 <!-- Retail -->
                 <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:linear-gradient(135deg, #8b5cf6, #6d28d9);display:flex;align-items:center;justify-content:center;color:#fff;">
+                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="white" stroke-width="2"/><path d="M12 22V12" stroke="white" stroke-width="2"/><path d="M3.27 6.96L12 12l8.73-5.04" stroke="white" stroke-width="2"/></svg>
                     </div>
                     <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
@@ -112,7 +112,7 @@ case_studies_body = """
 
                 <!-- Manufacturing -->
                 <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:linear-gradient(135deg, #10b981, #047857);display:flex;align-items:center;justify-content:center;color:#fff;">
+                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
                     </div>
                     <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
@@ -134,7 +134,7 @@ case_studies_body = """
 
                 <!-- Financial Services -->
                 <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:linear-gradient(135deg, #f59e0b, #b45309);display:flex;align-items:center;justify-content:center;color:#fff;">
+                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
                     </div>
                     <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
@@ -156,7 +156,7 @@ case_studies_body = """
 
                 <!-- Education -->
                 <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:linear-gradient(135deg, #ec4899, #be185d);display:flex;align-items:center;justify-content:center;color:#fff;">
+                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
                         <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14v7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
