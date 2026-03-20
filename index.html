@@ -99,16 +99,6 @@
             }
         }
 
-        @keyframes labelPop {
-            from {
-                opacity: 0
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
         @keyframes feedScroll {
             0% {
                 transform: translateY(0)
@@ -203,6 +193,7 @@
         }
 
         /* ── Fluid mobile sizing ── */
+        /* Hero heading: fluid from ~1.6rem at 320px to 2.2rem at 480px */
         .hero-heading {
             font-size: clamp(1.6rem, 4vw + 0.5rem, 2.2rem);
         }
@@ -230,12 +221,12 @@
             }
         }
 
-        /* Metric numbers */
+        /* Metric numbers: scale down on small screens */
         .metric-num {
             font-size: clamp(1.5rem, 6vw, 1.875rem);
         }
 
-        /* Very small screens (< 380px) */
+        /* Very small screens (< 380px) — extra scaling */
         @media (max-width: 380px) {
             .compass-wrap {
                 width: 260px !important;
@@ -260,13 +251,21 @@
             .runway-strip {
                 height: 90px !important;
             }
+
+            .compass-label {
+                font-size: 8px !important;
+            }
+
+            .compass-card {
+                display: none !important;
+            }
         }
 
         /* Small-medium screens (381px – 480px) */
         @media (min-width: 381px) and (max-width: 480px) {
             .compass-wrap {
-                width: 300px !important;
-                height: 300px !important;
+                width: 290px !important;
+                height: 290px !important;
             }
 
             .radar-wrap {
@@ -286,6 +285,10 @@
 
             .runway-strip {
                 height: 110px !important;
+            }
+
+            .compass-card {
+                transform: scale(0.85);
             }
         }
     </style>
@@ -385,107 +388,122 @@
     </div>
 
     <!-- ══ HERO ══ -->
-    <section class="flex items-center pt-[100px] pb-16 px-5 md:px-12 bg-[#fafafa] overflow-visible"
+    <section class="flex items-center pt-[80px] pb-14 px-5 md:px-12 bg-[#fafafa]"
         style="min-height:100dvh;min-height:100vh">
-        <div
-            class="w-full max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center overflow-visible">
+        <div class="w-full max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
-            <div class="text-center md:text-left z-10 mt-8 md:mt-0">
+            <!-- Left -->
+            <div class="text-center md:text-left">
                 <h1 class="hero-heading font-serif font-normal leading-[1.12] tracking-tight mb-5">
                     Your<br />Growth and Transformation<br /><em>Partner</em>
                 </h1>
-                <p class="text-[#6b6b6b] text-base md:text-lg leading-[1.85] mb-8 max-w-[480px] mx-auto md:mx-0">
+                <p class="text-[#6b6b6b] text-base leading-[1.85] mb-8 max-w-[480px] mx-auto md:mx-0">
                     We build fast, scalable, secure solutions that help businesses grow, adapt, and stay ahead.
                 </p>
                 <a href="#contact"
-                    class="inline-flex items-center gap-2 px-5 py-2 rounded-full border-[1.5px] border-[#1a1a1a] text-sm font-semibold hover:bg-[#1a1a1a] hover:text-white transition-all">Get
-                    Onboard →</a>
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full border-[1.5px] border-[#1a1a1a] text-sm font-semibold hover:bg-[#1a1a1a] hover:text-white transition-all">
+                    Get Onboard
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3,8 L13,8 M10,5 L13,8 L10,11" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
             </div>
 
-            <div class="flex justify-center items-center relative w-full mt-6 md:mt-0 overflow-visible">
-                <div class="compass-wrap float-y relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] lg:w-[520px] lg:h-[520px]"
-                    style="overflow:visible">
+            <!-- Right: Enhanced Compass -->
+            <div class="flex justify-center items-center">
+                <div
+                    class="compass-wrap float-y relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px]">
 
-                    <div class="hidden md:flex absolute flex-col items-center gap-[5px] z-20"
-                        style="top: -2%; left: 50%; transform: translateX(-50%); animation: labelPop 0.7s ease 0.5s both;">
-                        <span class="font-mono text-[9px] font-bold tracking-[.22em] text-[#1a1a1a]">CONSULTING</span>
-                        <div
-                            class="w-[28px] h-[28px] rounded-full border border-[#e5e5e5] bg-white flex items-center justify-center shadow-md">
-                            <svg width="13" height="13" viewBox="0 0 15 15" fill="none">
-                                <circle cx="7.5" cy="5.5" r="2.5" stroke="#1a1a1a" stroke-width="1.2" />
-                                <path d="M7.5,8 L6,12.5 M7.5,8 L9,12.5 M6,12.5 L9,12.5" stroke="#1a1a1a"
-                                    stroke-width="1" stroke-linecap="round" />
-                                <line x1="4.5" y1="7.5" x2="2.5" y2="9" stroke="#1a1a1a" stroke-width="1"
-                                    stroke-linecap="round" opacity="0.5" />
-                                <line x1="10.5" y1="7.5" x2="12.5" y2="9" stroke="#1a1a1a" stroke-width="1"
-                                    stroke-linecap="round" opacity="0.5" />
-                            </svg>
+                    <!-- Service Labels at cardinal points -->
+                    <div class="absolute -top-6 sm:-top-7 md:-top-8 left-1/2 -translate-x-1/2 z-20">
+                        <span
+                            class="compass-label font-mono text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[.3em] text-[#1a1a1a]">CONSULTING</span>
+                    </div>
+                    <div class="absolute -bottom-6 sm:-bottom-7 md:-bottom-8 left-1/2 -translate-x-1/2 z-20">
+                        <span
+                            class="compass-label font-mono text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[.3em] text-[#1a1a1a]">SOLUTIONING</span>
+                    </div>
+                    <div class="absolute top-1/2 -translate-y-1/2 -right-6 sm:-right-10 md:-right-14 z-20">
+                        <span
+                            class="compass-label font-mono text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[.3em] text-[#1a1a1a]">ADVISORY</span>
+                    </div>
+                    <div class="absolute top-1/2 -translate-y-1/2 -left-10 sm:-left-14 md:-left-20 z-20">
+                        <span
+                            class="compass-label font-mono text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[.3em] text-[#1a1a1a]">ENGINEERING</span>
+                    </div>
+
+                    <!-- Small Icons near each cardinal -->
+                    <!-- N: Person icon (Consulting) -->
+                    <div
+                        class="absolute top-[10%] left-1/2 -translate-x-1/2 w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[36px] md:h-[36px] rounded-full border border-[#ddd] bg-white/90 flex items-center justify-center z-20">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <circle cx="7" cy="4.5" r="2" stroke="#1a1a1a" stroke-width="1" />
+                            <path d="M3,12.5 C3,10 11,10 11,12.5" stroke="#1a1a1a" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <!-- E: Chart icon (Advisory) -->
+                    <div
+                        class="absolute top-1/2 -translate-y-1/2 right-[10%] w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[36px] md:h-[36px] rounded-full border border-[#ddd] bg-white/90 flex items-center justify-center z-20">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2,11 L5,7 L8,9 L12,4" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <!-- S: Calendar icon (Solutioning) -->
+                    <div
+                        class="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[36px] md:h-[36px] rounded-full border border-[#ddd] bg-white/90 flex items-center justify-center z-20">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <rect x="2" y="3.5" width="10" height="8" rx="1" stroke="#1a1a1a" stroke-width="1" />
+                            <line x1="5" y1="2" x2="5" y2="5" stroke="#1a1a1a" stroke-width="1"
+                                stroke-linecap="round" />
+                            <line x1="9" y1="2" x2="9" y2="5" stroke="#1a1a1a" stroke-width="1"
+                                stroke-linecap="round" />
+                            <line x1="2" y1="7" x2="12" y2="7" stroke="#1a1a1a" stroke-width="0.8" />
+                        </svg>
+                    </div>
+                    <!-- W: Sun/Gear icon (Engineering) -->
+                    <div
+                        class="absolute top-1/2 -translate-y-1/2 left-[10%] w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[36px] md:h-[36px] rounded-full border border-[#ddd] bg-white/90 flex items-center justify-center z-20">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <circle cx="7" cy="7" r="2.5" stroke="#1a1a1a" stroke-width="1" />
+                            <path
+                                d="M7,1.5 L7,3 M7,11 L7,12.5 M1.5,7 L3,7 M11,7 L12.5,7 M3.1,3.1 L4.2,4.2 M9.8,9.8 L10.9,10.9 M10.9,3.1 L9.8,4.2 M4.2,9.8 L3.1,10.9"
+                                stroke="#1a1a1a" stroke-width="0.9" stroke-linecap="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Floating Info Cards -->
+                    <!-- Signal Lock (top-right) -->
+                    <div
+                        class="compass-card absolute top-[2%] right-[-8%] sm:right-[-14%] md:right-[-18%] bg-white/90 backdrop-blur-sm border border-[#e5e5e5] rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-sm z-30">
+                        <div class="font-mono text-[7px] sm:text-[8px] text-[#999] tracking-[.2em] mb-0.5">SIGNAL LOCK
+                        </div>
+                        <div class="font-bold text-sm sm:text-base md:text-lg text-[#1a1a1a] leading-none">TRUE NORTH
+                        </div>
+                        <div class="font-mono text-[7px] sm:text-[8px] text-[#999] tracking-[.15em] mt-0.5">99.8%
+                            PRECISION</div>
+                    </div>
+
+                    <!-- Systems Online (middle-right) -->
+                    <div
+                        class="compass-card absolute top-[56%] right-[-6%] sm:right-[-12%] md:right-[-16%] bg-white/90 backdrop-blur-sm border border-[#e5e5e5] rounded-xl px-3 py-1.5 sm:px-4 sm:py-2 shadow-sm z-30 flex items-center gap-2">
+                        <div class="w-[6px] h-[6px] rounded-full bg-[#1a1a1a] blink"></div>
+                        <span class="font-mono text-[8px] sm:text-[9px] text-[#6b6b6b] tracking-[.18em]">SYSTEMS
+                            ONLINE</span>
+                    </div>
+
+                    <!-- Bearing (bottom-left) -->
+                    <div
+                        class="compass-card absolute bottom-[4%] left-[-6%] sm:left-[-12%] md:left-[-16%] bg-white/90 backdrop-blur-sm border border-[#e5e5e5] rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 shadow-sm z-30">
+                        <div class="font-mono text-[7px] sm:text-[8px] text-[#999] tracking-[.2em]">BEARING</div>
+                        <div class="font-bold text-lg sm:text-xl md:text-2xl text-[#1a1a1a] leading-none">045°</div>
+                        <div class="font-mono text-[7px] sm:text-[8px] text-[#999] tracking-[.15em] mt-0.5">ENTERPRISE
                         </div>
                     </div>
 
-                    <div class="hidden md:flex absolute flex-col items-center gap-[5px] z-20"
-                        style="right: -6%; top: 50%; transform: translateY(-50%); animation: labelPop 0.7s ease 0.7s both;">
-                        <div
-                            class="w-[28px] h-[28px] rounded-full border border-[#e5e5e5] bg-white flex items-center justify-center shadow-md">
-                            <svg width="13" height="13" viewBox="0 0 15 15" fill="none">
-                                <path d="M2,11 L4,8 L6.5,9.5 L9.5,5 L13,7" stroke="#1a1a1a" stroke-width="1.3"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                                <circle cx="9.5" cy="5" r="1.5" fill="#e5e5e5" stroke="#1a1a1a" stroke-width="1" />
-                            </svg>
-                        </div>
-                        <span class="font-mono text-[9px] font-bold tracking-[.22em] text-[#1a1a1a]">ADVISORY</span>
-                    </div>
-
-                    <div class="hidden md:flex absolute flex-col items-center gap-[5px] z-20"
-                        style="bottom: -2%; left: 50%; transform: translateX(-50%); animation: labelPop 0.7s ease 0.9s both;">
-                        <div
-                            class="w-[28px] h-[28px] rounded-full border border-[#e5e5e5] bg-white flex items-center justify-center shadow-md">
-                            <svg width="13" height="13" viewBox="0 0 15 15" fill="none">
-                                <rect x="2" y="4.5" width="11" height="7.5" rx="1" stroke="#1a1a1a"
-                                    stroke-width="1.2" />
-                                <line x1="5" y1="4.5" x2="5" y2="2.5" stroke="#1a1a1a" stroke-width="1.2"
-                                    stroke-linecap="round" />
-                                <line x1="10" y1="4.5" x2="10" y2="2.5" stroke="#1a1a1a" stroke-width="1.2"
-                                    stroke-linecap="round" />
-                                <line x1="5" y1="8" x2="10" y2="8" stroke="#1a1a1a" stroke-width="1"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <span class="font-mono text-[9px] font-bold tracking-[.22em] text-[#1a1a1a]">SOLUTIONING</span>
-                    </div>
-
-                    <div class="hidden md:flex absolute flex-col items-center gap-[5px] z-20"
-                        style="left: -8%; top: 50%; transform: translateY(-50%); animation: labelPop 0.7s ease 1.1s both;">
-                        <div
-                            class="w-[28px] h-[28px] rounded-full border border-[#e5e5e5] bg-white flex items-center justify-center shadow-md">
-                            <svg width="13" height="13" viewBox="0 0 15 15" fill="none">
-                                <circle cx="7.5" cy="7.5" r="2.5" stroke="#1a1a1a" stroke-width="1.2" />
-                                <path
-                                    d="M7.5,1 L7.5,2.8 M7.5,12.2 L7.5,14 M1,7.5 L2.8,7.5 M12.2,7.5 L14,7.5 M3.2,3.2 L4.4,4.4 M10.6,10.6 L11.8,11.8 M11.8,3.2 L10.6,4.4 M4.4,10.6 L3.2,11.8"
-                                    stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <span class="font-mono text-[9px] font-bold tracking-[.22em] text-[#1a1a1a]">ENGINEERING</span>
-                    </div>
-
-                    <div class="hidden lg:block absolute z-30 bg-white/95 backdrop-blur-md border border-[#e5e5e5] rounded-xl px-4 py-3 shadow-lg text-left"
-                        style="top: 8%; right: -12%; animation: floatY 5s ease-in-out infinite;">
-                        <div class="font-mono text-[8px] text-[#999] tracking-[.18em] mb-[3px]">SIGNAL LOCK</div>
-                        <div class="font-bold text-[13px] text-[#1a1a1a] leading-none mb-1">TRUE NORTH</div>
-                        <div class="font-mono text-[8px] text-[#999] mt-[4px] flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse"></span>99.8% PRECISION
-                        </div>
-                    </div>
-
-                    <div class="hidden lg:block absolute z-30 bg-white/95 backdrop-blur-md border border-[#e5e5e5] rounded-xl px-4 py-3 shadow-lg text-left"
-                        style="bottom: 12%; left: -8%; animation: floatY 6.5s ease-in-out 0.8s infinite reverse;">
-                        <div class="font-mono text-[8px] text-[#999] tracking-[.18em] mb-[3px]">BEARING</div>
-                        <div class="font-bold text-[13px] text-[#1a1a1a] leading-none mb-1">045°</div>
-                        <div class="font-mono text-[8px] text-[#999] mt-[4px]">ENTERPRISE</div>
-                    </div>
-
-                    <svg viewBox="0 0 440 440" class="w-full h-full relative z-0" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <!-- The Compass SVG -->
+                    <svg viewBox="0 0 440 440" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <radialGradient id="sg1" cx="50%" cy="50%" r="50%">
                                 <stop offset="0%" stop-color="#fff" />
@@ -500,6 +518,12 @@
                                 <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,.15)" />
                             </filter>
                         </defs>
+
+                        <!-- Outer subtle rings -->
+                        <circle cx="220" cy="220" r="212" stroke="#e5e5e5" stroke-width="0.5" opacity="0.3" />
+                        <circle cx="220" cy="220" r="205" stroke="#e5e5e5" stroke-width="0.5" opacity="0.2" />
+
+                        <!-- Segment fills -->
                         <path d="M220,220 L220,56 A164,164 0 0,1 384,220 Z" fill="#e5e5e5" opacity="0.6"
                             class="seg-glow" />
                         <path d="M220,220 L384,220 A164,164 0 0,1 220,384 Z" fill="#e5e5e5" opacity="0.5"
@@ -511,6 +535,8 @@
                         <circle cx="220" cy="220" r="164" stroke="#e5e5e5" stroke-width="1.5" />
                         <line x1="220" y1="56" x2="220" y2="384" stroke="#e5e5e5" stroke-width="1" />
                         <line x1="56" y1="220" x2="384" y2="220" stroke="#e5e5e5" stroke-width="1" />
+
+                        <!-- Spinning rings -->
                         <g class="spin-cw">
                             <circle cx="220" cy="220" r="185" stroke="#e5e5e5" stroke-width="1"
                                 stroke-dasharray="4 6" />
@@ -519,39 +545,265 @@
                             <circle cx="220" cy="220" r="175" stroke="rgba(0,0,0,.1)" stroke-width="1"
                                 stroke-dasharray="2 8" />
                         </g>
+
+                        <!-- Radar sweep -->
                         <g style="transform-origin:220px 220px;animation:radarSweep 6s linear infinite">
                             <path d="M220,220 L248,62 A164,164 0 0,0 220,56 Z" fill="#1a1a1a" opacity="0.03" />
                             <line x1="220" y1="220" x2="220" y2="56" stroke="#1a1a1a" stroke-width="1.2"
                                 opacity="0.2" />
                         </g>
-                        <circle cx="220" cy="220" r="130" fill="white" stroke="rgba(0,0,0,.15)" stroke-width="1.5" />
+
+                        <!-- Inner white circle -->
+                        <circle cx="220" cy="220" r="130" fill="white" stroke="rgba(0,0,0,.12)" stroke-width="1.5" />
+
+                        <!-- Star points (subtle) -->
                         <polygon points="220,220 200,200 220,148 240,200" fill="url(#sg2)" opacity="0.55" />
                         <polygon points="220,220 240,200 292,220 240,240" fill="url(#sg2)" opacity="0.55" />
                         <polygon points="220,220 240,240 220,292 200,240" fill="url(#sg2)" opacity="0.55" />
                         <polygon points="220,220 200,240 148,220 200,200" fill="url(#sg2)" opacity="0.55" />
+
+                        <!-- Main Needle -->
                         <polygon points="220,220 208,205 220,96 232,205" fill="url(#sg1)" filter="url(#sh)"
                             class="needle" />
                         <polygon points="220,220 235,208 344,220 235,232" fill="url(#sg1)" filter="url(#sh)" />
                         <polygon points="220,220 232,235 220,344 208,235" fill="url(#sg1)" filter="url(#sh)" />
                         <polygon points="220,220 205,232 96,220 205,208" fill="url(#sg1)" filter="url(#sh)" />
+
+                        <!-- Center hub -->
                         <circle cx="220" cy="220" r="22" fill="white" stroke="rgba(0,0,0,.15)" stroke-width="1.5"
                             filter="url(#sh)" />
                         <circle cx="220" cy="220" r="10" fill="#1a1a1a" />
                         <text x="220" y="218" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="5"
                             fill="rgba(0,0,0,.4)" letter-spacing="2">ACANTIX</text>
-                        <text x="220" y="74" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="11"
-                            font-weight="600" fill="#1a1a1a" letter-spacing="2">N</text>
-                        <text x="220" y="378" text-anchor="middle" font-family="'Courier Prime',monospace"
-                            font-size="10" fill="rgba(0,0,0,.4)">S</text>
-                        <text x="378" y="224" text-anchor="middle" font-family="'Courier Prime',monospace"
-                            font-size="10" fill="rgba(0,0,0,.4)">E</text>
-                        <text x="62" y="224" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="10"
-                            fill="rgba(0,0,0,.4)">W</text>
+
+                        <!-- Cardinal tick marks -->
+                        <line x1="220" y1="56" x2="220" y2="44" stroke="#1a1a1a" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="220" y1="384" x2="220" y2="396" stroke="#999" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <line x1="384" y1="220" x2="396" y2="220" stroke="#999" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <line x1="56" y1="220" x2="44" y2="220" stroke="#999" stroke-width="1.5"
+                            stroke-linecap="round" />
+
+                        <!-- Cardinal Letters -->
+                        <text x="220" y="39" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="13"
+                            font-weight="700" fill="#1a1a1a" letter-spacing="2">N</text>
+                        <text x="220" y="412" text-anchor="middle" font-family="'Courier Prime',monospace"
+                            font-size="11" fill="rgba(0,0,0,.35)">S</text>
+                        <text x="412" y="224" text-anchor="middle" font-family="'Courier Prime',monospace"
+                            font-size="11" fill="rgba(0,0,0,.35)">E</text>
+                        <text x="28" y="224" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="11"
+                            fill="rgba(0,0,0,.35)">W</text>
                     </svg>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ══ STATS / RADAR ══ -->
+    <section class="py-16 md:py-20 px-5 md:px-12 bg-white">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+            <!-- Radar -->
+            <div class="flex justify-center">
+                <div
+                    class="radar-wrap relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[300px] md:h-[300px]">
+                    <svg viewBox="0 0 360 360" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="180" cy="180" r="160" stroke="#e5e5e5" stroke-width="1" />
+                        <circle cx="180" cy="180" r="118" stroke="#e5e5e5" stroke-width="1" />
+                        <circle cx="180" cy="180" r="78" stroke="#e5e5e5" stroke-width="1" />
+                        <circle cx="180" cy="180" r="40" stroke="#e5e5e5" stroke-width="1" />
+                        <line x1="20" y1="180" x2="340" y2="180" stroke="#e5e5e5" stroke-width=".8" />
+                        <line x1="180" y1="20" x2="180" y2="340" stroke="#e5e5e5" stroke-width=".8" />
+                        <line x1="66" y1="66" x2="294" y2="294" stroke="#e5e5e5" stroke-width=".6" opacity=".4" />
+                        <line x1="294" y1="66" x2="66" y2="294" stroke="#e5e5e5" stroke-width=".6" opacity=".4" />
+                        <!-- Sweep -->
+                        <g class="radar-line">
+                            <path d="M180,180 L202,26 A160,160 0 0,0 180,20 Z" fill="#999" opacity=".07" />
+                            <line x1="180" y1="180" x2="180" y2="20" stroke="#999" stroke-width="1.5" opacity=".5" />
+                        </g>
+                        <!-- Blips -->
+                        <circle cx="222" cy="118" r="4" fill="#555">
+                            <animate attributeName="opacity" values="0.9;0.1;0.9" dur="2.4s" repeatCount="indefinite" />
+                            <animate attributeName="r" values="4;7;4" dur="2.4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="135" cy="238" r="3.5" fill="#777" opacity=".4">
+                            <animate attributeName="opacity" values="0.4;0.06;0.4" dur="3.9s"
+                                repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="248" cy="215" r="3" fill="#1a1a1a" opacity=".18">
+                            <animate attributeName="opacity" values="0.18;0.03;0.18" dur="5.5s"
+                                repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="120" cy="155" r="3" fill="#666" opacity=".35">
+                            <animate attributeName="opacity" values="0.35;0.06;0.35" dur="4.6s"
+                                repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="180" cy="180" r="5" fill="#555" />
+                        <circle cx="180" cy="180" r="2" fill="white" />
+                        <!-- Cardinal labels -->
+                        <rect x="148" y="4" width="64" height="22" rx="11" fill="#1a1a1a" />
+                        <text x="180" y="19" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="9"
+                            font-weight="700" fill="white" letter-spacing="1.5">START</text>
+                        <rect x="296" y="169" width="60" height="22" rx="11" fill="#1a1a1a" />
+                        <text x="326" y="184" text-anchor="middle" font-family="'Courier Prime',monospace" font-size="9"
+                            font-weight="700" fill="white" letter-spacing="1.5">GROWTH</text>
+                        <rect x="108" y="334" width="96" height="22" rx="11" fill="#1a1a1a" />
+                        <text x="156" y="349" text-anchor="middle" font-family="'Courier Prime',monospace"
+                            font-size="8.5" font-weight="700" fill="white" letter-spacing="1.2">ACCELERATION</text>
+                        <rect x="0" y="169" width="86" height="22" rx="11" fill="#1a1a1a" />
+                        <text x="43" y="184" text-anchor="middle" font-family="'Courier Prime',monospace"
+                            font-size="7.8" font-weight="700" fill="white" letter-spacing="1">ORGANIZATION</text>
+                    </svg>
+                    <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
+                        <div class="blink w-[5px] h-[5px] rounded-full bg-[#6b6b6b]"></div>
+                        <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] whitespace-nowrap">RADAR —
+                            LIVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metrics -->
+            <div>
+                <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.25em] uppercase mb-3 block">Telemetry
+                    Readout</span>
+                <h2 class="section-heading font-serif font-bold leading-tight mb-8">Mission <span
+                        class="bg-[#f5e642] px-1.5 italic">Metrics</span></h2>
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                    <div class="border-l-2 border-[#e5e5e5] pl-3">
+                        <div class="metric-num font-black leading-none">120+</div>
+                        <div class="font-mono text-[9px] text-[#6b6b6b] tracking-[.1em] mt-1.5">PROJECTS DELIVERED</div>
+                    </div>
+                    <div class="border-l-2 border-[#e5e5e5] pl-3">
+                        <div class="metric-num font-black leading-none">50+</div>
+                        <div class="font-mono text-[9px] text-[#6b6b6b] tracking-[.1em] mt-1.5">CLIENTS</div>
+                    </div>
+                    <div class="border-l-2 border-[#e5e5e5] pl-3">
+                        <div class="metric-num font-black leading-none">20+</div>
+                        <div class="font-mono text-[9px] text-[#6b6b6b] tracking-[.1em] mt-1.5">YEARS EXPERIENCE</div>
+                    </div>
+                    <div class="border-l-2 border-[#e5e5e5] pl-3">
+                        <div class="metric-num font-black leading-none">98%</div>
+                        <div class="font-mono text-[9px] text-[#6b6b6b] tracking-[.1em] mt-1.5">CLIENT SATISFACTION
+                        </div>
+                    </div>
+                </div>
+                <!-- Live feed -->
+                <div class="border border-[#e5e5e5] rounded-xl p-3 bg-[#fafafa] overflow-hidden h-[80px] relative">
+                    <div class="flex items-center gap-1.5 mb-1.5">
+                        <div class="blink w-[5px] h-[5px] rounded-full bg-[#6b6b6b]"></div>
+                        <span class="font-mono text-[9px] text-[#6b6b6b] tracking-[.14em]">SYSTEM FEED</span>
+                    </div>
+                    <div class="feed-anim font-mono text-[9px] text-[#1a1a1a] leading-[2.1]">
+                        <div>[ CONSULTING ] ....... ACTIVE — 12 engagements</div>
+                        <div>[ ENGINEERING ] ...... ACTIVE — 8 sprints live</div>
+                        <div>[ ADVISORY ] ......... ACTIVE — 5 clients onboard</div>
+                        <div>[ SOLUTIONING ] ...... ACTIVE — 3 in delivery</div>
+                        <div>[ CONSULTING ] ....... ACTIVE — 12 engagements</div>
+                        <div>[ ENGINEERING ] ...... ACTIVE — 8 sprints live</div>
+                        <div>[ ADVISORY ] ......... ACTIVE — 5 clients onboard</div>
+                        <div>[ SOLUTIONING ] ...... ACTIVE — 3 in delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ ABOUT ══ -->
+    <section id="about" class="py-16 md:py-20 px-5 md:px-12 bg-[#f7f7f2]">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="text-center mb-12">
+                <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.25em] uppercase mb-3 block">WHO WE
+                    ARE</span>
+                <h2 class="section-heading font-serif font-normal">Your Vision. is Our <span
+                        class="bg-[#f5e642] px-1.5 italic">Mission.</span></h2>
+                <p class="text-[#6b6b6b] text-sm md:text-base leading-[1.85] max-w-[580px] mx-auto mt-4">Acantix turns
+                    ideas into high-impact digital solutions through thoughtful design, precise engineering, and
+                    seamless execution.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <!-- Image -->
+                <div class="flex justify-center">
+                    <img src="tower.png" alt="Control tower" class="max-w-[280px] md:max-w-full w-full object-contain"
+                        style="mix-blend-mode:darken" />
+                </div>
+                <!-- Chat -->
+                <div class="flex flex-col gap-0">
+                    <div class="mb-2">
+                        <div
+                            class="font-mono text-[9px] tracking-[.18em] uppercase text-[#1a1a1a] flex items-center gap-2 mb-1.5">
+                            <div
+                                class="w-[26px] h-[26px] rounded-full border border-[#e5e5e5] flex items-center justify-center flex-shrink-0 bg-white">
+                                <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                                    <circle cx="7" cy="5" r="2.5" stroke="#1a1a1a" stroke-width="1.2" />
+                                    <path d="M2,13 C2,10 12,10 12,13" stroke="#1a1a1a" stroke-width="1.2" />
+                                </svg>
+                            </div>
+                            Solutions Architect
+                        </div>
+                        <div
+                            class="bg-white border border-[#e5e5e5] rounded-[14px_14px_14px_3px] px-4 py-3 max-w-[400px] text-sm leading-[1.75]">
+                            Welcome to Acantix. How can we accelerate your growth?</div>
+                    </div>
+                    <div class="w-[1px] h-4 bg-[#e5e5e5] ml-[13px] mb-2"></div>
+                    <div class="mb-2">
+                        <div
+                            class="font-mono text-[9px] tracking-[.18em] uppercase text-[#6b6b6b] flex items-center gap-2 justify-end mb-1.5">
+                            Client
+                            <div
+                                class="w-[26px] h-[26px] rounded-full border border-[#e5e5e5] flex items-center justify-center flex-shrink-0 bg-white">
+                                <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                                    <path d="M3,3 L11,3 L11,11 L3,11 Z" stroke="#6b6b6b" stroke-width="1.2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-[#f0f0f0] border border-[#e5e5e5] rounded-[14px_14px_3px_14px] px-4 py-3 max-w-[380px] ml-auto text-sm leading-[1.75]">
+                            We need a trusted partner for scalable <span class="text-[#6b6b6b]">innovation and secure
+                                systems.</span></div>
+                    </div>
+                    <div class="w-[1px] h-4 bg-[#e5e5e5] ml-auto mr-[13px] mb-2"></div>
+                    <div class="mb-2">
+                        <div
+                            class="font-mono text-[9px] tracking-[.18em] uppercase text-[#1a1a1a] flex items-center gap-2 mb-1.5">
+                            <div
+                                class="w-[26px] h-[26px] rounded-full border border-[#e5e5e5] flex items-center justify-center flex-shrink-0 bg-white">
+                                <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                                    <circle cx="7" cy="5" r="2.5" stroke="#1a1a1a" stroke-width="1.2" />
+                                    <path d="M2,13 C2,10 12,10 12,13" stroke="#1a1a1a" stroke-width="1.2" />
+                                </svg>
+                            </div>
+                            Solutions Architect
+                        </div>
+                        <div
+                            class="bg-white border border-[#e5e5e5] rounded-[14px_14px_14px_3px] px-4 py-3 max-w-[400px] text-sm leading-[1.75]">
+                            Your requirements are clear. <span class="text-[#6b6b6b]">We'll craft a strategy aligned to
+                                your goals.</span></div>
+                    </div>
+                    <div class="w-[1px] h-4 bg-[#e5e5e5] ml-[13px] mb-2"></div>
+                    <div>
+                        <div
+                            class="font-mono text-[9px] tracking-[.18em] uppercase text-[#1a1a1a] flex items-center gap-2 mb-1.5">
+                            <div
+                                class="w-[26px] h-[26px] rounded-full border border-[#e5e5e5] flex items-center justify-center flex-shrink-0 bg-white">
+                                <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                                    <circle cx="7" cy="5" r="2.5" stroke="#1a1a1a" stroke-width="1.2" />
+                                    <path d="M2,13 C2,10 12,10 12,13" stroke="#1a1a1a" stroke-width="1.2" />
+                                </svg>
+                            </div>
+                            Solutions Architect
+                        </div>
+                        <div
+                            class="bg-white border border-[#ccc] rounded-[14px_14px_14px_3px] px-4 py-3 max-w-[400px] text-sm leading-[1.75]">
+                            Deployment ready. Let's unlock your next stage of <strong>digital transformation.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ══ PROCESS ══ -->
     <section id="process" class="py-16 md:py-20 px-5 md:px-12 bg-white">
         <div class="max-w-[1200px] mx-auto">
@@ -564,10 +816,13 @@
                     <strong>Acantix Compass</strong> — four integrated capabilities from vision to value.
                 </p>
             </div>
+            <!-- Steps: 2 cols on mobile, 4 on desktop -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting line — desktop only -->
                 <div
                     class="hidden md:block absolute top-[26px] left-[12.5%] right-[12.5%] h-[1.5px] bg-gradient-to-r from-[#e5e5e5] via-[#1a1a1a] to-[#e5e5e5]">
                 </div>
+                <!-- Step 1 -->
                 <div class="text-center z-10">
                     <div
                         class="w-[52px] h-[52px] rounded-full border-2 border-[#1a1a1a] flex items-center justify-center font-mono text-base font-medium mx-auto mb-4 bg-white relative hover:bg-[#1a1a1a] hover:text-white transition-all cursor-default">
@@ -579,6 +834,7 @@
                     <p class="text-[#6b6b6b] text-xs leading-[1.8]">Defining strategic direction and transformation
                         roadmaps.</p>
                 </div>
+                <!-- Step 2 -->
                 <div class="text-center z-10">
                     <div
                         class="w-[52px] h-[52px] rounded-full border-2 border-[#1a1a1a] flex items-center justify-center font-mono text-base font-medium mx-auto mb-4 bg-white relative hover:bg-[#1a1a1a] hover:text-white transition-all cursor-default">
@@ -590,6 +846,7 @@
                     <p class="text-[#6b6b6b] text-xs leading-[1.8]">Expert guidance for critical business and technology
                         decisions.</p>
                 </div>
+                <!-- Step 3 -->
                 <div class="text-center z-10">
                     <div
                         class="w-[52px] h-[52px] rounded-full border-2 border-[#6b6b6b] flex items-center justify-center font-mono text-base font-medium text-[#6b6b6b] mx-auto mb-4 bg-white relative hover:bg-[#1a1a1a] hover:text-white hover:border-[#1a1a1a] transition-all cursor-default">
@@ -601,6 +858,7 @@
                     <p class="text-[#6b6b6b] text-xs leading-[1.8]">Scalable architectures and platform strategies built
                         to last.</p>
                 </div>
+                <!-- Step 4 -->
                 <div class="text-center z-10">
                     <div
                         class="w-[52px] h-[52px] rounded-full border-2 border-[#6b6b6b] flex items-center justify-center font-mono text-base font-medium text-[#6b6b6b] mx-auto mb-4 bg-white relative hover:bg-[#1a1a1a] hover:text-white hover:border-[#1a1a1a] transition-all cursor-default">
@@ -613,6 +871,7 @@
                         precision.</p>
                 </div>
             </div>
+            <!-- Callout -->
             <div
                 class="mt-12 border border-[#e5e5e5] rounded-2xl bg-[#fafafa] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-5 hover:border-[#bbb] hover:shadow-lg transition-all">
                 <p class="text-sm text-[#1a1a1a] leading-[1.75] flex-1"><strong>These four capabilities work as an
@@ -851,6 +1110,7 @@
                 <div class="w-[90px] h-[3px] bg-[#6b6b6b] mx-auto mt-5"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <!-- Fishbowl -->
                 <div
                     class="flex flex-col items-center text-center gap-6 p-8 bg-[#fafafa] border border-[#e5e5e5] rounded-3xl hover:border-[#bbb] hover:shadow-lg transition-all">
                     <div
@@ -871,6 +1131,7 @@
                             progress, workflows, and activities.</p>
                     </div>
                 </div>
+                <!-- Swim Together -->
                 <div
                     class="flex flex-col items-center text-center gap-6 p-8 bg-[#fafafa] border border-[#e5e5e5] rounded-3xl hover:border-[#bbb] hover:shadow-lg transition-all">
                     <div
@@ -891,6 +1152,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Delivery Models -->
             <div class="max-w-[840px] mx-auto">
                 <div class="bg-[#1a1a1a] text-white px-5 py-3 rounded-t-xl font-bold tracking-[.05em] text-center">
                     Delivery Models</div>
@@ -1113,12 +1375,14 @@
     </div>
 
     <script>
+        // Nav shadow on scroll
         window.addEventListener('scroll', () => {
             document.getElementById('nav').classList.toggle('shadow-md', scrollY > 10);
             const btn = document.getElementById('topBtn');
             btn.style.opacity = scrollY > 400 ? '1' : '0';
         });
 
+        // Mobile menu
         let menuOpen = false;
         function toggleMenu() {
             menuOpen = !menuOpen;
@@ -1148,6 +1412,7 @@
             if (menuOpen && !document.getElementById('mobMenu').contains(e.target) && !document.getElementById('ham').contains(e.target)) closeMenu();
         });
 
+        // Form submit
         function submitForm(btn) {
             btn.innerHTML = '✓ Message Sent Successfully!';
             btn.style.background = '#22c55e';
