@@ -1485,6 +1485,105 @@ Let’s connect and we’re here to answer any questions your team may have.
   "description": "AI system development, application modernization, consulting, and engineering services."
 }
 </script>
+
+<!-- ══ ACANTIX CHATBOT WIDGET ══ -->
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '66628d3e91ec1995b6cfe8a9' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+   })(document, 'script');
+</script>
+<script>
+(function () {
+  function hideInRoot(root) {
+    try {
+      if (!root) return false;
+      const els = root.querySelectorAll('.vfrc-footer__links-powered-by-container');
+      if (els.length) {
+        els.forEach(e => { e.style.display = 'none'; });
+        return true;
+      }
+      return false;
+    } catch (err) { return false; }
+  }
+
+  function hideInShadowRoots(node) {
+    if (!node) return false;
+    let found = false;
+    try { if (hideInRoot(node)) found = true; } catch (e) {}
+    const all = (node.querySelectorAll) ? node.querySelectorAll('*') : [];
+    for (let i = 0; i < all.length; i++) {
+      const el = all[i];
+      if (el.shadowRoot) {
+        try { if (hideInRoot(el.shadowRoot)) found = true; } catch (e) {}
+        hideInShadowRoots(el.shadowRoot) && (found = true);
+      }
+    }
+    return found;
+  }
+
+  function tryHideEverywhere() {
+    let did = false;
+    did = hideInRoot(document) || did;
+    did = hideInShadowRoots(document) || did;
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+      try {
+        const idoc = iframe.contentDocument || iframe.contentWindow.document;
+        if (idoc) {
+          if (hideInRoot(idoc)) did = true;
+          if (hideInShadowRoots(idoc)) did = true;
+        }
+      } catch (err) {}
+    });
+    return did;
+  }
+
+  tryHideEverywhere();
+
+  const observer = new MutationObserver((mutations) => {
+    let changed = false;
+    for (const m of mutations) {
+      if (m.addedNodes && m.addedNodes.length) {
+        for (const n of m.addedNodes) {
+          try {
+            if (n.nodeType === Node.ELEMENT_NODE) {
+              if (n.matches && n.matches('.vfrc-footer__links-powered-by-container')) {
+                n.style.display = 'none';
+                changed = true;
+              } else {
+                const inside = n.querySelector && n.querySelector('.vfrc-footer__links-powered-by-container');
+                if (inside) { inside.style.display = 'none'; changed = true; }
+              }
+            }
+          } catch (e) {}
+          try { if (hideInShadowRoots(n)) changed = true; } catch (e) {}
+        }
+      }
+    }
+    if (changed) tryHideEverywhere();
+  });
+
+  observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+
+  document.addEventListener('click', function () {
+    setTimeout(() => tryHideEverywhere(), 300);
+  }, { passive: true });
+
+  const fallbackInterval = setInterval(() => { tryHideEverywhere(); }, 1000);
+  setTimeout(() => clearInterval(fallbackInterval), 20000);
+})();
+</script>
 </body>
 
 </html>
