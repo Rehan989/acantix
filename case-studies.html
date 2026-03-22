@@ -4,65 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acantix — Consulting & Software Engineering</title>
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 44'%3E%3Cdefs%3E%3CradialGradient id='dg' cx='38%25' cy='32%25' r='65%25'%3E%3Cstop offset='0%25' stop-color='%23cccccc'/%3E%3Cstop offset='55%25' stop-color='%23888888'/%3E%3Cstop offset='100%25' stop-color='%23444444'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='10' cy='24' r='13.5' fill='%231a1a1a'/%3E%3Ccircle cx='10' cy='24' r='7' fill='white'/%3E%3Cpath d='M10 24 L22 36 L26 30 L10 24Z' fill='white'/%3E%3Crect x='19.5' y='11' width='7' height='27' rx='3.5' fill='%231a1a1a'/%3E%3Crect x='32' y='17' width='8.5' height='21' rx='1.5' fill='%231a1a1a'/%3E%3Ccircle cx='36.3' cy='8' r='7.5' fill='rgba(0,0,0,0.1)'/%3E%3Ccircle cx='36.3' cy='8' r='5.5' fill='url(%23dg)'/%3E%3C/svg%3E" />
+<title>Acantix | AI Consulting, Software Development & Digital Transformation</title>
+<meta name="description" content=" Acantix delivers AI consulting, application development, and digital transformation solutions to help businesses scale, automate, and innovate faster.">
+<meta name="keywords" content="AI consulting, digital transformation, software development, AI solutions, application modernisation, product engineering, cloud solutions, IT consulting company, AI development services">
+
+<meta name="author" content="Acantix">
+<meta name="robots" content="index, follow"> 
+    <meta property="og:title" content="Acantix | Build and Scale AI-Driven Systems">
+<meta property="og:description" content=" We design, build, and scale AI and digital systems that drive measurable business outcomes.">
+<meta property="og:image" content="https://acantix.com/og-image.png">
+<meta property="og:url" content="https://acantix.com">
+<meta property="og:type" content="website">
+    <link rel="canonical" href="https://acantix.com/">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="icon" href="/icon.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:wght@400;700&display=swap"
         rel="stylesheet" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
-        html {
-            scroll-behavior: smooth
-        }
-
-        :root {
-            --bg: #fafafa;
-            --white: #fff;
-            --black: #1a1a1a;
-            --gray: #6b6b6b;
-            --gl: #e5e5e5;
-            --glr: #f0f0f0;
-            --accent: #f5e642;
-            --green: #22c55e;
-            --mono: 'Courier Prime', monospace;
-            --serif: 'Playfair Display', serif
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--black);
-            overflow-x: hidden
-        }
-
-        ::-webkit-scrollbar {
-            width: 3px
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--black);
-            border-radius: 10px
-        }
-
-        .ticker {
-            background: var(--black);
-            padding: 6px 0;
-            overflow: hidden;
-            position: relative
-        }
-
-        .ticker-track {
-            display: flex;
-            white-space: nowrap;
-            animation: tick 45s linear infinite
-        }
-
+        /* Only animations — nothing that affects layout */
         @keyframes tick {
             0% {
                 transform: translateX(0)
@@ -73,541 +33,7 @@
             }
         }
 
-        .ti {
-            display: inline-flex;
-            align-items: center;
-            gap: 16px;
-            margin: 0 32px;
-            font-family: var(--mono);
-            font-size: 10px;
-            letter-spacing: .18em;
-            color: rgba(255, 255, 255, .45)
-        }
-
-        .ti-on {
-            color: var(--green)
-        }
-
-        .ti-bd {
-            color: var(--accent)
-        }
-
-        .ti-sep {
-            color: rgba(255, 255, 255, .15)
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 200;
-            height: 68px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 48px;
-            background: rgba(250, 250, 250, .92);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, .06);
-            transition: all .3s
-        }
-
-        nav.up {
-            box-shadow: 0 2px 24px rgba(0, 0, 0, .06)
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none
-        }
-
-        .logo-name {
-            font-size: 1.45rem;
-            font-weight: 800;
-            color: var(--black);
-            letter-spacing: -.02em
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px
-        }
-
-        .nav-links a {
-            color: var(--gray);
-            font-size: .88rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: color .2s;
-            position: relative;
-            padding-bottom: 2px
-        }
-
-        .nav-links a:hover {
-            color: var(--black)
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background: var(--black);
-            transition: width .3s
-        }
-
-        .nav-links a:hover::after {
-            width: 100%
-        }
-
-        .nav-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            background: transparent;
-            color: var(--black);
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-size: .85rem;
-            font-weight: 600;
-            text-decoration: none;
-            border: 1.5px solid var(--black);
-            transition: all .25s
-        }
-
-        .nav-btn:hover {
-            background: var(--black);
-            color: #fff;
-            transform: translateY(-1px)
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 48px 80px;
-            position: relative;
-            background: var(--bg)
-        }
-
-        .hero-inner {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            width: 100%
-        }
-
-        .hero h1 {
-            font-family: var(--serif);
-            font-size: clamp(2.6rem, 4.8vw, 4.2rem);
-            font-weight: 400;
-            color: var(--black);
-            line-height: 1.12;
-            letter-spacing: -.02em;
-            margin-bottom: 22px
-        }
-
-        .hero h1 .italic {
-            font-style: italic
-        }
-
-        .hero-p {
-            font-size: 1rem;
-            color: var(--gray);
-            line-height: 1.85;
-            margin-bottom: 36px;
-            max-width: 480px
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--black);
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-size: .9rem;
-            font-weight: 600;
-            text-decoration: none;
-            border: 1.5px solid var(--black);
-            transition: all .3s
-        }
-
-        .hero-cta:hover {
-            background: var(--black);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .12)
-        }
-
-        .hero-cta svg {
-            transition: transform .3s
-        }
-
-        .hero-cta:hover svg {
-            transform: translateX(3px)
-        }
-
-        .hero-right {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: visible
-        }
-
-        .hero-img {
-            width: 100%;
-            max-width: 580px;
-            object-fit: contain
-        }
-
-        .stats-bar {
-            background: var(--white);
-            border-top: 1px solid var(--gl);
-            border-bottom: 1px solid var(--gl)
-        }
-
-        .stats-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr)
-        }
-
-        .stat {
-            padding: 32px 20px;
-            text-align: center;
-            border-right: 1px solid var(--gl);
-            transition: background .25s
-        }
-
-        .stat:last-child {
-            border-right: none
-        }
-
-        .stat:hover {
-            background: var(--glr)
-        }
-
-        .stat-n {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: var(--black);
-            line-height: 1;
-            letter-spacing: -.02em
-        }
-
-        .stat-l {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray);
-            letter-spacing: .18em;
-            margin-top: 6px
-        }
-
-        section {
-            padding: 100px 48px
-        }
-
-        .inner {
-            max-width: 1200px;
-            margin: 0 auto
-        }
-
-        .stag {
-            display: inline-block;
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray);
-            letter-spacing: .25em;
-            text-transform: uppercase;
-            margin-bottom: 14px
-        }
-
-        h2 {
-            font-family: var(--serif);
-            font-size: clamp(2rem, 3.5vw, 3.2rem);
-            font-weight: 400;
-            color: var(--black);
-            line-height: 1.12;
-            letter-spacing: -.02em;
-            margin-bottom: 16px
-        }
-
-        h2 .hl {
-            background: var(--accent);
-            padding: 0 6px;
-            display: inline;
-            text-decoration: none;
-            font-style: italic
-        }
-
-        .about-bg {
-            background: #f7f7f2
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start
-        }
-
-        .about-p {
-            color: var(--gray);
-            font-size: .95rem;
-            line-height: 1.9;
-            margin-bottom: 16px
-        }
-
-        .about-img {
-            width: 100%;
-            max-width: 650px;
-            object-fit: contain;
-            mix-blend-mode: darken;
-        }
-
-        .chat {
-            display: flex;
-            flex-direction: column;
-            gap: 0
-        }
-
-        .chat-who {
-            font-family: var(--mono);
-            font-size: 9px;
-            letter-spacing: .18em;
-            margin-bottom: 5px;
-            text-transform: uppercase
-        }
-
-        .c-ops {
-            color: var(--black);
-            display: flex;
-            align-items: center;
-            gap: 8px
-        }
-
-        .c-client {
-            color: var(--gray);
-            text-align: right;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            justify-content: flex-end
-        }
-
-        .c-ico {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            border: 1px solid var(--gl);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0
-        }
-
-        .bubble-a {
-            background: var(--white);
-            border: 1px solid var(--gl);
-            border-radius: 14px 14px 14px 3px;
-            padding: 14px 18px;
-            max-width: 420px;
-            transition: all .3s;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .03)
-        }
-
-        .bubble-a:hover {
-            border-color: #ccc;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, .06)
-        }
-
-        .bubble-b {
-            background: var(--glr);
-            border: 1px solid var(--gl);
-            border-radius: 14px 14px 3px 14px;
-            padding: 14px 18px;
-            max-width: 400px;
-            margin-left: auto;
-            transition: all .3s
-        }
-
-        .bubble-b:hover {
-            border-color: #ccc
-        }
-
-        .bt {
-            font-size: .92rem;
-            line-height: 1.75;
-            color: var(--black)
-        }
-
-        .bt .fade {
-            color: var(--gray)
-        }
-
-        .chat-line {
-            height: 18px;
-            width: 1px;
-            background: var(--gl);
-            margin-left: 14px;
-            margin-bottom: 6px
-        }
-
-        .chat-line-r {
-            margin-left: auto;
-            margin-right: 14px
-        }
-
-        /* Departure board - light theme */
-        .dep-board {
-            background: var(--white);
-            border: 1px solid var(--gl);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, .04)
-        }
-
-        .dep-top {
-            background: var(--glr);
-            border-bottom: 1px solid var(--gl);
-            padding: 10px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-
-        .dep-top-label {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--black);
-            letter-spacing: .2em
-        }
-
-        .dep-top-time {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray);
-            letter-spacing: .15em
-        }
-
-        .dep-cols,
-        .dep-row {
-            display: grid;
-            grid-template-columns: 85px 1fr 90px 125px 65px
-        }
-
-        .dep-ch {
-            padding: 7px 14px;
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--gray);
-            letter-spacing: .2em;
-            border-bottom: 1px solid var(--gl)
-        }
-
-        .dep-row {
-            border-bottom: 1px solid var(--gl);
-            transition: background .2s
-        }
-
-        .dep-row:last-child {
-            border-bottom: none
-        }
-
-        .dep-row:hover {
-            background: var(--glr)
-        }
-
-        .dep-cell {
-            padding: 11px 14px;
-            display: flex;
-            align-items: center
-        }
-
-        .dc-fl {
-            font-family: var(--mono);
-            font-size: 12px;
-            color: var(--black);
-            font-weight: 700;
-            letter-spacing: .08em
-        }
-
-        .dc-name {
-            font-weight: 700;
-            font-size: 14px;
-            color: var(--black)
-        }
-
-        .dc-sub {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--gray);
-            letter-spacing: .12em;
-            margin-top: 2px
-        }
-
-        .dc-time {
-            font-family: var(--mono);
-            font-size: 12px;
-            color: var(--gray)
-        }
-
-        .dc-gate {
-            font-family: var(--mono);
-            font-size: 15px;
-            color: var(--black);
-            font-weight: 700;
-            letter-spacing: .1em
-        }
-
-        .pill {
-            font-family: var(--mono);
-            font-size: 9px;
-            letter-spacing: .12em;
-            padding: 3px 9px;
-            border-radius: 3px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px
-        }
-
-        .p-bd {
-            background: rgba(245, 230, 66, .15);
-            color: #b8a000
-        }
-
-        .p-ot {
-            background: rgba(34, 197, 94, .1);
-            color: var(--green)
-        }
-
-        .p-sc {
-            background: var(--glr);
-            color: var(--gray)
-        }
-
-        .pdot {
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: currentColor;
-            animation: bl 1.6s ease-in-out infinite
-        }
-
-        @keyframes bl {
+        @keyframes blink {
 
             0%,
             100% {
@@ -615,448 +41,84 @@
             }
 
             50% {
-                opacity: .1
+                opacity: .15
             }
         }
 
-        /* Boarding passes - light theme */
-        .bp-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
-            max-width: 1160px;
-            margin: 0 auto
+        @keyframes floatY {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
         }
 
-        .bp {
-            background: var(--white);
-            border: 1px solid var(--gl);
-            border-radius: 14px;
-            overflow: hidden;
-            transition: transform .35s cubic-bezier(.4, 0, .2, 1), box-shadow .35s, border-color .35s
+        @keyframes spinCW {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
         }
 
-        .bp:hover {
-            transform: translateY(-7px);
-            border-color: #bbb;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .08)
+        @keyframes spinCCW {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(-360deg)
+            }
         }
 
-        .bp-stub {
-            background: var(--glr);
-            padding: 16px 22px 14px;
-            border-bottom: none
+        @keyframes radarSweep {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
         }
 
-        .bp-stub-top {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--gray);
-            letter-spacing: .28em;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between
+        @keyframes segGlow {
+
+            0%,
+            100% {
+                opacity: .1
+            }
+
+            50% {
+                opacity: .22
+            }
         }
 
-        .bp-stub-main {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between
+        @keyframes needlePulse {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 4px rgba(0, 0, 0, .1))
+            }
+
+            50% {
+                filter: drop-shadow(0 0 14px rgba(0, 0, 0, .2))
+            }
         }
 
-        .bp-service-name {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--black);
-            letter-spacing: -.01em;
-            margin-bottom: 3px
-        }
+        @keyframes feedScroll {
+            0% {
+                transform: translateY(0)
+            }
 
-        .bp-flight-no {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray);
-            letter-spacing: .18em
-        }
-
-        .bp-gate-area {
-            text-align: right
-        }
-
-        .bp-gate-label {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--gray);
-            letter-spacing: .2em;
-            margin-bottom: 2px
-        }
-
-        .bp-gate-num {
-            font-family: var(--mono);
-            font-size: 1.8rem;
-            color: var(--black);
-            font-weight: 700;
-            line-height: 1
-        }
-
-        .bp-alive {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 5px;
-            justify-content: flex-end
-        }
-
-        .bp-alive-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--green);
-            animation: bl 2s ease-in-out infinite
-        }
-
-        .bp-alive-text {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--gray);
-            letter-spacing: .14em
-        }
-
-        .tear {
-            height: 12px;
-            background: var(--white);
-            position: relative;
-            overflow: visible;
-            border-top: 1.5px dashed var(--gl);
-            margin-top: -1px
-        }
-
-        .tear::before,
-        .tear::after {
-            content: '';
-            position: absolute;
-            top: -7px;
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            background: var(--bg);
-            border: 1px solid var(--gl)
-        }
-
-        .tear::before {
-            left: -7px
-        }
-
-        .tear::after {
-            right: -7px
-        }
-
-        .bp-body {
-            padding: 22px 22px 20px
-        }
-
-        .bp-desc {
-            font-size: .9rem;
-            color: var(--gray);
-            line-height: 1.82;
-            margin-bottom: 18px
-        }
-
-        .bp-meter {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px
-        }
-
-        .bp-m-label {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--gray);
-            letter-spacing: .14em;
-            width: 64px;
-            flex-shrink: 0
-        }
-
-        .bp-m-track {
-            flex: 1;
-            height: 2px;
-            background: var(--gl);
-            border-radius: 1px;
-            overflow: hidden
-        }
-
-        .bp-m-fill {
-            height: 100%;
-            background: var(--black);
-            border-radius: 1px;
-            width: 0;
-            transition: width 1.5s cubic-bezier(.4, 0, .2, 1)
-        }
-
-        .bp-m-pct {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--black);
-            min-width: 28px;
-            text-align: right
-        }
-
-        .bp-tags {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-bottom: 18px
-        }
-
-        .bp-tag {
-            font-family: var(--mono);
-            font-size: 9px;
-            letter-spacing: .12em;
-            padding: 4px 10px;
-            border-radius: 3px;
-            background: var(--glr);
-            border: 1px solid var(--gl);
-            color: var(--gray);
-            transition: all .3s
-        }
-
-        .bp:hover .bp-tag {
-            border-color: #bbb;
-            color: var(--black)
-        }
-
-        .bp-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            background: var(--glr);
-            border: 1px solid var(--gl);
-            color: var(--black);
-            padding: 9px 18px;
-            border-radius: 50px;
-            font-size: .83rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all .3s;
-            text-decoration: none
-        }
-
-        .bp-cta:hover {
-            background: var(--black);
-            color: #fff;
-            border-color: var(--black)
-        }
-
-        /* Contact */
-        .contact-bg {
-            background: var(--white)
-        }
-
-        .ticket {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--bg);
-            border: 1px solid var(--gl);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, .04)
-        }
-
-        .ticket-stub {
-            background: var(--glr);
-            padding: 18px 30px 16px;
-            border-bottom: 1.5px dashed var(--gl);
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-
-        .ticket-stub-label {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--black);
-            letter-spacing: .2em;
-            margin-bottom: 3px
-        }
-
-        .ticket-stub-sub {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--gray);
-            letter-spacing: .18em
-        }
-
-        .ticket-stub-gate {
-            font-family: var(--mono);
-            font-size: 2rem;
-            color: var(--black);
-            font-weight: 700;
-            letter-spacing: .1em
-        }
-
-        .ticket-body {
-            padding: 34px 30px 28px
-        }
-
-        label {
-            display: block;
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray);
-            letter-spacing: .2em;
-            margin-bottom: 7px
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            background: var(--white);
-            border: 1px solid var(--gl);
-            border-radius: 9px;
-            padding: 12px 15px;
-            font-family: 'Inter', sans-serif;
-            font-size: .91rem;
-            color: var(--black);
-            outline: none;
-            transition: all .3s
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-            color: #bbb
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: var(--black);
-            box-shadow: 0 0 0 3px rgba(0, 0, 0, .05)
-        }
-
-        textarea {
-            resize: none
-        }
-
-        .f-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 16px
-        }
-
-        .f-full {
-            margin-bottom: 16px
-        }
-
-        .f-submit {
-            width: 100%;
-            background: var(--black);
-            color: #fff;
-            padding: 14px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            font-size: .93rem;
-            font-weight: 700;
-            transition: all .3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 8px
-        }
-
-        .f-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .18)
-        }
-
-        /* Runway */
-        .runway {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-            background: linear-gradient(180deg, var(--bg), var(--glr));
-            border-top: 1px solid var(--gl)
-        }
-
-        .rwy-perspective {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 220px;
-            height: 100%;
-            background: linear-gradient(0deg, rgba(0, 0, 0, .03) 0%, transparent 100%);
-            clip-path: polygon(40% 100%, 60% 100%, 100% 0%, 0% 0%)
-        }
-
-        .rwy-dashes {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            gap: 14px;
-            padding-bottom: 10px
-        }
-
-        .rwy-dash {
-            width: 3px;
-            height: 28px;
-            background: rgba(0, 0, 0, .15);
-            border-radius: 1px
-        }
-
-        .rwy-edge-l,
-        .rwy-edge-r {
-            position: absolute;
-            bottom: 0;
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 28px;
-            padding-bottom: 14px
-        }
-
-        .rwy-edge-l {
-            left: calc(50% - 110px)
-        }
-
-        .rwy-edge-r {
-            right: calc(50% - 110px)
-        }
-
-        .rwy-lt {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: var(--accent)
-        }
-
-        .rwy-lt:nth-child(1) {
-            animation: rwl 1.4s ease-in-out infinite 0s
-        }
-
-        .rwy-lt:nth-child(2) {
-            animation: rwl 1.4s ease-in-out infinite .22s
-        }
-
-        .rwy-lt:nth-child(3) {
-            animation: rwl 1.4s ease-in-out infinite .44s
-        }
-
-        .rwy-lt:nth-child(4) {
-            animation: rwl 1.4s ease-in-out infinite .66s
-        }
-
-        .rwy-lt:nth-child(5) {
-            animation: rwl 1.4s ease-in-out infinite .88s
+            100% {
+                transform: translateY(-50%)
+            }
         }
 
         @keyframes rwl {
@@ -1064,7 +126,7 @@
             0%,
             100% {
                 opacity: 1;
-                box-shadow: 0 0 8px var(--accent)
+                box-shadow: 0 0 8px #f5e642
             }
 
             50% {
@@ -1073,638 +135,722 @@
             }
         }
 
-        .rwy-tag {
-            position: absolute;
-            bottom: 18px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray);
-            letter-spacing: .3em;
-            white-space: nowrap;
-            z-index: 3
-        }
-
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--gl);
-            padding: 56px 48px 24px
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 44px
-        }
-
-        .f-brand p {
-            font-size: .85rem;
-            color: var(--gray);
-            line-height: 1.9;
-            margin-top: 8px;
-            max-width: 240px
-        }
-
-        .f-col h4 {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--black);
-            letter-spacing: .24em;
-            margin-bottom: 14px
-        }
-
-        .f-col ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 9px
-        }
-
-        .f-col a {
-            color: var(--gray);
-            font-size: .87rem;
-            text-decoration: none;
-            transition: color .2s
-        }
-
-        .f-col a:hover {
-            color: var(--black)
-        }
-
-        .f-rule {
-            height: 1px;
-            background: var(--gl);
-            max-width: 1200px;
-            margin: 0 auto 18px
-        }
-
-        .f-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center
-        }
-
-        .f-copy {
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray)
-        }
-
-        .f-status {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-family: var(--mono);
-            font-size: 10px;
-            color: var(--gray)
-        }
-
-        .features {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 22px 0 30px
-        }
-
-        .feat {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 13px 16px;
-            background: var(--glr);
-            border: 1px solid var(--gl);
-            border-radius: 10px;
-            transition: all .3s
-        }
-
-        .feat:hover {
-            background: var(--white);
-            border-color: #bbb;
-            transform: translateX(5px)
-        }
-
-        .feat-ico {
-            width: 40px;
-            height: 40px;
-            border-radius: 9px;
-            background: rgba(0, 0, 0, .04);
-            border: 1px solid var(--gl);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: all .3s
-        }
-
-        .feat:hover .feat-ico {
-            background: rgba(0, 0, 0, .08)
-        }
-
-        .feat-t {
-            font-weight: 600;
-            font-size: .9rem;
-            color: var(--black);
-            margin-bottom: 1px
-        }
-
-        .feat-s {
-            font-size: .78rem;
-            color: var(--gray)
-        }
-
-        .btn-p {
-            background: var(--black);
-            color: #fff;
-            padding: 13px 30px;
-            border-radius: 50px;
-            font-size: .93rem;
-            font-weight: 700;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all .3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 7px
-        }
-
-        .btn-p:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 32px rgba(0, 0, 0, .15)
-        }
-
-        #topBtn {
-            position: fixed;
-            bottom: 26px;
-            right: 26px;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--black);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
-            opacity: 0;
-            transition: opacity .3s, transform .3s;
-            z-index: 300
-        }
-
-        #topBtn.v {
-            opacity: 1
-        }
-
-        #topBtn:hover {
-            transform: translateY(-3px)
-        }
-
-        .toast {
-            position: fixed;
-            top: 80px;
-            right: 22px;
-            background: var(--white);
-            border: 1px solid rgba(34, 197, 94, .35);
-            border-radius: 10px;
-            padding: 13px 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transform: translateX(130%);
-            transition: transform .4s;
-            z-index: 500;
-            box-shadow: 0 8px 28px rgba(0, 0, 0, .08)
-        }
-
-        .toast.show {
-            transform: translateX(0)
-        }
-
-        .toast span {
-            font-size: .87rem;
-            color: var(--black)
-        }
-
-        .r {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity .7s cubic-bezier(.4, 0, .2, 1), transform .7s cubic-bezier(.4, 0, .2, 1)
-        }
-
-        .r.in {
-            opacity: 1;
-            transform: none
-        }
-
-        .r.left {
-            transform: translateX(-24px)
-        }
-
-        .r.right {
-            transform: translateX(24px)
-        }
-
-        .r.left.in,
-        .r.right.in {
-            transform: none
-        }
-
-        .d1 {
-            transition-delay: .1s
-        }
-
-        .d2 {
-            transition-delay: .22s
-        }
-
-        .d3 {
-            transition-delay: .34s
-        }
-
-        .d4 {
-            transition-delay: .46s
-        }
-
-        @media(max-width:900px) {
-
-            .hero-inner,
-            .about-grid,
-            .bp-grid,
-            .values-grid,
-            .engage-grid,
-            .careers-grid {
-                grid-template-columns: 1fr !important;
-                gap: 40px !important;
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(24px)
             }
 
-            .flight-grid {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 40px 20px !important;
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .ticker-track {
+            animation: tick 45s linear infinite;
+        }
+
+        .blink {
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        .float-y {
+            animation: floatY 5s ease-in-out infinite;
+        }
+
+        .spin-cw {
+            animation: spinCW 40s linear infinite;
+            transform-origin: center;
+        }
+
+        .spin-ccw {
+            animation: spinCCW 22s linear infinite;
+            transform-origin: center;
+        }
+
+        .radar-line {
+            animation: radarSweep 6s linear infinite;
+            transform-origin: 180px 180px;
+        }
+
+        .seg-glow {
+            animation: segGlow 3s ease-in-out infinite;
+        }
+
+        .needle {
+            animation: needlePulse 3s ease-in-out infinite;
+        }
+
+        .feed-anim {
+            animation: feedScroll 25s linear infinite;
+        }
+
+        .rwy-lt {
+            animation: rwl 1.4s ease-in-out infinite;
+        }
+
+        .revealed {
+            animation: reveal .6s ease forwards;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+
+        /* ── Fluid mobile sizing ── */
+        /* Hero heading: fluid from ~1.6rem at 320px to 2.2rem at 480px */
+        .hero-heading {
+            font-size: clamp(1.6rem, 4vw + 0.5rem, 2.2rem);
+        }
+
+        @media (min-width: 640px) {
+            .hero-heading {
+                font-size: clamp(2.2rem, 3vw + 1rem, 2.8rem);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-heading {
+                font-size: clamp(2.8rem, 3vw + 1rem, 4rem);
+            }
+        }
+
+        /* Section headings: fluid on mobile */
+        .section-heading {
+            font-size: clamp(1.5rem, 5vw, 1.875rem);
+        }
+
+        @media (min-width: 768px) {
+            .section-heading {
+                font-size: clamp(1.875rem, 3vw, 2.25rem);
+            }
+        }
+
+        /* Metric numbers: scale down on small screens */
+        .metric-num {
+            font-size: clamp(1.5rem, 6vw, 1.875rem);
+        }
+
+        /* Very small screens (< 380px) — extra scaling */
+        @media (max-width: 380px) {
+            .compass-wrap {
+                width: 260px !important;
+                height: 260px !important;
             }
 
-            .flight-grid>div:first-child {
+            .radar-wrap {
+                width: 200px !important;
+                height: 200px !important;
+            }
+
+            .engage-icon {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+            .engage-icon svg {
+                width: 36px;
+                height: 36px;
+            }
+
+            .runway-strip {
+                height: 90px !important;
+            }
+
+            .compass-label {
+                font-size: 8px !important;
+            }
+
+            .compass-card {
                 display: none !important;
-                /* hide the connecting line on mobile */
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr !important;
-            }
-
-            .stats-inner {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
-
-            nav {
-                padding: 0 24px
-            }
-
-            section,
-            .hero {
-                padding-left: 24px;
-                padding-right: 24px
-            }
-
-            .f-grid {
-                grid-template-columns: 1fr
-            }
-
-            .dep-cols,
-            .dep-row {
-                grid-template-columns: 70px 1fr 70px 100px 50px
-            }
-
-            .delivery-flex {
-                flex-direction: column !important;
-                gap: 16px !important;
             }
         }
 
-        @media(max-width:600px) {
-            .nav-links {
-                display: none
+        /* Small-medium screens (381px – 480px) */
+        @media (min-width: 381px) and (max-width: 480px) {
+            .compass-wrap {
+                width: 290px !important;
+                height: 290px !important;
             }
 
-            .footer-grid,
-            .stats-inner,
-            .flight-grid {
-                grid-template-columns: 1fr !important;
+            .radar-wrap {
+                width: 230px !important;
+                height: 230px !important;
             }
 
-            .engage-card,
-            .career-card {
-                flex-direction: column !important;
-                text-align: center !important;
-                border-radius: 40px !important;
-                padding: 30px 20px !important;
+            .engage-icon {
+                width: 90px !important;
+                height: 90px !important;
             }
 
-            .engage-card>div:first-child,
-            .career-card>div:first-child {
-                margin: 0 auto 24px !important;
-                order: -1 !important;
+            .engage-icon svg {
+                width: 40px;
+                height: 40px;
             }
 
-            .about-img {
-                height: auto !important;
-                max-width: 100% !important;
+            .runway-strip {
+                height: 110px !important;
             }
 
-            .hero h1 {
-                font-size: clamp(2.2rem, 8vw, 2.6rem) !important;
+            .compass-card {
+                transform: scale(0.85);
             }
         }
     </style>
 </head>
 
-<body>
-    <!-- TICKER -->
-    <div class="ticker">
-        <div class="ticker-track">
-            <div class="ti"><span>ACX-001</span><span class="ti-sep">◈</span><span>CONSULTING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE A1</span></div>
-            <div class="ti"><span>ACX-002</span><span class="ti-sep">◈</span><span>ENGINEERING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE B3</span></div>
-            <div class="ti"><span>ACX-003</span><span class="ti-sep">◈</span><span>ADVISORY</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE C2</span></div>
-            <div class="ti"><span>ACX-004</span><span class="ti-sep">◈</span><span>SOLUTIONING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE D7</span></div>
-            <div class="ti"><span class="ti-sep">◈</span><span>TRUE NORTH BEARING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">MISSION: GO</span><span class="ti-sep">◈</span></div>
-            <div class="ti"><span>ACX-001</span><span class="ti-sep">◈</span><span>CONSULTING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE A1</span></div>
-            <div class="ti"><span>ACX-002</span><span class="ti-sep">◈</span><span>ENGINEERING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE B3</span></div>
-            <div class="ti"><span>ACX-003</span><span class="ti-sep">◈</span><span>ADVISORY</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">BOARDING · GATE C2</span></div>
-            <div class="ti"><span>ACX-004</span><span class="ti-sep">◈</span><span>SOLUTIONING</span><span
-                    class="ti-sep">◈</span><span class="ti-on">ON TIME · GATE D7</span></div>
-            <div class="ti"><span class="ti-sep">◈</span><span>TRUE NORTH BEARING</span><span
-                    class="ti-sep">◈</span><span class="ti-bd">MISSION: GO</span><span class="ti-sep">◈</span></div>
+<body class="bg-[#fafafa] text-[#1a1a1a] font-sans overflow-x-hidden">
+
+    <!-- ══ TICKER ══ -->
+    <div class="bg-[#1a1a1a] py-1.5 overflow-hidden">
+        <div class="ticker-track flex whitespace-nowrap">
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-001
+                <span class="text-white/15">◈</span> CONSULTING <span class="text-white/15">◈</span> <span
+                    class="text-[#f5e642]">BOARDING · GATE A1</span></span>
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-002
+                <span class="text-white/15">◈</span> ENGINEERING <span class="text-white/15">◈</span> <span
+                    class="text-[#22c55e]">ON TIME · GATE B3</span></span>
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-003
+                <span class="text-white/15">◈</span> ADVISORY <span class="text-white/15">◈</span> <span
+                    class="text-[#f5e642]">BOARDING · GATE C2</span></span>
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-004
+                <span class="text-white/15">◈</span> SOLUTIONING <span class="text-white/15">◈</span> <span
+                    class="text-[#22c55e]">ON TIME · GATE D7</span></span>
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span
+                    class="text-white/15">◈</span> TRUE NORTH BEARING <span class="text-white/15">◈</span> <span
+                    class="text-[#f5e642]">MISSION: GO</span> <span class="text-white/15">◈</span></span>
+            <!-- duplicate for seamless loop -->
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-001
+                <span class="text-white/15">◈</span> CONSULTING <span class="text-white/15">◈</span> <span
+                    class="text-[#f5e642]">BOARDING · GATE A1</span></span>
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-002
+                <span class="text-white/15">◈</span> ENGINEERING <span class="text-white/15">◈</span> <span
+                    class="text-[#22c55e]">ON TIME · GATE B3</span></span>
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-003
+                <span class="text-white/15">◈</span> ADVISORY <span class="text-white/15">◈</span> <span
+                    class="text-[#f5e642]">BOARDING · GATE C2</span></span>
+            <span
+                class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40">ACX-004
+                <span class="text-white/15">◈</span> SOLUTIONING <span class="text-white/15">◈</span> <span
+                    class="text-[#22c55e]">ON TIME · GATE D7</span></span>
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span
+                    class="text-white/15">◈</span> TRUE NORTH BEARING <span class="text-white/15">◈</span> <span
+                    class="text-[#f5e642]">MISSION: GO</span></span>
         </div>
     </div>
 
-    <!-- NAV -->
-    <nav id="nav">
-        <a href="#" class="logo"><img src="icon.svg" alt="Acantix" style="height:32px;width:32px;" /><span
-                class="logo-name">Acantix</span></a>
-        <div style="display:flex;align-items:center;gap:20px;">
-            <div class="nav-links"><a href="#services">Services</a><a href="case-studies.html">Case Studies</a><a
-                    href="careers.html">Careers</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
-            <a href="#contact" class="nav-btn">Get Onboard →</a>
+    <!-- ══ NAV ══ -->
+    <nav id="nav"
+        class="fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center justify-between px-5 md:px-12 bg-[rgba(250,250,250,0.95)] backdrop-blur-xl border-b border-black/[.06] transition-shadow duration-300">
+        <a href="#" class="flex items-center gap-2.5 no-underline">
+            <img src="icon.svg" alt="Acantix" class="w-7 h-7" />
+            <span class="text-xl font-extrabold text-[#1a1a1a] tracking-tight">Acantix</span>
+        </a>
+        <!-- Desktop links -->
+        <div class="hidden md:flex items-center gap-6">
+            <a href="#services"
+                class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Services</a>
+            <a href="#about" class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">About
+                Us</a>
+            <a href="#engagement"
+                class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Engagement</a>
+            <a href="case-studies.html"
+                class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Case Studies</a>
+            <a href="careers.html"
+                class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Careers</a>
+            <a href="#contact"
+                class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Contact</a>
+            <a href="#contact"
+                class="inline-flex items-center gap-2 px-5 py-2 rounded-full border-[1.5px] border-[#1a1a1a] text-sm font-semibold hover:bg-[#1a1a1a] hover:text-white transition-all">Get Your AI Strategy Blueprint →</a>
         </div>
+        <!-- Hamburger -->
+        <button id="ham" class="md:hidden flex flex-col gap-[5px] p-2 bg-transparent border-none cursor-pointer"
+            onclick="toggleMenu()" aria-label="Menu">
+            <span id="h1" class="block w-[22px] h-[2px] bg-[#1a1a1a] rounded transition-all duration-300"></span>
+            <span id="h2" class="block w-[22px] h-[2px] bg-[#1a1a1a] rounded transition-all duration-300"></span>
+            <span id="h3" class="block w-[22px] h-[2px] bg-[#1a1a1a] rounded transition-all duration-300"></span>
+        </button>
     </nav>
     <!-- TICKER -->
-    <div style="margin-top:68px;" class="ticker-wrap">
-        <div class="ticker-track">
-            <span>◈ CLIENT SUCCESS</span><span>◈ PROVEN RESULTS</span><span>◈ IMPACT DELIVERED</span><span>◈ TRANSFORMING INDUSTRIES</span><span>◈ REAL PROJECTS</span>
-            <span>◈ CLIENT SUCCESS</span><span>◈ PROVEN RESULTS</span><span>◈ IMPACT DELIVERED</span><span>◈ TRANSFORMING INDUSTRIES</span><span>◈ REAL PROJECTS</span>
+    <div class="bg-[#1a1a1a] py-1.5 mt-[60px] overflow-hidden">
+        <div class="ticker-track flex whitespace-nowrap">
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> CLIENT SUCCESS <span class="text-white/15">◈</span> PROVEN RESULTS <span class="text-white/15">◈</span> IMPACT DELIVERED <span class="text-white/15">◈</span> TRANSFORMING INDUSTRIES <span class="text-white/15">◈</span> REAL PROJECTS</span>
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> CLIENT SUCCESS <span class="text-white/15">◈</span> PROVEN RESULTS <span class="text-white/15">◈</span> IMPACT DELIVERED <span class="text-white/15">◈</span> TRANSFORMING INDUSTRIES <span class="text-white/15">◈</span> REAL PROJECTS</span>
         </div>
     </div>
     
     <!-- ═══ CASE HERO ═══ -->
-    <section style="padding:120px 0 60px;background:#fff;text-align:center;">
-        <div style="max-width:1280px;margin:0 auto;padding:0 28px;">
-            <div class="tag tag-sky" style="margin-bottom:22px;">
+    <section class="py-24 md:py-32 bg-[#fafafa] text-center">
+        <div class="max-w-[1280px] mx-auto px-7">
+            <div class="inline-block font-mono text-[10px] text-[#6b6b6b] tracking-[.25em] uppercase mb-5">
                 Client Success Stories
             </div>
-            <h1 style="font-size:clamp(2.5rem,4vw,3.8rem);font-weight:800;color:var(--ink2);margin-bottom:20px;">
-                Transforming <em class="serif shimmer-text" style="font-style:italic;font-weight:400;">Industries</em>
+            <h1 class="font-serif font-normal leading-[1.12] tracking-tight mb-5 text-[clamp(2.5rem,4vw,3.8rem)] text-[#1a1a1a]">
+                Transforming <em class="bg-[#f5e642] px-1.5 italic font-normal">Industries</em>
             </h1>
-            <p style="font-size:1.1rem;color:var(--muted);max-width:700px;margin:0 auto 40px;line-height:1.8;">
+            <p class="text-[#6b6b6b] text-[1.05rem] md:text-[1.1rem] max-w-[700px] mx-auto mb-10 leading-[1.85]">
                 From startups to enterprises, we've partnered with organizations across industries to deliver measurable results through intelligent solutions. Real projects. Real impact. Real testimonials.
             </p>
             
-            <div style="display:flex;justify-content:center;gap:40px;margin-top:40px;">
+            <div class="flex flex-wrap justify-center gap-10 md:gap-16 mt-12">
                 <div>
-                    <div style="font-size:2rem;font-weight:800;color:var(--sky);">50+</div>
-                    <div class="mono" style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;">PROJECTS DELIVERED</div>
+                    <div class="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-none mb-2">50+</div>
+                    <div class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em]">PROJECTS DELIVERED</div>
                 </div>
                 <div>
-                    <div style="font-size:2rem;font-weight:800;color:var(--sky);">5</div>
-                    <div class="mono" style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;">INDUSTRIES</div>
+                    <div class="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-none mb-2">5</div>
+                    <div class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em]">INDUSTRIES</div>
                 </div>
                 <div>
-                    <div style="font-size:2rem;font-weight:800;color:var(--sky);">100%</div>
-                    <div class="mono" style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;">SUCCESS RATE</div>
+                    <div class="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-none mb-2">100%</div>
+                    <div class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em]">SUCCESS RATE</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr class="div" />
+    <hr class="border-[#e5e5e5]" />
 
     <!-- ═══ PORTFOLIO ═══ -->
-    <section style="padding:100px 0;background:var(--bg);">
-        <div style="max-width:1280px;margin:0 auto;padding:0 28px;">
-            <div style="text-align:center;margin-bottom:60px;">
-                <h2 style="font-size:2.4rem;font-weight:800;color:var(--ink2);margin-bottom:30px;">Project Portfolio</h2>
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-[1280px] mx-auto px-7">
+            <div class="text-center mb-16">
+                <h2 class="font-serif font-bold text-[#1a1a1a] text-[clamp(2rem,3.5vw,3.2rem)] mb-8">Project Portfolio</h2>
                 
-                <div style="display:inline-flex;background:#fff;padding:8px;border-radius:50px;box-shadow:0 4px 12px rgba(0,0,0,0.05);flex-wrap:wrap;justify-content:center;gap:10px;">
-                    <button class="btn" style="background:var(--ink2);color:#fff;padding:8px 20px;font-size:0.85rem;">All Projects <span style="background:rgba(255,255,255,0.2);padding:2px 6px;border-radius:10px;font-size:0.7rem;margin-left:6px;">5</span></button>
-                    <button class="btn" style="background:transparent;color:var(--muted);padding:8px 20px;font-size:0.85rem;">Mobile Apps</button>
-                    <button class="btn" style="background:transparent;color:var(--muted);padding:8px 20px;font-size:0.85rem;">AI Bots</button>
-                    <button class="btn" style="background:transparent;color:var(--muted);padding:8px 20px;font-size:0.85rem;">Manufacturing</button>
-                    <button class="btn" style="background:transparent;color:var(--muted);padding:8px 20px;font-size:0.85rem;">Automation</button>
+                <div class="inline-flex flex-wrap justify-center gap-2 p-1.5 bg-[#fafafa] border border-[#e5e5e5] rounded-full shadow-sm">
+                    <button class="bg-[#1a1a1a] text-white px-5 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2 pointer-events-none hover:bg-[#1a1a1a]">All Projects <span class="bg-white/20 px-1.5 py-0.5 rounded text-[10px] font-mono leading-none">5</span></button>
+                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">Mobile Apps</button>
+                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">AI Bots</button>
+                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">Manufacturing</button>
+                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">Automation</button>
                 </div>
             </div>
             
-            <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:30px;">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Healthcare -->
-                <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="white" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
+                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
+                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     </div>
-                    <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
-                            <span class="mono" style="font-size:0.6rem;color:var(--sky);letter-spacing:0.1em;font-weight:700;">HEALTHCARE</span>
-                            <span class="tag">Mobile Apps</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
+                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Healthcare</span>
+                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Mobile Apps</span>
                         </div>
-                        <h3 style="font-size:1.4rem;font-weight:700;color:var(--ink2);margin-bottom:12px;">HealthTrack Mobile App</h3>
-                        <p style="color:var(--muted);line-height:1.6;font-size:0.95rem;margin-bottom:20px;">Remote patient monitoring and medication adherence tracking for chronic disease management.</p>
-                        <div style="background:var(--bg2);padding:15px;border-radius:10px;margin-bottom:20px;border-left:3px solid var(--sky);">
-                            <div style="font-weight:700;color:var(--sky3);font-size:1.2rem;">85%</div>
-                            <div style="font-size:0.8rem;color:var(--muted);">improvement in patient medication adherence</div>
+                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#22c55e] transition-colors">HealthTrack Mobile App</h3>
+                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Remote patient monitoring and medication adherence tracking for chronic disease management.</p>
+                        
+                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#22c55e] p-4 rounded-lg mb-8">
+                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">85%</div>
+                            <div class="text-xs text-[#6b6b6b] leading-relaxed">improvement in patient medication adherence</div>
                         </div>
-                        <div style="margin-top:auto;">
-                            <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:var(--sky2);font-weight:600;text-decoration:none;font-size:0.9rem;">View Full Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Retail -->
-                <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="white" stroke-width="2"/><path d="M12 22V12" stroke="white" stroke-width="2"/><path d="M3.27 6.96L12 12l8.73-5.04" stroke="white" stroke-width="2"/></svg>
+                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
+                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
+                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1.5"/><path d="M12 22V12" stroke="currentColor" stroke-width="1.5"/><path d="M3.27 6.96L12 12l8.73-5.04" stroke="currentColor" stroke-width="1.5"/></svg>
                     </div>
-                    <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
-                            <span class="mono" style="font-size:0.6rem;color:var(--sky);letter-spacing:0.1em;font-weight:700;">RETAIL & E-COMMERCE</span>
-                            <span class="tag">AI Bots</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
+                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Retail & E-Commerce</span>
+                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">AI Bots</span>
                         </div>
-                        <h3 style="font-size:1.4rem;font-weight:700;color:var(--ink2);margin-bottom:12px;">RetailBot Assistant</h3>
-                        <p style="color:var(--muted);line-height:1.6;font-size:0.95rem;margin-bottom:20px;">24/7 customer support automation and personalised product recommendations to increase sales conversion.</p>
-                        <div style="background:var(--bg2);padding:15px;border-radius:10px;margin-bottom:20px;border-left:3px solid var(--sky);">
-                            <div style="font-weight:700;color:var(--sky3);font-size:1.2rem;">300%</div>
-                            <div style="font-size:0.8rem;color:var(--muted);">increase in customer engagement</div>
+                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#f5e642] transition-colors">RetailBot Assistant</h3>
+                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">24/7 customer support automation and personalised product recommendations to increase sales conversion.</p>
+                        
+                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#f5e642] p-4 rounded-lg mb-8">
+                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">300%</div>
+                            <div class="text-xs text-[#6b6b6b] leading-relaxed">increase in customer engagement</div>
                         </div>
-                        <div style="margin-top:auto;">
-                            <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:var(--sky2);font-weight:600;text-decoration:none;font-size:0.9rem;">View Full Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Manufacturing -->
-                <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
+                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
+                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     </div>
-                    <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
-                            <span class="mono" style="font-size:0.6rem;color:var(--sky);letter-spacing:0.1em;font-weight:700;">MANUFACTURING</span>
-                            <span class="tag">Manufacturing</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
+                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Manufacturing</span>
+                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Automation</span>
                         </div>
-                        <h3 style="font-size:1.4rem;font-weight:700;color:var(--ink2);margin-bottom:12px;">SmartFactory Automation</h3>
-                        <p style="color:var(--muted);line-height:1.6;font-size:0.95rem;margin-bottom:20px;">Streamline production workflows, reduce manual errors, and optimise equipment maintenance scheduling.</p>
-                        <div style="background:var(--bg2);padding:15px;border-radius:10px;margin-bottom:20px;border-left:3px solid var(--sky);">
-                            <div style="font-weight:700;color:var(--sky3);font-size:1.2rem;">50%</div>
-                            <div style="font-size:0.8rem;color:var(--muted);">reduction in production downtime</div>
+                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#22c55e] transition-colors">SmartFactory Automation</h3>
+                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Streamline production workflows, reduce manual errors, and optimise equipment maintenance scheduling.</p>
+                        
+                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#22c55e] p-4 rounded-lg mb-8">
+                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">50%</div>
+                            <div class="text-xs text-[#6b6b6b] leading-relaxed">reduction in production downtime</div>
                         </div>
-                        <div style="margin-top:auto;">
-                            <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:var(--sky2);font-weight:600;text-decoration:none;font-size:0.9rem;">View Full Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Financial Services -->
-                <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
+                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
+                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                     </div>
-                    <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
-                            <span class="mono" style="font-size:0.6rem;color:var(--sky);letter-spacing:0.1em;font-weight:700;">FINANCIAL SERVICES</span>
-                            <span class="tag">Mobile Apps</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
+                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Financial Services</span>
+                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Mobile Apps</span>
                         </div>
-                        <h3 style="font-size:1.4rem;font-weight:700;color:var(--ink2);margin-bottom:12px;">FinanceFlow Mobile Suite</h3>
-                        <p style="color:var(--muted);line-height:1.6;font-size:0.95rem;margin-bottom:20px;">Modernize legacy banking systems with secure mobile banking and automated compliance reporting.</p>
-                        <div style="background:var(--bg2);padding:15px;border-radius:10px;margin-bottom:20px;border-left:3px solid var(--sky);">
-                            <div style="font-weight:700;color:var(--sky3);font-size:1.2rem;">90%</div>
-                            <div style="font-size:0.8rem;color:var(--muted);">faster transaction processing</div>
+                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#f5e642] transition-colors">FinanceFlow Mobile Suite</h3>
+                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Modernize legacy banking systems with secure mobile banking and automated compliance reporting.</p>
+                        
+                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#f5e642] p-4 rounded-lg mb-8">
+                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">90%</div>
+                            <div class="text-xs text-[#6b6b6b] leading-relaxed">faster transaction processing</div>
                         </div>
-                        <div style="margin-top:auto;">
-                            <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:var(--sky2);font-weight:600;text-decoration:none;font-size:0.9rem;">View Full Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Education -->
-                <div class="card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;">
-                    <div style="height:200px;background:var(--ink2);display:flex;align-items:center;justify-content:center;color:#fff;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14v7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
+                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
+                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <div style="padding:30px;flex:1;display:flex;flex-direction:column;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
-                            <span class="mono" style="font-size:0.6rem;color:var(--sky);letter-spacing:0.1em;font-weight:700;">EDUCATION TECHNOLOGY</span>
-                            <span class="tag">Automation</span>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
+                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Education Technology</span>
+                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Automation</span>
                         </div>
-                        <h3 style="font-size:1.4rem;font-weight:700;color:var(--ink2);margin-bottom:12px;">EduAdapt Learning Platform</h3>
-                        <p style="color:var(--muted);line-height:1.6;font-size:0.95rem;margin-bottom:20px;">Personalised learning experiences that adapt to individual student progress and learning styles.</p>
-                        <div style="background:var(--bg2);padding:15px;border-radius:10px;margin-bottom:20px;border-left:3px solid var(--sky);">
-                            <div style="font-weight:700;color:var(--sky3);font-size:1.2rem;">70%</div>
-                            <div style="font-size:0.8rem;color:var(--muted);">improvement in student engagement</div>
+                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#22c55e] transition-colors">EduAdapt Learning Platform</h3>
+                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Personalised learning experiences that adapt to individual student progress and learning styles.</p>
+                        
+                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#22c55e] p-4 rounded-lg mb-8">
+                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">70%</div>
+                            <div class="text-xs text-[#6b6b6b] leading-relaxed">improvement in student engagement</div>
                         </div>
-                        <div style="margin-top:auto;">
-                            <a href="#" style="display:inline-flex;align-items:center;gap:6px;color:var(--sky2);font-weight:600;text-decoration:none;font-size:0.9rem;">View Full Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-             <div style="margin-top:60px;padding:40px;background:var(--ink2);border-radius:20px;text-align:center;color:#fff;">
-                <h3 style="font-size:1.8rem;font-weight:700;margin-bottom:16px;">Ready to Join Our Success Stories?</h3>
-                <p style="color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto 24px;line-height:1.7;">Whether you're looking to streamline operations, enhance customer experience, or drive innovation, we're here to transform your vision into measurable results.</p>
-                <a href="index.html#contact" class="btn btn-sky">Start Your Success Story</a>
+             <div class="mt-20 p-12 bg-[#fafafa] border border-[#e5e5e5] rounded-3xl text-center shadow-sm relative overflow-hidden">
+                <div class="absolute inset-0 border-[8px] border-white pointer-events-none rounded-3xl"></div>
+                <h3 class="text-3xl font-bold mb-4 relative z-10 text-[#1a1a1a]">Ready to Join Our Success Stories?</h3>
+                <p class="text-[#6b6b6b] max-w-[600px] mx-auto mb-8 relative z-10 leading-[1.7] text-lg">Whether you're looking to streamline operations, enhance customer experience, or drive innovation, we're here to transform your vision into measurable results.</p>
+                <a href="index.html#contact" class="relative z-10 inline-flex px-8 py-3 rounded-full bg-[#1a1a1a] text-white text-sm font-bold hover:bg-[#333] transition-all hover:shadow-lg hover:-translate-y-1">Start Your Success Story</a>
             </div>
             
         </div>
     </section>
-<footer>
-        <div class="footer-grid">
-            <div class="f-brand">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:2px;"><img src="icon.svg"
-                        alt="Acantix" style="height:28px;width:28px;" /><span
-                        style="font-size:1.4rem;font-weight:800;color:var(--black);letter-spacing:-.02em;">Acantix</span>
+<!-- ══ CONTACT ══ -->
+    <section id="contact" class="py-16 md:py-20 px-5 md:px-12 bg-[#fafafa]">
+        <div class="max-w-[760px] mx-auto">
+            <div class="text-center mb-10">
+                <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.25em] uppercase mb-3 block">Strategy, 
+Meet Execution. Execution Meets Value</span>
+                <h2 class="section-heading font-serif font-normal">Start Your <span
+                        class="bg-[#f5e642] px-1.5 italic">Digital Journey</span></h2>
+                <p class="text-[#6b6b6b] text-sm mt-3">Whether you have a project or a partnership in mind. 
+Let’s connect and we’re here to answer any questions your team may have. 
+
+</p>
+            </div>
+            <div class="bg-[#fafafa] border border-[#e5e5e5] rounded-2xl overflow-hidden shadow-sm">
+                <div
+                    class="bg-[#f0f0f0] px-6 py-4 border-b-2 border-dashed border-[#e5e5e5] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div>
+                        <div class="font-mono text-[10px] text-[#1a1a1a] tracking-[.2em] mb-1">✈ START A PROJECT</div>
+                        <div class="font-mono text-[9px] text-[#6b6b6b] tracking-[.18em]">YOUR Vision · Our Mission
+                        </div>
+                    </div>
+                    <div class="font-mono text-3xl font-bold tracking-[.1em] text-[#1a1a1a]">E5</div>
                 </div>
-                <p>Better strategy, better engineering,<br />done right. Guiding enterprises<br />to their true north.
-                </p>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+                        <div><label
+                                class="block font-mono text-[10px] text-[#6b6b6b] tracking-[.2em] mb-1.5">NAME</label><input
+                                type="text" placeholder="Full name"
+                                class="w-full bg-white border border-[#e5e5e5] rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#1a1a1a] transition-colors" />
+                        </div>
+                        <div><label
+                                class="block font-mono text-[10px] text-[#6b6b6b] tracking-[.2em] mb-1.5">EMAIL</label><input
+                                type="email" placeholder="you@company.com"
+                                class="w-full bg-white border border-[#e5e5e5] rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#1a1a1a] transition-colors" />
+                        </div>
+                        <div><label
+                                class="block font-mono text-[10px] text-[#6b6b6b] tracking-[.2em] mb-1.5">COMPANY</label><input
+                                type="text" placeholder="Organisation"
+                                class="w-full bg-white border border-[#e5e5e5] rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#1a1a1a] transition-colors" />
+                        </div>
+                        <div><label
+                                class="block font-mono text-[10px] text-[#6b6b6b] tracking-[.2em] mb-1.5">PHONE</label><input
+                                type="tel" placeholder="+91 or international"
+                                class="w-full bg-white border border-[#e5e5e5] rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#1a1a1a] transition-colors" />
+                        </div>
+                    </div>
+                    <div class="mb-3"><label
+                            class="block font-mono text-[10px] text-[#6b6b6b] tracking-[.2em] mb-1.5">MESSAGE</label><textarea
+                            rows="4" placeholder="Describe your challenge or goals..."
+                            class="w-full bg-white border border-[#e5e5e5] rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#1a1a1a] transition-colors resize-none"></textarea>
+                    </div>
+                    <button onclick="submitForm(this)"
+                        class="w-full bg-[#1a1a1a] text-white py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg transition-all">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2,8 L14,8 M11,5 L14,8 L11,11" stroke="white" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Submit
+                    </button>
+                </div>
             </div>
-            <div class="f-col">
-                <h4>COMPANY</h4>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <div
+                class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mt-8 text-sm text-[#6b6b6b]">
+                <a href="mailto:ai@acantix.com"
+                    class="flex items-center gap-2 hover:text-[#1a1a1a] transition-colors no-underline text-[#6b6b6b]">
+                    <svg width="14" height="14" viewBox="0 0 15 15" fill="none">
+                        <rect x="1.5" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2" />
+                        <polyline points="1.5,3 7.5,8.5 13.5,3" stroke="currentColor" stroke-width="1.2" />
+                    </svg>
+                    ai@acantix.com
+                </a>
+                <span class="text-[#e5e5e5] hidden sm:inline">·</span>
+                <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 15 15" fill="none">
+                        <circle cx="7.5" cy="6" r="2.5" stroke="currentColor" stroke-width="1.2" />
+                        <path d="M2.5,14.5 C2.5,11 12.5,11 12.5,14.5" stroke="currentColor" stroke-width="1.2" />
+                    </svg>USA · India. Global Delivery</span>
+                <span class="text-[#e5e5e5] hidden sm:inline">·</span>
+                <span class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 15 15" fill="none">
+                        <circle cx="7.5" cy="7.5" r="6" stroke="currentColor" stroke-width="1.2" />
+                        <polyline points="7.5,4 7.5,7.5 10,10" stroke="currentColor" stroke-width="1.2"
+                            stroke-linecap="round" />
+                    </svg>Response &lt; 24 Hours</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ RUNWAY ══ -->
+    <div
+        class="runway-strip relative h-[120px] sm:h-[135px] md:h-[150px] overflow-hidden bg-gradient-to-b from-[#fafafa] to-[#f0f0f0] border-t border-[#e5e5e5]">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col justify-end gap-3 pb-2.5">
+            <div class="w-[3px] h-[22px] bg-black/15 rounded mx-auto"></div>
+            <div class="w-[3px] h-[22px] bg-black/15 rounded mx-auto"></div>
+            <div class="w-[3px] h-[22px] bg-black/15 rounded mx-auto"></div>
+        </div>
+        <div class="absolute bottom-0 left-[calc(50%-90px)] flex flex-col-reverse gap-6 pb-3.5">
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:0s"></div>
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:.22s"></div>
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:.44s"></div>
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:.66s"></div>
+        </div>
+        <div class="absolute bottom-0 right-[calc(50%-90px)] flex flex-col-reverse gap-6 pb-3.5">
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:0s"></div>
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:.22s"></div>
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:.44s"></div>
+            <div class="rwy-lt w-[5px] h-[5px] rounded-full bg-[#f5e642]" style="animation-delay:.66s"></div>
+        </div>
+        <div
+            class="absolute bottom-4 left-1/2 -translate-x-1/2 font-mono text-[10px] text-[#6b6b6b] tracking-[.3em] whitespace-nowrap">
+            Vision meets Value</div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="bg-white border-t border-[#e5e5e5] px-5 md:px-12 pt-12 pb-6">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center gap-2.5 mb-2">
+                    <img src="icon.svg" alt="Acantix" class="w-6 h-6" />
+                    <span class="text-lg font-extrabold text-[#1a1a1a] tracking-tight">Acantix</span>
+                </div>
+                <p class="text-[#6b6b6b] text-sm leading-[1.9]">Acantix helps businesses design, build, and scale AI-driven systems faster, smarter, and with measurable impact. Guiding
+                    enterprises to their true north.</p>
+            </div>
+            <div>
+                <h4 class="font-mono text-[10px] text-[#1a1a1a] tracking-[.24em] mb-3">COMPANY</h4>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#services"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Services</a>
+                    </li>
+                    <li><a href="#about"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">About
+                            Us</a></li>
+                    <li><a href="case-studies.html"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Case Studies</a>
+                    </li>
+                    <li><a href="careers.html"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Careers</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Contact</a>
+                    </li>
                 </ul>
             </div>
-            <div class="f-col">
-                <h4>SERVICES</h4>
-                <ul>
-                    <li><a href="#services">Strategic Consulting</a></li>
-                    <li><a href="#services">Software Engineering</a></li>
-                    <li><a href="#services">Advisory</a></li>
-                    <li><a href="#services">Solutioning</a></li>
+            <div>
+                <h4 class="font-mono text-[10px] text-[#1a1a1a] tracking-[.24em] mb-3">SERVICES</h4>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#services"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Consulting</a>
+                    </li>
+                    <li><a href="#services"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Engineering</a>
+                    </li>
+                    <li><a href="#services"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Advisory</a>
+                    </li>
+                    <li><a href="#services"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Solutioning</a>
+                    </li>
                 </ul>
             </div>
-            <div class="f-col">
-                <h4>OFFICE</h4>
-                <ul>
-                    <li><a href="#">India · Global Delivery</a></li>
-                    <li><a href="mailto:hello@acantix.com">hello@acantix.com</a></li>
+            <div>
+                <h4 class="font-mono text-[10px] text-[#1a1a1a] tracking-[.24em] mb-3">OFFICE</h4>
+                <ul class="flex flex-col gap-2">
+                    <li class="text-[#6b6b6b] text-sm">USA · India</li>
+                    <li class="text-[#6b6b6b] text-sm">Global Delivery</li>
+                    <li><a href="mailto:ai@acantix.com"
+                            class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">ai@acantix.com</a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="f-rule"></div>
-        <div class="f-bottom">
-            <div class="f-copy">© 2026 Acantix. All Rights Reserved.</div>
-            <div class="f-status">
-                <div
-                    style="width:5px;height:5px;border-radius:50%;background:var(--green);animation:bl 2s ease-in-out infinite;">
-                </div>All Systems Nominal
+        <div
+            class="max-w-[1200px] mx-auto border-t border-[#e5e5e5] pt-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="font-mono text-[10px] text-[#6b6b6b]">© 2026 Acantix. All Rights Reserved.</div>
+            <div class="flex items-center gap-1.5 font-mono text-[10px] text-[#6b6b6b]">
+                <div class="blink w-[5px] h-[5px] rounded-full bg-[#22c55e]"></div>
+                All Systems Nominal
             </div>
         </div>
     </footer>
 
-    <button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="16" height="16"
-            viewBox="0 0 16 16" fill="none">
+    <!-- Back to top -->
+    <button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-[#1a1a1a] border-none cursor-pointer flex items-center justify-center shadow-lg opacity-0 transition-all z-50 hover:-translate-y-1">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <polyline points="3,10 8,5 13,10" stroke="white" stroke-width="2.2" stroke-linecap="round"
                 stroke-linejoin="round" />
-        </svg></button>
-    <div class="toast" id="toast">
-        <div style="width:8px;height:8px;border-radius:50%;background:var(--green);"></div><span>Message Sent! Our team
-            will contact you shortly.</span>
+        </svg>
+    </button>
+
+    <!-- Toast -->
+    <div id="toast"
+        class="fixed top-[72px] right-4 bg-white border border-[#22c55e]/40 rounded-xl px-4 py-3 flex items-center gap-2.5 shadow-xl translate-x-[130%] transition-transform z-50">
+        <div class="w-2 h-2 rounded-full bg-[#22c55e]"></div>
+        <span class="text-sm text-[#1a1a1a]">Message sent! Our team will contact you shortly.</span>
     </div>
 
     <script>
-        window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('up', scrollY > 10); document.getElementById('topBtn').classList.toggle('v', scrollY > 400); });
-        const clk = () => { const e = document.getElementById('clock'); if (e) e.textContent = new Date().toLocaleTimeString('en-GB', { hour12: false }); }; setInterval(clk, 1000); clk();
-        const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: .07 }); document.querySelectorAll('.r').forEach(el => obs.observe(el));
-        let done = false; new IntersectionObserver(es => { if (es[0].isIntersecting && !done) { done = true;[['s1', 120, '+'], [' s2', 50, '+'], [' s3', 8, '+'], [' s4', 98, '%']].forEach(([id, t, s]) => { const el = document.getElementById(id.trim()); if (!el) return; let v = 0; const step = t / 60; const ti = setInterval(() => { v = Math.min(v + step, t); el.textContent = Math.round(v) + s; if (v >= t) clearInterval(ti); }, 22); }); } }, { threshold: .5 }).observe(document.querySelector('.stats-inner'));
-        new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) document.querySelectorAll('.bp-m-fill').forEach(b => b.style.width = b.dataset.w + '%'); }), { threshold: .2 }).observe(document.querySelector('.bp-grid'));
-        const ss = [['BOARDING', 'p-bd', true], ['ON TIME', 'p-ot', true], ['BOARDING', 'p-bd', true], ['SCHEDULED', 'p-sc', false]]; let flip = 0;
-        setInterval(() => { flip = (flip + 1) % 4; document.querySelectorAll('.dep-row').forEach((r, i) => { const p = r.querySelector('.pill'); if (!p) return; const s = ss[(i + flip) % ss.length]; p.innerHTML = s[2] ? `<span class="pdot"></span>${s[0]}` : s[0]; p.className = 'pill ' + s[1]; }); }, 3200);
-        function submit(btn) { btn.innerHTML = '✓ Message Sent Successfully!'; btn.style.background = '#22c55e'; const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 4500); setTimeout(() => { btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2,8 L14,8 M11,5 L14,8 L11,11" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Submit Boarding Pass'; btn.style.background = ''; }, 4200); }
+        // Nav shadow on scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('shadow-md', scrollY > 10);
+            const btn = document.getElementById('topBtn');
+            btn.style.opacity = scrollY > 400 ? '1' : '0';
+        });
+
+        // Mobile menu
+        let menuOpen = false;
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            const m = document.getElementById('mobMenu');
+            const h1 = document.getElementById('h1');
+            const h2 = document.getElementById('h2');
+            const h3 = document.getElementById('h3');
+            if (menuOpen) {
+                m.classList.remove('hidden'); m.classList.add('flex');
+                h1.style.transform = 'translateY(7px) rotate(45deg)';
+                h2.style.opacity = '0';
+                h3.style.transform = 'translateY(-7px) rotate(-45deg)';
+            } else {
+                m.classList.add('hidden'); m.classList.remove('flex');
+                h1.style.transform = ''; h2.style.opacity = '1'; h3.style.transform = '';
+            }
+        }
+        function closeMenu() {
+            menuOpen = false;
+            document.getElementById('mobMenu').classList.add('hidden');
+            document.getElementById('mobMenu').classList.remove('flex');
+            document.getElementById('h1').style.transform = '';
+            document.getElementById('h2').style.opacity = '1';
+            document.getElementById('h3').style.transform = '';
+        }
+        document.addEventListener('click', e => {
+            if (menuOpen && !document.getElementById('mobMenu').contains(e.target) && !document.getElementById('ham').contains(e.target)) closeMenu();
+        });
+
+        // Form submit
+        function submitForm(btn) {
+            btn.innerHTML = '✓ Message Sent Successfully!';
+            btn.style.background = '#22c55e';
+            const t = document.getElementById('toast');
+            t.style.transform = 'translateX(0)';
+            setTimeout(() => { t.style.transform = 'translateX(130%)'; }, 4500);
+            setTimeout(() => {
+                btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2,8 L14,8 M11,5 L14,8 L11,11" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Submit';
+                btn.style.background = '';
+            }, 4200);
+        }
     </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Acantix",
+  "url": "https://acantix.com",
+  "logo": "https://acantix.com/icon.svg",
+  "description": "Acantix provides AI consulting, software engineering, and digital transformation solutions.",
+  "sameAs": [
+    "https://www.linkedin.com/company/acantix"
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "AI Consulting and Software Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Acantix"
+  },
+  "areaServed": "Global",
+  "description": "AI system development, application modernization, consulting, and engineering services."
+}
+</script>
 </body>
 
 </html>
