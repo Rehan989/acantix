@@ -19,8 +19,8 @@ stack_content = f'''
     <!-- TICKER -->
     <div class="bg-[#1a1a1a] py-1.5 mt-[60px] overflow-hidden">
         <div class="ticker-track flex whitespace-nowrap">
-            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> OUR FOUNDATION <span class="text-white/15">◈</span> ACANTIX STACK <span class="text-white/15">◈</span> THE DNA OF INTELLIGENT TRANSFORMATION</span>
-            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> OUR FOUNDATION <span class="text-white/15">◈</span> ACANTIX STACK <span class="text-white/15">◈</span> THE DNA OF INTELLIGENT TRANSFORMATION</span>
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white font-bold"><span class="text-white/15">◈</span> OUR FOUNDATION <span class="text-white/15">◈</span> ACANTIX STACK <span class="text-white/15">◈</span> THE DNA OF INTELLIGENT TRANSFORMATION</span>
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white font-bold"><span class="text-white/15">◈</span> OUR FOUNDATION <span class="text-white/15">◈</span> ACANTIX STACK <span class="text-white/15">◈</span> THE DNA OF INTELLIGENT TRANSFORMATION</span>
         </div>
     </div>
     
