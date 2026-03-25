@@ -10,14 +10,24 @@
 
 <meta name="author" content="Acantix">
 <meta name="robots" content="index, follow"> 
-    <meta property="og:title" content="Acantix | Build and Scale AI-Driven Systems">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Acantix | Build and Scale AI-Driven Systems">
 <meta property="og:description" content=" We design, build, and scale AI and digital systems that drive measurable business outcomes.">
 <meta property="og:image" content="https://acantix.com/og-image.png">
-<meta property="og:url" content="https://acantix.com">
+<meta property="og:url" content="https://acantix.com/">
 <meta property="og:type" content="website">
-    <link rel="canonical" href="https://acantix.com/">
-    <link rel="stylesheet" href="dist/output.css">
-    <link rel="icon" href="/icon.svg">
+<meta property="og:site_name" content="Acantix">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Acantix | AI Consulting, Software Development & Digital Transformation">
+<meta name="twitter:description" content="Acantix delivers AI consulting, application development, and digital transformation solutions to help businesses scale, automate, and innovate faster.">
+<meta name="twitter:image" content="https://acantix.com/og-image.png">
+
+<link rel="canonical" href="https://acantix.com/">
+<link rel="stylesheet" href="/dist/output.css">
+<link rel="icon" href="/icon.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:wght@400;700&display=swap"
         rel="stylesheet" />
@@ -356,25 +366,25 @@
     <!-- ══ NAV ══ -->
     <nav id="nav"
         class="fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center justify-between px-5 md:px-12 bg-[rgba(250,250,250,0.95)] backdrop-blur-xl border-b border-black/[.06] transition-shadow duration-300">
-        <a href="#" class="flex items-center gap-2.5 no-underline">
-            <img src="icon.svg" alt="Acantix" class="w-7 h-7" />
+        <a href="/#" class="flex items-center gap-2.5 no-underline">
+            <img src="/icon.svg" alt="Acantix" class="w-7 h-7" />
             <span class="text-xl font-extrabold text-[#1a1a1a] tracking-tight">Acantix</span>
         </a>
         <!-- Desktop links -->
         <div class="hidden md:flex items-center gap-6">
-            <a href="#services"
+            <a href="/#services"
                 class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Services</a>
-            <a href="#about" class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">About
+            <a href="/#about" class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">About
                 Us</a>
-            <a href="#engagement"
+            <a href="/#engagement"
                 class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Engagement</a>
-            <a href="case-studies.html"
+            <a href="/case-studies.html"
                 class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Case Studies</a>
-            <a href="careers.html"
+            <a href="/careers.html"
                 class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Careers</a>
-            <a href="#contact"
+            <a href="/#contact"
                 class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Contact</a>
-            <a href="#contact"
+            <a href="/#contact"
                 class="inline-flex items-center gap-2 px-5 py-2 rounded-full border-[1.5px] border-[#1a1a1a] text-sm font-semibold hover:bg-[#1a1a1a] hover:text-white transition-all">Get Your AI Strategy Blueprint →</a>
         </div>
         <!-- Hamburger -->
@@ -388,197 +398,114 @@
     <!-- TICKER -->
     <div class="bg-[#1a1a1a] py-1.5 mt-[60px] overflow-hidden">
         <div class="ticker-track flex whitespace-nowrap">
-            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> CLIENT SUCCESS <span class="text-white/15">◈</span> PROVEN RESULTS <span class="text-white/15">◈</span> IMPACT DELIVERED <span class="text-white/15">◈</span> TRANSFORMING INDUSTRIES <span class="text-white/15">◈</span> REAL PROJECTS</span>
-            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> CLIENT SUCCESS <span class="text-white/15">◈</span> PROVEN RESULTS <span class="text-white/15">◈</span> IMPACT DELIVERED <span class="text-white/15">◈</span> TRANSFORMING INDUSTRIES <span class="text-white/15">◈</span> REAL PROJECTS</span>
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> CLIENT SUCCESS <span class="text-white/15">◈</span> CASE STUDY <span class="text-white/15">◈</span> RETAILBOT ASSISTANT</span>
+            <span class="inline-flex items-center gap-4 mx-8 font-mono text-[10px] tracking-[.18em] text-white/40"><span class="text-white/15">◈</span> CLIENT SUCCESS <span class="text-white/15">◈</span> CASE STUDY <span class="text-white/15">◈</span> RETAILBOT ASSISTANT</span>
         </div>
     </div>
     
+    <!-- ═══ BREADCRUMBS ═══ -->
+    <div class="bg-[#fafafa] py-4 border-b border-[#e5e5e5]">
+        <div class="max-w-[1000px] mx-auto px-7 flex items-center gap-2">
+            <a href="/case-studies.html" class="text-sm text-[#6b6b6b] hover:text-[#1a1a1a] font-medium flex items-center gap-1.5 transition-colors">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back to Clients
+            </a>
+        </div>
+    </div>
+
     <!-- ═══ CASE HERO ═══ -->
-    <section class="py-24 md:py-32 bg-[#fafafa] text-center">
-        <div class="max-w-[1280px] mx-auto px-7">
-            <div class="inline-block font-mono text-[10px] text-[#6b6b6b] tracking-[.25em] uppercase mb-5">
-                Client Success Stories
+    <section class="py-20 md:py-28 bg-white border-b border-[#e5e5e5]">
+        <div class="max-w-[1000px] mx-auto px-7">
+            <div class="flex flex-wrap gap-2 mb-6">
+                <span class="bg-[#1a1a1a] text-white px-3 py-1.5 rounded textxs font-bold uppercase tracking-wider">Case Study</span>
+                <span class="bg-[#f0f0f0] text-[#1a1a1a] px-3 py-1.5 rounded text-xs font-bold uppercase tracking-wider">Retail & E-commerce</span>
             </div>
-            <h1 class="font-serif font-normal leading-[1.12] tracking-tight mb-5 text-[clamp(2.5rem,4vw,3.8rem)] text-[#1a1a1a]">
-                Transforming <em class="bg-[#f5e642] px-1.5 italic font-normal">Industries</em>
+            <h1 class="font-serif font-bold text-[#1a1a1a] text-[clamp(2.5rem,4vw,3.8rem)] leading-[1.15] mb-6">
+                RetailBot Assistant
             </h1>
-            <p class="text-[#6b6b6b] text-[1.05rem] md:text-[1.1rem] max-w-[700px] mx-auto mb-10 leading-[1.85]">
-                From startups to enterprises, we've partnered with organizations across industries to deliver measurable results through intelligent solutions. Real projects. Real impact. Real testimonials.
+            <p class="text-[#6b6b6b] text-xl md:text-2xl leading-relaxed max-w-[800px] mb-12">
+                24/7 customer support automation and personalised product recommendations to increase sales conversion
             </p>
             
-            <div class="flex flex-wrap justify-center gap-10 md:gap-16 mt-12">
-                <div>
-                    <div class="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-none mb-2">50+</div>
-                    <div class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em]">PROJECTS DELIVERED</div>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-none mb-2">5</div>
-                    <div class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em]">INDUSTRIES</div>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-none mb-2">100%</div>
-                    <div class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em]">SUCCESS RATE</div>
-                </div>
+            <div class="flex flex-wrap gap-3">
+                <span class="border border-[#e5e5e5] text-[#6b6b6b] px-4 py-2 rounded-full text-sm font-medium">AI Bots</span>
+                <span class="border border-[#e5e5e5] text-[#6b6b6b] px-4 py-2 rounded-full text-sm font-medium">Retail & E-commerce</span>
             </div>
         </div>
     </section>
 
-    <hr class="border-[#e5e5e5]" />
-
-    <!-- ═══ PORTFOLIO ═══ -->
-    <section class="py-24 md:py-32 bg-white">
-        <div class="max-w-[1280px] mx-auto px-7">
-            <div class="text-center mb-16">
-                <h2 class="font-serif font-bold text-[#1a1a1a] text-[clamp(2rem,3.5vw,3.2rem)] mb-8">Project Portfolio</h2>
-                
-                <div class="inline-flex flex-wrap justify-center gap-2 p-1.5 bg-[#fafafa] border border-[#e5e5e5] rounded-full shadow-sm">
-                    <button class="bg-[#1a1a1a] text-white px-5 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2 pointer-events-none hover:bg-[#1a1a1a]">All Projects <span class="bg-white/20 px-1.5 py-0.5 rounded text-[10px] font-mono leading-none">5</span></button>
-                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">Mobile Apps</button>
-                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">AI Bots</button>
-                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">Manufacturing</button>
-                    <button class="hover:bg-[#f0f0f0] text-[#6b6b6b] hover:text-[#1a1a1a] px-5 py-2 rounded-full text-sm font-medium transition-all">Automation</button>
-                </div>
-            </div>
+    <!-- ═══ CONTENT ═══ -->
+    <section class="py-20 md:py-28 bg-[#fafafa]">
+        <div class="max-w-[1000px] mx-auto px-7 grid grid-cols-1 lg:grid-cols-3 gap-16">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Left Column: Main Content -->
+            <div class="lg:col-span-2 space-y-16">
+                <!-- The Challenge -->
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-[#1a1a1a] mb-6">The Challenge</h2>
+                    <p class="text-[#6b6b6b] text-lg leading-relaxed mb-6">24/7 customer support automation and personalised product recommendations to increase sales conversion</p>
+                    <h3 class="text-sm font-bold text-[#1a1a1a] uppercase tracking-wider mb-4">Key Challenges:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#f5e642] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg> <span class="leading-relaxed">High volume of repetitive customer inquiries</span></li><li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#f5e642] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg> <span class="leading-relaxed">Limited customer support hours affecting sales</span></li><li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#f5e642] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg> <span class="leading-relaxed">Difficulty providing personalised shopping experiences at scale</span></li><li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#f5e642] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg> <span class="leading-relaxed">Low conversion rates from browsing to purchase</span></li>
+                    </ul>
+                </div>
+
+                <!-- Our Solution -->
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-[#1a1a1a] mb-6">Our Solution</h2>
+                    <p class="text-[#6b6b6b] text-lg leading-relaxed mb-6">Intelligent conversational AI bot with natural language processing and recommendation engine integration</p>
+                    <h3 class="text-sm font-bold text-[#1a1a1a] uppercase tracking-wider mb-4">Solution Components:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#22c55e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> <span class="leading-relaxed">Built an intelligent chatbot with natural language understanding</span></li><li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#22c55e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> <span class="leading-relaxed">Integrated machine learning for personalised product recommendations</span></li><li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#22c55e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> <span class="leading-relaxed">Implemented sentiment analysis for better customer interaction</span></li><li class="flex gap-3 text-[#6b6b6b]"><svg class="w-6 h-6 text-[#22c55e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> <span class="leading-relaxed">Created seamless handoff system to human agents when needed</span></li>
+                    </ul>
+                </div>
                 
-                <!-- Healthcare -->
-                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
-                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
-                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Healthcare</span>
-                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Mobile Apps</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#22c55e] transition-colors">HealthTrack Mobile App</h3>
-                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Remote patient monitoring and medication adherence tracking for chronic disease management.</p>
-                        
-                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#22c55e] p-4 rounded-lg mb-8">
-                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">85%</div>
-                            <div class="text-xs text-[#6b6b6b] leading-relaxed">improvement in patient medication adherence</div>
-                        </div>
-                        
-                        <div class="mt-auto">
-                            <a href="/clients/case-study/healthcare/" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <!-- Testimonial -->
+                <div class="bg-white border border-[#e5e5e5] p-10 rounded-2xl relative shadow-sm mt-10">
+                    <svg class="w-12 h-12 text-[#e5e5e5] absolute top-8 left-8" fill="currentColor" viewBox="0 0 32 32"><path d="M9.333 13.333c0-3.68 3.013-6.667 6.667-6.667v-4c-5.893 0-10.667 4.773-10.667 10.667v13.333h10.667v-10.667h-6.667v-2.667zm16 0c0-3.68 3.013-6.667 6.667-6.667v-4c-5.893 0-10.667 4.773-10.667 10.667v13.333h10.667v-10.667h-6.667v-2.667z"/></svg>
+                    <div class="relative z-10 pl-4">
+                        <p class="text-xl md:text-2xl text-[#1a1a1a] leading-relaxed italic mb-8">"Our customers love the instant, personalised support. The bot handles complex queries beautifully and has significantly improved our sales metrics."</p>
+                        <div>
+                            <div class="font-bold text-[#1a1a1a] text-lg">Michael Chen, VP of Customer Experience</div>
+                            <div class="text-[#6b6b6b] text-sm uppercase tracking-wider font-bold mt-1">Retail & E-commerce</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Retail -->
-                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
-                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1.5"/><path d="M12 22V12" stroke="currentColor" stroke-width="1.5"/><path d="M3.27 6.96L12 12l8.73-5.04" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
-                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Retail & E-Commerce</span>
-                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">AI Bots</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#f5e642] transition-colors">RetailBot Assistant</h3>
-                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">24/7 customer support automation and personalised product recommendations to increase sales conversion.</p>
-                        
-                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#f5e642] p-4 rounded-lg mb-8">
-                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">300%</div>
-                            <div class="text-xs text-[#6b6b6b] leading-relaxed">increase in customer engagement</div>
-                        </div>
-                        
-                        <div class="mt-auto">
-                            <a href="/clients/case-study/retail/" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Manufacturing -->
-                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
-                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
-                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Manufacturing</span>
-                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Automation</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#22c55e] transition-colors">SmartFactory Automation</h3>
-                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Streamline production workflows, reduce manual errors, and optimise equipment maintenance scheduling.</p>
-                        
-                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#22c55e] p-4 rounded-lg mb-8">
-                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">50%</div>
-                            <div class="text-xs text-[#6b6b6b] leading-relaxed">reduction in production downtime</div>
-                        </div>
-                        
-                        <div class="mt-auto">
-                            <a href="/clients/case-study/manufacturing/" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Financial Services -->
-                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
-                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
-                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Financial Services</span>
-                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Mobile Apps</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#f5e642] transition-colors">FinanceFlow Mobile Suite</h3>
-                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Modernize legacy banking systems with secure mobile banking and automated compliance reporting.</p>
-                        
-                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#f5e642] p-4 rounded-lg mb-8">
-                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">90%</div>
-                            <div class="text-xs text-[#6b6b6b] leading-relaxed">faster transaction processing</div>
-                        </div>
-                        
-                        <div class="mt-auto">
-                            <a href="/clients/case-study/finance/" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="border border-[#e5e5e5] rounded-2xl bg-white overflow-hidden flex flex-col hover:border-[#bbb] hover:shadow-lg transition-all group">
-                    <div class="h-[220px] bg-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#333] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                        <svg class="relative z-10 w-14 h-14 text-white/90" viewBox="0 0 24 24" fill="none"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex flex-wrap justify-between items-center mb-5 gap-2">
-                            <span class="font-mono text-[10px] text-[#6b6b6b] tracking-[.15em] font-bold uppercase">Education Technology</span>
-                            <span class="bg-[#f0f0f0] text-[#1a1a1a] px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">Automation</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1a1a1a] mb-3 leading-tight group-hover:text-[#22c55e] transition-colors">EduAdapt Learning Platform</h3>
-                        <p class="text-[#6b6b6b] leading-relaxed text-sm mb-6">Personalised learning experiences that adapt to individual student progress and learning styles.</p>
-                        
-                        <div class="bg-[#fafafa] border border-[#e5e5e5] border-l-4 border-l-[#22c55e] p-4 rounded-lg mb-8">
-                            <div class="font-black text-2xl text-[#1a1a1a] mb-0.5">70%</div>
-                            <div class="text-xs text-[#6b6b6b] leading-relaxed">improvement in student engagement</div>
-                        </div>
-                        
-                        <div class="mt-auto">
-                            <a href="/clients/case-study/education/" class="inline-flex items-center gap-2 text-[#1a1a1a] font-bold text-sm group/link">View Full Case Study <svg class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-             <div class="mt-20 p-12 bg-[#fafafa] border border-[#e5e5e5] rounded-3xl text-center shadow-sm relative overflow-hidden">
-                <div class="absolute inset-0 border-[8px] border-white pointer-events-none rounded-3xl"></div>
-                <h3 class="text-3xl font-bold mb-4 relative z-10 text-[#1a1a1a]">Ready to Join Our Success Stories?</h3>
-                <p class="text-[#6b6b6b] max-w-[600px] mx-auto mb-8 relative z-10 leading-[1.7] text-lg">Whether you're looking to streamline operations, enhance customer experience, or drive innovation, we're here to transform your vision into measurable results.</p>
-                <a href="index.html#contact" class="relative z-10 inline-flex px-8 py-3 rounded-full bg-[#1a1a1a] text-white text-sm font-bold hover:bg-[#333] transition-all hover:shadow-lg hover:-translate-y-1">Start Your Success Story</a>
+            <!-- Right Column: Sidebar -->
+            <div class="space-y-8">
+                <!-- Results & Impact -->
+                <div class="bg-white border border-[#e5e5e5] rounded-2xl p-8 shadow-sm">
+                    <h2 class="font-serif text-2xl font-bold text-[#1a1a1a] mb-6">Results & Impact</h2>
+                    <h3 class="text-[10px] font-mono font-bold text-[#6b6b6b] uppercase tracking-[0.2em] mb-4">Measurable Outcomes:</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4"><div class="shrink-0 w-2 h-2 rounded-full bg-[#1a1a1a] mt-2"></div><p class="text-[#1a1a1a] font-medium leading-relaxed">300% increase in customer engagement</p></div><div class="flex items-start gap-4"><div class="shrink-0 w-2 h-2 rounded-full bg-[#1a1a1a] mt-2"></div><p class="text-[#1a1a1a] font-medium leading-relaxed">65% reduction in support tickets</p></div><div class="flex items-start gap-4"><div class="shrink-0 w-2 h-2 rounded-full bg-[#1a1a1a] mt-2"></div><p class="text-[#1a1a1a] font-medium leading-relaxed">45% boost in average order value</p></div><div class="flex items-start gap-4"><div class="shrink-0 w-2 h-2 rounded-full bg-[#1a1a1a] mt-2"></div><p class="text-[#1a1a1a] font-medium leading-relaxed">24/7 customer support availability</p></div><div class="flex items-start gap-4"><div class="shrink-0 w-2 h-2 rounded-full bg-[#1a1a1a] mt-2"></div><p class="text-[#1a1a1a] font-medium leading-relaxed">88% customer satisfaction with bot interactions</p></div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="bg-[#1a1a1a] rounded-2xl p-8 shadow-md">
+                    <h2 class="font-serif text-2xl font-bold text-white mb-6">Technology Stack</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">Python</span><span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">OpenAI GPT</span><span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">Dialogflow</span><span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">React</span><span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">MongoDB</span><span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">Redis</span><span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">Stripe API</span><span class="bg-white/10 text-white border border-white/20 px-3 py-1.5 rounded-lg text-sm font-medium">Analytics Dashboard</span>
+                    </div>
+                </div>
             </div>
             
         </div>
     </section>
-<!-- ══ CONTACT ══ -->
+
+    <!-- ═══ CALL TO ACTION ═══ -->
+    <section class="py-24 bg-white border-t border-[#e5e5e5] text-center px-7">
+        <div class="max-w-[700px] mx-auto">
+            <h2 class="font-serif font-bold text-4xl text-[#1a1a1a] mb-6">Ready for Similar Results?</h2>
+            <p class="text-xl text-[#6b6b6b] leading-relaxed mb-10">Let's discuss how we can create a custom solution for your business challenges and drive measurable impact in your industry.</p>
+            <a href="/index.html#contact" class="inline-flex px-8 py-4 rounded-full bg-[#1a1a1a] text-white font-bold hover:bg-[#333] transition-all hover:shadow-lg hover:-translate-y-1 text-lg">Start Your Project</a>
+        </div>
+    </section>
+    <!-- ══ CONTACT ══ -->
     <section id="contact" class="py-16 md:py-20 px-5 md:px-12 bg-[#fafafa]">
         <div class="max-w-[760px] mx-auto">
             <div class="text-center mb-10">
@@ -694,7 +621,7 @@ Let’s connect and we’re here to answer any questions your team may have.
         <div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
             <div class="col-span-2 md:col-span-1">
                 <div class="flex items-center gap-2.5 mb-2">
-                    <img src="icon.svg" alt="Acantix" class="w-6 h-6" />
+                    <img src="/icon.svg" alt="Acantix" class="w-6 h-6" />
                     <span class="text-lg font-extrabold text-[#1a1a1a] tracking-tight">Acantix</span>
                 </div>
                 <p class="text-[#6b6b6b] text-sm leading-[1.9]">Acantix helps businesses design, build, and scale AI-driven systems faster, smarter, and with measurable impact. Guiding
@@ -703,19 +630,19 @@ Let’s connect and we’re here to answer any questions your team may have.
             <div>
                 <h4 class="font-mono text-[10px] text-[#1a1a1a] tracking-[.24em] mb-3">COMPANY</h4>
                 <ul class="flex flex-col gap-2">
-                    <li><a href="#services"
+                    <li><a href="/#services"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Services</a>
                     </li>
-                    <li><a href="#about"
+                    <li><a href="/#about"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">About
                             Us</a></li>
-                    <li><a href="case-studies.html"
+                    <li><a href="/case-studies.html"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Case Studies</a>
                     </li>
-                    <li><a href="careers.html"
+                    <li><a href="/careers.html"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Careers</a>
                     </li>
-                    <li><a href="#contact"
+                    <li><a href="/#contact"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Contact</a>
                     </li>
                 </ul>
@@ -723,16 +650,16 @@ Let’s connect and we’re here to answer any questions your team may have.
             <div>
                 <h4 class="font-mono text-[10px] text-[#1a1a1a] tracking-[.24em] mb-3">SERVICES</h4>
                 <ul class="flex flex-col gap-2">
-                    <li><a href="#services"
+                    <li><a href="/#services"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Consulting</a>
                     </li>
-                    <li><a href="#services"
+                    <li><a href="/#services"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Engineering</a>
                     </li>
-                    <li><a href="#services"
+                    <li><a href="/#services"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Advisory</a>
                     </li>
-                    <li><a href="#services"
+                    <li><a href="/#services"
                             class="text-[#6b6b6b] text-sm hover:text-[#1a1a1a] transition-colors no-underline">Solutioning</a>
                     </li>
                 </ul>
@@ -850,6 +777,105 @@ Let’s connect and we’re here to answer any questions your team may have.
   "areaServed": "Global",
   "description": "AI system development, application modernization, consulting, and engineering services."
 }
+</script>
+
+<!-- ══ ACANTIX CHATBOT WIDGET ══ -->
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '66628d3e91ec1995b6cfe8a9' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+   })(document, 'script');
+</script>
+<script>
+(function () {
+  function hideInRoot(root) {
+    try {
+      if (!root) return false;
+      const els = root.querySelectorAll('.vfrc-footer__links-powered-by-container');
+      if (els.length) {
+        els.forEach(e => { e.style.display = 'none'; });
+        return true;
+      }
+      return false;
+    } catch (err) { return false; }
+  }
+
+  function hideInShadowRoots(node) {
+    if (!node) return false;
+    let found = false;
+    try { if (hideInRoot(node)) found = true; } catch (e) {}
+    const all = (node.querySelectorAll) ? node.querySelectorAll('*') : [];
+    for (let i = 0; i < all.length; i++) {
+      const el = all[i];
+      if (el.shadowRoot) {
+        try { if (hideInRoot(el.shadowRoot)) found = true; } catch (e) {}
+        hideInShadowRoots(el.shadowRoot) && (found = true);
+      }
+    }
+    return found;
+  }
+
+  function tryHideEverywhere() {
+    let did = false;
+    did = hideInRoot(document) || did;
+    did = hideInShadowRoots(document) || did;
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+      try {
+        const idoc = iframe.contentDocument || iframe.contentWindow.document;
+        if (idoc) {
+          if (hideInRoot(idoc)) did = true;
+          if (hideInShadowRoots(idoc)) did = true;
+        }
+      } catch (err) {}
+    });
+    return did;
+  }
+
+  tryHideEverywhere();
+
+  const observer = new MutationObserver((mutations) => {
+    let changed = false;
+    for (const m of mutations) {
+      if (m.addedNodes && m.addedNodes.length) {
+        for (const n of m.addedNodes) {
+          try {
+            if (n.nodeType === Node.ELEMENT_NODE) {
+              if (n.matches && n.matches('.vfrc-footer__links-powered-by-container')) {
+                n.style.display = 'none';
+                changed = true;
+              } else {
+                const inside = n.querySelector && n.querySelector('.vfrc-footer__links-powered-by-container');
+                if (inside) { inside.style.display = 'none'; changed = true; }
+              }
+            }
+          } catch (e) {}
+          try { if (hideInShadowRoots(n)) changed = true; } catch (e) {}
+        }
+      }
+    }
+    if (changed) tryHideEverywhere();
+  });
+
+  observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+
+  document.addEventListener('click', function () {
+    setTimeout(() => tryHideEverywhere(), 300);
+  }, { passive: true });
+
+  const fallbackInterval = setInterval(() => { tryHideEverywhere(); }, 1000);
+  setTimeout(() => clearInterval(fallbackInterval), 20000);
+})();
 </script>
 </body>
 
