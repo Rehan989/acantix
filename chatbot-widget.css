@@ -1,0 +1,371 @@
+/* ── Acantix Chat Widget ── */
+:root {
+  --acx-primary: #0a0a0a;
+  --acx-accent: #f5e642;
+  --acx-ai-bg: #f2f2f2;
+  --acx-border: #e8e8e8;
+  --acx-radius: 20px;
+  --acx-panel-w: 380px;
+  --acx-panel-h: 580px;
+}
+
+/* ── Launcher ── */
+#acx-launcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--acx-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.28), 0 1px 6px rgba(0,0,0,0.12);
+  transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.22s ease;
+  outline: none;
+}
+#acx-launcher:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.34), 0 2px 8px rgba(0,0,0,0.14);
+}
+#acx-launcher:active { transform: scale(0.94); }
+
+#acx-launcher .acx-icon-chat,
+#acx-launcher .acx-icon-close {
+  position: absolute;
+  transition: opacity 0.2s ease, transform 0.28s cubic-bezier(0.34,1.56,0.64,1);
+}
+#acx-launcher .acx-icon-close {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+}
+#acx-launcher.acx-open .acx-icon-chat {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
+#acx-launcher.acx-open .acx-icon-close {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* ── Panel ── */
+#acx-panel {
+  position: fixed;
+  bottom: 92px;
+  right: 24px;
+  z-index: 9998;
+  width: var(--acx-panel-w);
+  height: var(--acx-panel-h);
+  background: #fff;
+  border-radius: var(--acx-radius);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.16), 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(18px) scale(0.97);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.32s cubic-bezier(0.34,1.2,0.64,1), opacity 0.22s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+#acx-panel.acx-visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Header ── */
+.acx-header {
+  background: var(--acx-primary);
+  padding: 16px 18px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  position: relative;
+}
+.acx-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+.acx-header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1c1c1c;
+  border: 1.5px solid rgba(245,230,66,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--acx-accent);
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+.acx-header-info { flex: 1; min-width: 0; }
+.acx-header-name {
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+  line-height: 1.2;
+}
+.acx-header-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+.acx-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: acx-pulse 2.4s ease-in-out infinite;
+}
+@keyframes acx-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.acx-header-status-text {
+  color: rgba(255,255,255,0.45);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+}
+.acx-close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: background 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+}
+.acx-close-btn:hover {
+  background: rgba(255,255,255,0.16);
+  color: #fff;
+}
+
+/* ── Messages ── */
+.acx-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+.acx-messages::-webkit-scrollbar { width: 4px; }
+.acx-messages::-webkit-scrollbar-track { background: transparent; }
+.acx-messages::-webkit-scrollbar-thumb { background: #e0e0e0; border-radius: 2px; }
+
+/* ── Message rows ── */
+.acx-msg {
+  display: flex;
+  gap: 8px;
+  animation: acx-msg-in 0.28s cubic-bezier(0.34,1.2,0.64,1) both;
+}
+@keyframes acx-msg-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.acx-msg.acx-msg-user { flex-direction: row-reverse; }
+
+.acx-msg-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  color: #888;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.acx-ai-avatar {
+  background: var(--acx-primary) !important;
+  color: var(--acx-accent) !important;
+  font-size: 9px !important;
+  letter-spacing: -0.4px !important;
+}
+
+.acx-bubble {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  letter-spacing: -0.1px;
+  word-break: break-word;
+}
+.acx-msg-ai .acx-bubble {
+  background: var(--acx-ai-bg);
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+}
+.acx-msg-user .acx-bubble {
+  background: var(--acx-primary);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+/* ── Action chips ── */
+.acx-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-left: 36px;
+  animation: acx-msg-in 0.32s cubic-bezier(0.34,1.2,0.64,1) 0.1s both;
+}
+.acx-chip {
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 1.5px solid #d0d0d0;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.1px;
+  transition: all 0.18s cubic-bezier(0.34,1.4,0.64,1);
+  white-space: nowrap;
+  line-height: 1;
+}
+.acx-chip:hover {
+  background: #0a0a0a;
+  color: #fff;
+  border-color: #0a0a0a;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.14);
+}
+.acx-chip:active { transform: translateY(0); }
+
+/* ── Typing indicator ── */
+.acx-typing-bubble {
+  background: var(--acx-ai-bg);
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.acx-typing-bubble span {
+  width: 6px;
+  height: 6px;
+  background: #bbb;
+  border-radius: 50%;
+  animation: acx-dot-bounce 1.3s ease-in-out infinite;
+}
+.acx-typing-bubble span:nth-child(2) { animation-delay: 0.16s; }
+.acx-typing-bubble span:nth-child(3) { animation-delay: 0.32s; }
+@keyframes acx-dot-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.45; }
+  30%            { transform: translateY(-5px); opacity: 1; }
+}
+
+/* ── Input area ── */
+.acx-input-area {
+  padding: 10px 12px 12px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+  background: #fff;
+}
+.acx-input {
+  flex: 1;
+  resize: none;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 9px 12px;
+  font-size: 13.5px;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  line-height: 1.55;
+  max-height: 100px;
+  min-height: 38px;
+  outline: none;
+  transition: border-color 0.15s ease;
+  background: #fafafa;
+  letter-spacing: -0.1px;
+  overflow-y: auto;
+}
+.acx-input:focus {
+  border-color: #1a1a1a;
+  background: #fff;
+}
+.acx-input::placeholder { color: #b8b8b8; }
+
+.acx-send-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--acx-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform 0.18s cubic-bezier(0.34,1.4,0.64,1), background 0.15s ease;
+}
+.acx-send-btn:hover:not(:disabled) {
+  background: #2c2c2c;
+  transform: scale(1.1);
+}
+.acx-send-btn:active:not(:disabled) { transform: scale(0.93); }
+.acx-send-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* ── Footer ── */
+.acx-footer {
+  padding: 6px 16px 8px;
+  text-align: center;
+  font-size: 10px;
+  color: #ccc;
+  letter-spacing: 0.15px;
+  background: #fff;
+  border-top: 1px solid #f5f5f5;
+  font-family: 'Inter', sans-serif;
+}
+.acx-footer strong { color: #bbb; font-weight: 500; }
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  #acx-panel {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100dvh;
+    height: 100vh;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  #acx-launcher {
+    bottom: 18px;
+    right: 18px;
+  }
+}

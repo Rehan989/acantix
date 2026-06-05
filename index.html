@@ -27,6 +27,7 @@
 
 <link rel="canonical" href="https://acantix.com/">
 <link rel="stylesheet" href="dist/output.css">
+<link rel="stylesheet" href="chatbot-widget.css">
 <link rel="icon" href="/icon.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:wght@400;700&display=swap"
@@ -384,7 +385,7 @@
                 class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Case Studies</a>
             <a href="careers.html"
                 class="text-[#6b6b6b] text-sm font-medium hover:text-[#1a1a1a] transition-colors">Careers</a>
-            <a href="#" onclick="window.voiceflow.chat.open(); return false;"
+            <a href="#" onclick="window.acantixChat && window.acantixChat.open(); return false;"
                 class="inline-flex items-center gap-2 px-5 py-2 rounded-full border-[1.5px] border-[#1a1a1a] text-sm font-semibold hover:bg-[#1a1a1a] hover:text-white transition-all"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Talk to Riya</a>
         </div>
         <!-- Hamburger -->
@@ -411,7 +412,7 @@
             class="py-3 border-b border-[#e5e5e5] font-semibold text-[#1a1a1a] no-underline">Case Studies</a>
         <a href="careers.html" onclick="closeMenu()"
             class="py-3 border-b border-[#e5e5e5] font-semibold text-[#1a1a1a] no-underline">Careers</a>
-        <a href="#" onclick="window.voiceflow.chat.open(); return false;" onclick="closeMenu()"
+        <a href="#" onclick="window.acantixChat && window.acantixChat.open(); closeMenu(); return false;"
             class="mt-3 bg-[#1a1a1a] text-white py-3 px-5 rounded-full font-bold text-center no-underline inline-flex justify-center items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Talk to Riya</a>
     </div>
 
@@ -1499,105 +1500,7 @@ Let’s connect and we’re here to answer any questions your team may have.
 </script>
 
 <!-- ══ ACANTIX CHATBOT WIDGET ══ -->
-<script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '66628d3e91ec1995b6cfe8a9' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          voice: {
-            url: "https://runtime-api.voiceflow.com"
-          }
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-   })(document, 'script');
-</script>
-<script>
-(function () {
-  function hideInRoot(root) {
-    try {
-      if (!root) return false;
-      const els = root.querySelectorAll('.vfrc-footer__links-powered-by-container, .vfrc-launcher');
-      if (els.length) {
-        els.forEach(e => { e.style.display = 'none'; });
-        return true;
-      }
-      return false;
-    } catch (err) { return false; }
-  }
-
-  function hideInShadowRoots(node) {
-    if (!node) return false;
-    let found = false;
-    try { if (hideInRoot(node)) found = true; } catch (e) {}
-    const all = (node.querySelectorAll) ? node.querySelectorAll('*') : [];
-    for (let i = 0; i < all.length; i++) {
-      const el = all[i];
-      if (el.shadowRoot) {
-        try { if (hideInRoot(el.shadowRoot)) found = true; } catch (e) {}
-        hideInShadowRoots(el.shadowRoot) && (found = true);
-      }
-    }
-    return found;
-  }
-
-  function tryHideEverywhere() {
-    let did = false;
-    did = hideInRoot(document) || did;
-    did = hideInShadowRoots(document) || did;
-    const iframes = document.querySelectorAll('iframe');
-    iframes.forEach(iframe => {
-      try {
-        const idoc = iframe.contentDocument || iframe.contentWindow.document;
-        if (idoc) {
-          if (hideInRoot(idoc)) did = true;
-          if (hideInShadowRoots(idoc)) did = true;
-        }
-      } catch (err) {}
-    });
-    return did;
-  }
-
-  tryHideEverywhere();
-
-  const observer = new MutationObserver((mutations) => {
-    let changed = false;
-    for (const m of mutations) {
-      if (m.addedNodes && m.addedNodes.length) {
-        for (const n of m.addedNodes) {
-          try {
-            if (n.nodeType === Node.ELEMENT_NODE) {
-              if (n.matches && (n.matches('.vfrc-footer__links-powered-by-container') || n.matches('.vfrc-launcher'))) {
-                n.style.display = 'none';
-                changed = true;
-              } else {
-                if (n.querySelectorAll) {
-                  const insides = n.querySelectorAll('.vfrc-footer__links-powered-by-container, .vfrc-launcher');
-                  if (insides && insides.length) { insides.forEach(e => e.style.display = 'none'); changed = true; }
-                }
-              }
-            }
-          } catch (e) {}
-          try { if (hideInShadowRoots(n)) changed = true; } catch (e) {}
-        }
-      }
-    }
-    if (changed) tryHideEverywhere();
-  });
-
-  observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
-
-  document.addEventListener('click', function () {
-    setTimeout(() => tryHideEverywhere(), 300);
-  }, { passive: true });
-
-  const fallbackInterval = setInterval(() => { tryHideEverywhere(); }, 1000);
-  setTimeout(() => clearInterval(fallbackInterval), 20000);
-})();
-</script>
+<script src="chatbot-widget.js"></script>
 </body>
 
 </html>
