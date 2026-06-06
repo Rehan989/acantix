@@ -11,7 +11,7 @@
   function buildWidget() {
     const launcher = document.createElement('button');
     launcher.id = 'acx-launcher';
-    launcher.setAttribute('aria-label', 'Chat with Acantix AI');
+    launcher.setAttribute('aria-label', 'Chat with Referan');
     launcher.innerHTML = `
       <svg class="acx-icon-chat" width="22" height="22" viewBox="0 0 24 24" fill="none"
            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -25,15 +25,15 @@
     const panel = document.createElement('div');
     panel.id = 'acx-panel';
     panel.setAttribute('role', 'dialog');
-    panel.setAttribute('aria-label', 'Acantix AI Chat');
+    panel.setAttribute('aria-label', 'Referan Chat');
     panel.innerHTML = `
       <div class="acx-header">
-        <div class="acx-header-avatar">AI</div>
+        <div class="acx-header-avatar"><img src="logo-chatbot.jpeg" alt="Referan"></div>
         <div class="acx-header-info">
-          <div class="acx-header-name">Acantix AI</div>
+          <div class="acx-header-name">Referan</div>
           <div class="acx-header-status">
             <div class="acx-status-dot"></div>
-            <span class="acx-header-status-text">Online · Riya</span>
+            <span class="acx-header-status-text">Online</span>
           </div>
         </div>
         <button class="acx-close-btn" aria-label="Close chat">
@@ -54,7 +54,7 @@
           </svg>
         </button>
       </div>
-      <div class="acx-footer">Powered by <strong>Acantix AI</strong></div>`;
+      <div class="acx-footer">Powered by <strong>Referan</strong></div>`;
 
     document.body.appendChild(launcher);
     document.body.appendChild(panel);

@@ -104,11 +104,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 800;
-  color: var(--acx-accent);
-  letter-spacing: -0.5px;
   flex-shrink: 0;
+  overflow: hidden;
+}
+.acx-header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .acx-header-info { flex: 1; min-width: 0; }
 .acx-header-name {

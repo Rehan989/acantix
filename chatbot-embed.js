@@ -95,12 +95,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      color: #f5e642;
-      letter-spacing: -0.5px;
       flex-shrink: 0;
-      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+    .acx-header-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .acx-header-info { flex: 1; min-width: 0; }
     .acx-header-name {
@@ -378,7 +380,7 @@
   function buildWidget() {
     const launcher = document.createElement('button');
     launcher.id = 'acx-launcher';
-    launcher.setAttribute('aria-label', 'Chat with Acantix AI');
+    launcher.setAttribute('aria-label', 'Chat with Referan');
     launcher.innerHTML = `
       <svg class="acx-icon-chat" width="22" height="22" viewBox="0 0 24 24" fill="none"
            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -392,15 +394,15 @@
     const panel = document.createElement('div');
     panel.id = 'acx-panel';
     panel.setAttribute('role', 'dialog');
-    panel.setAttribute('aria-label', 'Acantix AI Chat');
+    panel.setAttribute('aria-label', 'Referan Chat');
     panel.innerHTML = `
       <div class="acx-header">
-        <div class="acx-header-avatar">AI</div>
+        <div class="acx-header-avatar"><img src="logo-chatbot.jpeg" alt="Referan"></div>
         <div class="acx-header-info">
-          <div class="acx-header-name">Acantix AI</div>
+          <div class="acx-header-name">Referan</div>
           <div class="acx-header-status">
             <div class="acx-status-dot"></div>
-            <span class="acx-header-status-text">Online · Riya</span>
+            <span class="acx-header-status-text">Online</span>
           </div>
         </div>
         <button class="acx-close-btn" aria-label="Close chat">
@@ -421,7 +423,7 @@
           </svg>
         </button>
       </div>
-      <div class="acx-footer">Powered by <a href="https://acantix.com" target="_blank" rel="noopener">Acantix AI</a></div>`;
+      <div class="acx-footer">Powered by <a href="https://acantix.com" target="_blank" rel="noopener">Referan</a></div>`;
 
     document.body.appendChild(launcher);
     document.body.appendChild(panel);
