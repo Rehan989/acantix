@@ -195,6 +195,13 @@
       flex-shrink: 0;
       margin-top: 2px;
       font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+    .acx-msg-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .acx-ai-avatar {
       background: #0a0a0a !important;
@@ -397,7 +404,7 @@
     panel.setAttribute('aria-label', 'Referan Chat');
     panel.innerHTML = `
       <div class="acx-header">
-        <div class="acx-header-avatar"><img src="logo-chatbot.jpeg" alt="Referan"></div>
+        <div class="acx-header-avatar"><img src="https://acantix.com/logo-chatbot.jpeg" alt="Referan"></div>
         <div class="acx-header-info">
           <div class="acx-header-name">Referan</div>
           <div class="acx-header-status">
@@ -514,7 +521,7 @@
     var row = document.createElement('div');
     row.className = 'acx-msg acx-msg-ai';
     row.innerHTML =
-      '<div class="acx-msg-avatar acx-ai-avatar">AI</div>' +
+      '<div class="acx-msg-avatar acx-ai-avatar"><img src="https://acantix.com/logo-chatbot.jpeg" alt=""></div>' +
       '<div class="acx-bubble">' + renderText(text) + '</div>';
     return row;
   }
@@ -532,7 +539,7 @@
     row.className = 'acx-msg acx-msg-ai';
     row.id = 'acx-typing';
     row.innerHTML =
-      '<div class="acx-msg-avatar acx-ai-avatar">AI</div>' +
+      '<div class="acx-msg-avatar acx-ai-avatar"><img src="https://acantix.com/logo-chatbot.jpeg" alt=""></div>' +
       '<div class="acx-typing-bubble"><span></span><span></span><span></span></div>';
     msgs.appendChild(row);
     scrollBottom();

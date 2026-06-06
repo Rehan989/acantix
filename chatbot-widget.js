@@ -148,7 +148,7 @@
     var row = document.createElement('div');
     row.className = 'acx-msg acx-msg-ai';
     row.innerHTML =
-      '<div class="acx-msg-avatar acx-ai-avatar">AI</div>' +
+      '<div class="acx-msg-avatar acx-ai-avatar"><img src="logo-chatbot.jpeg" alt=""></div>' +
       '<div class="acx-bubble">' + renderText(text) + '</div>';
     return row;
   }
@@ -166,7 +166,7 @@
     row.className = 'acx-msg acx-msg-ai';
     row.id = 'acx-typing';
     row.innerHTML =
-      '<div class="acx-msg-avatar acx-ai-avatar">AI</div>' +
+      '<div class="acx-msg-avatar acx-ai-avatar"><img src="logo-chatbot.jpeg" alt=""></div>' +
       '<div class="acx-typing-bubble"><span></span><span></span><span></span></div>';
     msgs.appendChild(row);
     scrollBottom();
